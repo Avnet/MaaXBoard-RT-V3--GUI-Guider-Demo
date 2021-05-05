@@ -1,0 +1,4 @@
+temp/
+lvgl-simulator/build
+
+.vscode/settings.json

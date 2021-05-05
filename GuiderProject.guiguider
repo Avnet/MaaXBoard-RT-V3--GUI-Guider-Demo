@@ -1,0 +1,1880 @@
+{
+	"projectName": "GuiderProject",
+	"boardPlatformSettings": {
+		"resolution": {
+			"width": "720",
+			"height": "1280"
+		},
+		"color_depth": 16,
+		"name": "MIMXRT1062xxxxA",
+		"OS": "FreeRTOS",
+		"mcu": "MIMXRT1062DVL6A",
+		"mcuxpresso_config": {
+			"CMAKE_BUILD_TYPE": "flexspi_nor_sdram_release"
+		}
+	},
+	"BuildStatus": {
+		"supportPXP": true,
+		"enable_pxp": false
+	},
+	"version": "1.0.0-GA",
+	"lvConf": {
+		"LV_HOR_RES_MAX": "(720)",
+		"LV_VER_RES_MAX": "(1280)",
+		"LV_COLOR_DEPTH": 16,
+		"LV_MEM_CUSTOM": "0",
+		"LV_MEM_SIZE": "320",
+		"LV_MEM_ADR": "0",
+		"LV_MEM_AUTO_DEFRAG": "1",
+		"LV_MEM_CUSTOM_INCLUDE": "FreeRTOS.h",
+		"LV_MEM_CUSTOM_ALLOC": "pvPortMalloc",
+		"LV_MEM_CUSTOM_FREE": "vPortFree",
+		"LV_USE_GPU": "1",
+		"LV_USE_GPU_NXP_PXP": "0",
+		"LV_USE_GPU_NXP_PXP_DEFAULT_OSA": "0",
+		"LV_USE_GPU_NXP_VG_LITE": "0"
+	},
+	"ImportFonts": {
+		"simsun": "simsun.woff",
+		"montserratMedium": "Montserrat-medium.ttf"
+	},
+	"FrontJson": [
+		{
+			"id": "tyyf75tz",
+			"name": "welcome_screen",
+			"list": [
+				{
+					"name": "rightbtn0",
+					"type": "imgbtn",
+					"left": 533,
+					"top": 197,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 150,
+					"height": 150,
+					"text": "",
+					"toggle": false,
+					"src_released": "right_arrow.png",
+					"src_pressed": "right_arrow_dark.png",
+					"src_checked_released": "",
+					"src_checked_pressed": "",
+					"color_format": "true-color-alpha",
+					"part": "LV_IMGBTN_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"image_recolor": "#ffffff",
+					"image_recolor_opa": 0,
+					"image_opa": 255,
+					"font_family": "simsun",
+					"text_color": "#000000",
+					"font": 12,
+					"style": [
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255,
+							"font_family": "simsun",
+							"text_color": "#000000",
+							"font": 12
+						},
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_PRESSED",
+							"disable": true,
+							"image_recolor": "#000000",
+							"image_recolor_opa": 0,
+							"text_color": "#FF33FF",
+							"font_family": "simsun",
+							"font": 16
+						},
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_CHECKED",
+							"disable": true,
+							"image_recolor": "#000000",
+							"image_recolor_opa": 0,
+							"text_color": "#FF33FF",
+							"font_family": "simsun",
+							"font": 16
+						}
+					],
+					"id": "hv83zbjz",
+					"default_style": false
+				},
+				{
+					"name": "avlogoimg0",
+					"type": "img",
+					"left": 235,
+					"top": 145,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 250,
+					"height": 250,
+					"img_path": "AvnetIcon310x310.png",
+					"rotate": 0,
+					"x": 0,
+					"y": 0,
+					"color_format": "true-color-alpha",
+					"part": "LV_IMG_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"image_recolor": "#ffffff",
+					"image_recolor_opa": 0,
+					"image_opa": 255,
+					"style": [
+						{
+							"part": "LV_IMG_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255
+						}
+					],
+					"id": "f9q83rhu",
+					"default_style": false
+				},
+				{
+					"name": "leftbtn0",
+					"type": "imgbtn",
+					"left": 37,
+					"top": 197,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 150,
+					"height": 150,
+					"text": "",
+					"toggle": false,
+					"src_released": "left_arrow.png",
+					"src_pressed": "left_arrow_dark.png",
+					"src_checked_released": "",
+					"src_checked_pressed": "",
+					"color_format": "true-color-alpha",
+					"part": "LV_IMGBTN_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"image_recolor": "#ffffff",
+					"image_recolor_opa": 0,
+					"image_opa": 255,
+					"font_family": "simsun",
+					"text_color": "#000000",
+					"font": 12,
+					"style": [
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255,
+							"font_family": "simsun",
+							"text_color": "#000000",
+							"font": 12
+						},
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_PRESSED",
+							"disable": true,
+							"image_recolor": "#000000",
+							"image_recolor_opa": 0,
+							"text_color": "#FF33FF",
+							"font_family": "simsun",
+							"font": 16
+						},
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_CHECKED",
+							"disable": true,
+							"image_recolor": "#000000",
+							"image_recolor_opa": 0,
+							"text_color": "#FF33FF",
+							"font_family": "simsun",
+							"font": 16
+						}
+					],
+					"id": "k0qlijc1",
+					"default_style": false
+				},
+				{
+					"name": "redbtn0",
+					"type": "imgbtn",
+					"left": 28,
+					"top": 1050,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 200,
+					"height": 200,
+					"text": "",
+					"toggle": true,
+					"src_released": "red_button_dark.png",
+					"src_pressed": "red_button.png",
+					"src_checked_released": "red_button_dark.png",
+					"src_checked_pressed": "red_button.png",
+					"color_format": "true-color-alpha",
+					"part": "LV_IMGBTN_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"image_recolor": "#ffffff",
+					"image_recolor_opa": 0,
+					"image_opa": 255,
+					"font_family": "simsun",
+					"text_color": "#000000",
+					"font": 12,
+					"style": [
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255,
+							"font_family": "simsun",
+							"text_color": "#000000",
+							"font": 12
+						},
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_PRESSED",
+							"disable": true,
+							"image_recolor": "#000000",
+							"image_recolor_opa": 0,
+							"text_color": "#FF33FF",
+							"font_family": "simsun",
+							"font": 16
+						},
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_CHECKED",
+							"disable": true,
+							"image_recolor": "#000000",
+							"image_recolor_opa": 0,
+							"text_color": "#FF33FF",
+							"font_family": "simsun",
+							"font": 16
+						}
+					],
+					"id": "v1kocb38",
+					"default_style": false,
+					"event": [
+						{
+							"src": "redbtn0",
+							"trigger": "pressed",
+							"dst": "cjd54n5v",
+							"action": "set_text",
+							"font_family": "simsun",
+							"font": "20",
+							"value": "Red LED active"
+						},
+						{
+							"src": "redbtn0",
+							"trigger": "pressed",
+							"dst": "ph0untpi",
+							"action": "hidden"
+						}
+					]
+				},
+				{
+					"name": "greenbtn0",
+					"type": "imgbtn",
+					"left": 260,
+					"top": 1050,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 200,
+					"height": 200,
+					"text": "",
+					"toggle": true,
+					"src_released": "green_button_dark.png",
+					"src_pressed": "green_button.png",
+					"src_checked_released": "green_button_dark.png",
+					"src_checked_pressed": "green_button.png",
+					"color_format": "true-color-alpha",
+					"part": "LV_IMGBTN_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"image_recolor": "#ffffff",
+					"image_recolor_opa": 0,
+					"image_opa": 255,
+					"font_family": "simsun",
+					"text_color": "#000000",
+					"font": 12,
+					"style": [
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255,
+							"font_family": "simsun",
+							"text_color": "#000000",
+							"font": 12
+						},
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_PRESSED",
+							"disable": true,
+							"image_recolor": "#000000",
+							"image_recolor_opa": 0,
+							"text_color": "#FF33FF",
+							"font_family": "simsun",
+							"font": 16
+						},
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_CHECKED",
+							"disable": true,
+							"image_recolor": "#000000",
+							"image_recolor_opa": 0,
+							"text_color": "#FF33FF",
+							"font_family": "simsun",
+							"font": 16
+						}
+					],
+					"id": "g3aq687u",
+					"default_style": false,
+					"event": [
+						{
+							"src": "greenbtn0",
+							"trigger": "pressed",
+							"dst": "0z78tg8c",
+							"action": "set_text",
+							"font_family": "simsun",
+							"font": "20",
+							"value": "Green LED active"
+						}
+					]
+				},
+				{
+					"name": "bluebtn0",
+					"type": "imgbtn",
+					"left": 492,
+					"top": 1050,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 200,
+					"height": 200,
+					"text": "",
+					"toggle": true,
+					"src_released": "blue_button_dark.png",
+					"src_pressed": "blue_button.png",
+					"src_checked_released": "blue_button_dark.png",
+					"src_checked_pressed": "blue_button.png",
+					"color_format": "true-color-alpha",
+					"part": "LV_IMGBTN_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"image_recolor": "#ffffff",
+					"image_recolor_opa": 0,
+					"image_opa": 255,
+					"font_family": "simsun",
+					"text_color": "#000000",
+					"font": 12,
+					"style": [
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255,
+							"font_family": "simsun",
+							"text_color": "#000000",
+							"font": 12
+						},
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_PRESSED",
+							"disable": true,
+							"image_recolor": "#000000",
+							"image_recolor_opa": 0,
+							"text_color": "#FF33FF",
+							"font_family": "simsun",
+							"font": 16
+						},
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_CHECKED",
+							"disable": true,
+							"image_recolor": "#000000",
+							"image_recolor_opa": 0,
+							"text_color": "#FF33FF",
+							"font_family": "simsun",
+							"font": 16
+						}
+					],
+					"id": "9kchkpfx",
+					"default_style": false,
+					"event": [
+						{
+							"src": "bluebtn0",
+							"trigger": "pressed",
+							"dst": "2q6p0ib3",
+							"action": "set_text",
+							"font_family": "simsun",
+							"font": "20",
+							"value": "Blue LED active"
+						}
+					]
+				},
+				{
+					"name": "usrtglimg0",
+					"type": "img",
+					"left": 568,
+					"top": 846,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 100,
+					"height": 100,
+					"img_path": "cyan_active_button.png",
+					"rotate": 0,
+					"x": 0,
+					"y": 0,
+					"color_format": "true-color-alpha",
+					"part": "LV_IMG_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"image_recolor": "#ffffff",
+					"image_recolor_opa": 0,
+					"image_opa": 255,
+					"style": [
+						{
+							"part": "LV_IMG_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255
+						}
+					],
+					"id": "8h8liont",
+					"default_style": false
+				},
+				{
+					"name": "usruntglimg0",
+					"type": "img",
+					"left": 568,
+					"top": 846,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 100,
+					"height": 100,
+					"img_path": "cyan_inactive_button.png",
+					"rotate": 0,
+					"x": 0,
+					"y": 0,
+					"color_format": "true-color-alpha",
+					"part": "LV_IMG_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"image_recolor": "#ffffff",
+					"image_recolor_opa": 0,
+					"image_opa": 255,
+					"style": [
+						{
+							"part": "LV_IMG_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255
+						}
+					],
+					"id": "ph0untpi",
+					"default_style": false,
+					"event": []
+				},
+				{
+					"name": "userlabel0",
+					"type": "label",
+					"left": 291,
+					"top": 884,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 260,
+					"height": 0,
+					"text": "User button untoggled",
+					"text_align": "left",
+					"long_mode": "LV_LABEL_LONG_BREAK",
+					"part": "LV_LABEL_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"bg_color": "#ffffff",
+					"bg_grad_color": "#ffffff",
+					"bg_grad_dir": "LV_GRAD_DIR_VER",
+					"bg_opa": 255,
+					"text_color": "#000000",
+					"font": "20",
+					"font_family": "simsun",
+					"letter_space": 2,
+					"radius": 0,
+					"paddingTop": 0,
+					"paddingRight": 0,
+					"paddingBottom": 0,
+					"paddingLeft": 0,
+					"style": [
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": "20",
+							"font_family": "simsun",
+							"letter_space": 2,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 0,
+							"paddingRight": 0,
+							"paddingBottom": 0,
+							"paddingLeft": 0
+						}
+					],
+					"id": "zc4hqp0v",
+					"default_style": false
+				},
+				{
+					"name": "redlabel0",
+					"type": "label",
+					"left": 64,
+					"top": 987,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 130,
+					"height": 0,
+					"text": "Red LED innactive",
+					"text_align": "center",
+					"long_mode": "LV_LABEL_LONG_BREAK",
+					"part": "LV_LABEL_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"bg_color": "#ffffff",
+					"bg_grad_color": "#ffffff",
+					"bg_grad_dir": "LV_GRAD_DIR_VER",
+					"bg_opa": 255,
+					"text_color": "#000000",
+					"font": "20",
+					"font_family": "simsun",
+					"letter_space": 2,
+					"radius": 0,
+					"paddingTop": 0,
+					"paddingRight": 0,
+					"paddingBottom": 0,
+					"paddingLeft": 0,
+					"style": [
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": "20",
+							"font_family": "simsun",
+							"letter_space": 2,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 0,
+							"paddingRight": 0,
+							"paddingBottom": 0,
+							"paddingLeft": 0
+						}
+					],
+					"id": "cjd54n5v",
+					"default_style": false
+				},
+				{
+					"name": "greenlabel0",
+					"type": "label",
+					"left": 296,
+					"top": 987,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 130,
+					"height": 0,
+					"text": "Green LED innactive",
+					"text_align": "center",
+					"long_mode": "LV_LABEL_LONG_BREAK",
+					"part": "LV_LABEL_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"bg_color": "#ffffff",
+					"bg_grad_color": "#ffffff",
+					"bg_grad_dir": "LV_GRAD_DIR_VER",
+					"bg_opa": 255,
+					"text_color": "#000000",
+					"font": "20",
+					"font_family": "simsun",
+					"letter_space": 2,
+					"radius": 0,
+					"paddingTop": 0,
+					"paddingRight": 0,
+					"paddingBottom": 0,
+					"paddingLeft": 0,
+					"style": [
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": "20",
+							"font_family": "simsun",
+							"letter_space": 2,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 0,
+							"paddingRight": 0,
+							"paddingBottom": 0,
+							"paddingLeft": 0
+						}
+					],
+					"id": "0z78tg8c",
+					"default_style": false
+				},
+				{
+					"name": "bluelabel0",
+					"type": "label",
+					"left": 530,
+					"top": 987,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 130,
+					"height": 0,
+					"text": "Blue LED innactive",
+					"text_align": "center",
+					"long_mode": "LV_LABEL_LONG_BREAK",
+					"part": "LV_LABEL_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"bg_color": "#ffffff",
+					"bg_grad_color": "#ffffff",
+					"bg_grad_dir": "LV_GRAD_DIR_VER",
+					"bg_opa": 255,
+					"text_color": "#000000",
+					"font": "20",
+					"font_family": "simsun",
+					"letter_space": 2,
+					"radius": 0,
+					"paddingTop": 0,
+					"paddingRight": 0,
+					"paddingBottom": 0,
+					"paddingLeft": 0,
+					"style": [
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": "20",
+							"font_family": "simsun",
+							"letter_space": 2,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 0,
+							"paddingRight": 0,
+							"paddingBottom": 0,
+							"paddingLeft": 0
+						}
+					],
+					"id": "2q6p0ib3",
+					"default_style": false
+				},
+				{
+					"name": "helplabel0",
+					"type": "label",
+					"left": 41,
+					"top": 356,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 130,
+					"height": 0,
+					"text": "HELP",
+					"text_align": "center",
+					"long_mode": "LV_LABEL_LONG_BREAK",
+					"part": "LV_LABEL_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"bg_color": "#ffffff",
+					"bg_grad_color": "#ffffff",
+					"bg_grad_dir": "LV_GRAD_DIR_VER",
+					"bg_opa": 255,
+					"text_color": "#000000",
+					"font": "20",
+					"font_family": "simsun",
+					"letter_space": 2,
+					"radius": 0,
+					"paddingTop": 0,
+					"paddingRight": 0,
+					"paddingBottom": 0,
+					"paddingLeft": 0,
+					"style": [
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": "20",
+							"font_family": "simsun",
+							"letter_space": 2,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 0,
+							"paddingRight": 0,
+							"paddingBottom": 0,
+							"paddingLeft": 0
+						}
+					],
+					"id": "5te1ilym",
+					"default_style": false
+				},
+				{
+					"name": "wifilabel0",
+					"type": "label",
+					"left": 545,
+					"top": 356,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 130,
+					"height": 0,
+					"text": "WIFI",
+					"text_align": "center",
+					"long_mode": "LV_LABEL_LONG_BREAK",
+					"part": "LV_LABEL_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"bg_color": "#ffffff",
+					"bg_grad_color": "#ffffff",
+					"bg_grad_dir": "LV_GRAD_DIR_VER",
+					"bg_opa": 255,
+					"text_color": "#000000",
+					"font": "20",
+					"font_family": "simsun",
+					"letter_space": 2,
+					"radius": 0,
+					"paddingTop": 0,
+					"paddingRight": 0,
+					"paddingBottom": 0,
+					"paddingLeft": 0,
+					"style": [
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": "20",
+							"font_family": "simsun",
+							"letter_space": 2,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 0,
+							"paddingRight": 0,
+							"paddingBottom": 0,
+							"paddingLeft": 0
+						}
+					],
+					"id": "qugcw07a",
+					"default_style": false
+				}
+			]
+		},
+		{
+			"name": "screen",
+			"id": "screen",
+			"list": [
+				{
+					"name": "img1",
+					"type": "img",
+					"left": 109,
+					"top": 142,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 499,
+					"height": 772,
+					"img_path": "maaxBoard01.png",
+					"rotate": 0,
+					"x": 0,
+					"y": 0,
+					"color_format": "true-color-alpha",
+					"part": "LV_IMG_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"image_recolor": "#ffffff",
+					"image_recolor_opa": 0,
+					"image_opa": 255,
+					"style": [
+						{
+							"part": "LV_IMG_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255
+						}
+					],
+					"id": "2b0kg1ie",
+					"default_style": false
+				},
+				{
+					"name": "imgbtn1",
+					"type": "imgbtn",
+					"left": 21,
+					"top": 21,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 100,
+					"height": 100,
+					"text": "test",
+					"toggle": false,
+					"src_released": "image008.jpg",
+					"src_pressed": "image008_dark.jpg",
+					"src_checked_released": "",
+					"src_checked_pressed": "",
+					"color_format": "true-color-alpha",
+					"part": "LV_IMGBTN_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"image_recolor": "#ffffff",
+					"image_recolor_opa": 0,
+					"image_opa": 255,
+					"font_family": "simsun",
+					"text_color": "#000000",
+					"font": 12,
+					"style": [
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255,
+							"font_family": "simsun",
+							"text_color": "#000000",
+							"font": 12
+						},
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_PRESSED",
+							"disable": true,
+							"image_recolor": "#000000",
+							"image_recolor_opa": 0,
+							"text_color": "#FF33FF",
+							"font_family": "simsun",
+							"font": 16
+						},
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_CHECKED",
+							"disable": true,
+							"image_recolor": "#000000",
+							"image_recolor_opa": 0,
+							"text_color": "#FF33FF",
+							"font_family": "simsun",
+							"font": 16
+						}
+					],
+					"id": "mnexyrcy",
+					"default_style": false,
+					"event": [
+						{
+							"src": "imgbtn1",
+							"trigger": "pressed",
+							"dst": "txzdqq8u",
+							"action": "load_screen"
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "txzdqq8u",
+			"name": "screen2",
+			"list": [
+				{
+					"name": "img0",
+					"type": "img",
+					"left": 281,
+					"top": 67,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 158,
+					"height": 158,
+					"img_path": "image009.jpg",
+					"rotate": 0,
+					"x": 0,
+					"y": 0,
+					"color_format": "true-color-alpha",
+					"part": "LV_IMG_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"image_recolor": "#ffffff",
+					"image_recolor_opa": 0,
+					"image_opa": 255,
+					"style": [
+						{
+							"part": "LV_IMG_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255
+						}
+					],
+					"id": "p86fcwon",
+					"default_style": false
+				}
+			]
+		}
+	],
+	"FrontStatus": {},
+	"Application": {
+		"name": "testingJson",
+		"version": "test_v1",
+		"default_scr": "welcome_screen",
+		"screen": [
+			{
+				"name": "welcome_screen",
+				"type": "scr",
+				"widgets": [
+					{
+						"name": "welcome_screen_rightbtn0",
+						"type": "imgbtn",
+						"pos": [
+							533,
+							197
+						],
+						"size": [
+							150,
+							150
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"toggle": false,
+						"text": "",
+						"color_format": "true-color-alpha",
+						"src_released": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/right_arrow.png",
+						"src_pressed": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/right_arrow_dark.png",
+						"style": [
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255,
+								"font_family": "simsun",
+								"text_color": "#000000",
+								"font": 12
+							},
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_PRESSED",
+								"disable": true,
+								"image_recolor": "#000000",
+								"image_recolor_opa": 0,
+								"text_color": "#FF33FF",
+								"font_family": "simsun",
+								"font": 16
+							},
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_CHECKED",
+								"disable": true,
+								"image_recolor": "#000000",
+								"image_recolor_opa": 0,
+								"text_color": "#FF33FF",
+								"font_family": "simsun",
+								"font": 16
+							}
+						]
+					},
+					{
+						"name": "welcome_screen_avlogoimg0",
+						"type": "img",
+						"pos": [
+							235,
+							145
+						],
+						"size": [
+							250,
+							250
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"img_path": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/AvnetIcon310x310.png",
+						"color_format": "true-color-alpha",
+						"rotate": 0,
+						"pivot": "0,0",
+						"style": [
+							{
+								"part": "LV_IMG_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255
+							}
+						]
+					},
+					{
+						"name": "welcome_screen_leftbtn0",
+						"type": "imgbtn",
+						"pos": [
+							37,
+							197
+						],
+						"size": [
+							150,
+							150
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"toggle": false,
+						"text": "",
+						"color_format": "true-color-alpha",
+						"src_released": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/left_arrow.png",
+						"src_pressed": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/left_arrow_dark.png",
+						"style": [
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255,
+								"font_family": "simsun",
+								"text_color": "#000000",
+								"font": 12
+							},
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_PRESSED",
+								"disable": true,
+								"image_recolor": "#000000",
+								"image_recolor_opa": 0,
+								"text_color": "#FF33FF",
+								"font_family": "simsun",
+								"font": 16
+							},
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_CHECKED",
+								"disable": true,
+								"image_recolor": "#000000",
+								"image_recolor_opa": 0,
+								"text_color": "#FF33FF",
+								"font_family": "simsun",
+								"font": 16
+							}
+						]
+					},
+					{
+						"name": "welcome_screen_redbtn0",
+						"type": "imgbtn",
+						"pos": [
+							28,
+							1050
+						],
+						"size": [
+							200,
+							200
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"toggle": true,
+						"text": "",
+						"color_format": "true-color-alpha",
+						"src_released": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/red_button_dark.png",
+						"src_pressed": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/red_button.png",
+						"src_checked_released": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/red_button_dark.png",
+						"src_checked_pressed": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/red_button.png",
+						"style": [
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255,
+								"font_family": "simsun",
+								"text_color": "#000000",
+								"font": 12
+							},
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_PRESSED",
+								"disable": true,
+								"image_recolor": "#000000",
+								"image_recolor_opa": 0,
+								"text_color": "#FF33FF",
+								"font_family": "simsun",
+								"font": 16
+							},
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_CHECKED",
+								"disable": true,
+								"image_recolor": "#000000",
+								"image_recolor_opa": 0,
+								"text_color": "#FF33FF",
+								"font_family": "simsun",
+								"font": 16
+							}
+						]
+					},
+					{
+						"name": "welcome_screen_greenbtn0",
+						"type": "imgbtn",
+						"pos": [
+							260,
+							1050
+						],
+						"size": [
+							200,
+							200
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"toggle": true,
+						"text": "",
+						"color_format": "true-color-alpha",
+						"src_released": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/green_button_dark.png",
+						"src_pressed": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/green_button.png",
+						"src_checked_released": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/green_button_dark.png",
+						"src_checked_pressed": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/green_button.png",
+						"style": [
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255,
+								"font_family": "simsun",
+								"text_color": "#000000",
+								"font": 12
+							},
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_PRESSED",
+								"disable": true,
+								"image_recolor": "#000000",
+								"image_recolor_opa": 0,
+								"text_color": "#FF33FF",
+								"font_family": "simsun",
+								"font": 16
+							},
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_CHECKED",
+								"disable": true,
+								"image_recolor": "#000000",
+								"image_recolor_opa": 0,
+								"text_color": "#FF33FF",
+								"font_family": "simsun",
+								"font": 16
+							}
+						]
+					},
+					{
+						"name": "welcome_screen_bluebtn0",
+						"type": "imgbtn",
+						"pos": [
+							492,
+							1050
+						],
+						"size": [
+							200,
+							200
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"toggle": true,
+						"text": "",
+						"color_format": "true-color-alpha",
+						"src_released": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/blue_button_dark.png",
+						"src_pressed": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/blue_button.png",
+						"src_checked_released": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/blue_button_dark.png",
+						"src_checked_pressed": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/blue_button.png",
+						"style": [
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255,
+								"font_family": "simsun",
+								"text_color": "#000000",
+								"font": 12
+							},
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_PRESSED",
+								"disable": true,
+								"image_recolor": "#000000",
+								"image_recolor_opa": 0,
+								"text_color": "#FF33FF",
+								"font_family": "simsun",
+								"font": 16
+							},
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_CHECKED",
+								"disable": true,
+								"image_recolor": "#000000",
+								"image_recolor_opa": 0,
+								"text_color": "#FF33FF",
+								"font_family": "simsun",
+								"font": 16
+							}
+						]
+					},
+					{
+						"name": "welcome_screen_usrtglimg0",
+						"type": "img",
+						"pos": [
+							568,
+							846
+						],
+						"size": [
+							100,
+							100
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"img_path": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/cyan_active_button.png",
+						"color_format": "true-color-alpha",
+						"rotate": 0,
+						"pivot": "0,0",
+						"style": [
+							{
+								"part": "LV_IMG_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255
+							}
+						]
+					},
+					{
+						"name": "welcome_screen_usruntglimg0",
+						"type": "img",
+						"pos": [
+							568,
+							846
+						],
+						"size": [
+							100,
+							100
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"img_path": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/cyan_inactive_button.png",
+						"color_format": "true-color-alpha",
+						"rotate": 0,
+						"pivot": "0,0",
+						"style": [
+							{
+								"part": "LV_IMG_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255
+							}
+						]
+					},
+					{
+						"name": "welcome_screen_userlabel0",
+						"type": "label",
+						"pos": [
+							291,
+							884
+						],
+						"size": [
+							260,
+							0
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"text": "User button untoggled",
+						"long_mode": "LV_LABEL_LONG_BREAK",
+						"text_align": "left",
+						"style": [
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": "20",
+								"font_family": "simsun",
+								"letter_space": 2,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 0,
+								"paddingRight": 0,
+								"paddingBottom": 0,
+								"paddingLeft": 0
+							}
+						]
+					},
+					{
+						"name": "welcome_screen_redlabel0",
+						"type": "label",
+						"pos": [
+							64,
+							987
+						],
+						"size": [
+							130,
+							0
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"text": "Red LED innactive",
+						"long_mode": "LV_LABEL_LONG_BREAK",
+						"text_align": "center",
+						"style": [
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": "20",
+								"font_family": "simsun",
+								"letter_space": 2,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 0,
+								"paddingRight": 0,
+								"paddingBottom": 0,
+								"paddingLeft": 0
+							}
+						]
+					},
+					{
+						"name": "welcome_screen_greenlabel0",
+						"type": "label",
+						"pos": [
+							296,
+							987
+						],
+						"size": [
+							130,
+							0
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"text": "Green LED innactive",
+						"long_mode": "LV_LABEL_LONG_BREAK",
+						"text_align": "center",
+						"style": [
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": "20",
+								"font_family": "simsun",
+								"letter_space": 2,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 0,
+								"paddingRight": 0,
+								"paddingBottom": 0,
+								"paddingLeft": 0
+							}
+						]
+					},
+					{
+						"name": "welcome_screen_bluelabel0",
+						"type": "label",
+						"pos": [
+							530,
+							987
+						],
+						"size": [
+							130,
+							0
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"text": "Blue LED innactive",
+						"long_mode": "LV_LABEL_LONG_BREAK",
+						"text_align": "center",
+						"style": [
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": "20",
+								"font_family": "simsun",
+								"letter_space": 2,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 0,
+								"paddingRight": 0,
+								"paddingBottom": 0,
+								"paddingLeft": 0
+							}
+						]
+					},
+					{
+						"name": "welcome_screen_helplabel0",
+						"type": "label",
+						"pos": [
+							41,
+							356
+						],
+						"size": [
+							130,
+							0
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"text": "HELP",
+						"long_mode": "LV_LABEL_LONG_BREAK",
+						"text_align": "center",
+						"style": [
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": "20",
+								"font_family": "simsun",
+								"letter_space": 2,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 0,
+								"paddingRight": 0,
+								"paddingBottom": 0,
+								"paddingLeft": 0
+							}
+						]
+					},
+					{
+						"name": "welcome_screen_wifilabel0",
+						"type": "label",
+						"pos": [
+							545,
+							356
+						],
+						"size": [
+							130,
+							0
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"text": "WIFI",
+						"long_mode": "LV_LABEL_LONG_BREAK",
+						"text_align": "center",
+						"style": [
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": "20",
+								"font_family": "simsun",
+								"letter_space": 2,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 0,
+								"paddingRight": 0,
+								"paddingBottom": 0,
+								"paddingLeft": 0
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "screen",
+				"type": "scr",
+				"widgets": [
+					{
+						"name": "screen_img1",
+						"type": "img",
+						"pos": [
+							109,
+							142
+						],
+						"size": [
+							499,
+							772
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"img_path": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/maaxBoard01.png",
+						"color_format": "true-color-alpha",
+						"rotate": 0,
+						"pivot": "0,0",
+						"style": [
+							{
+								"part": "LV_IMG_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255
+							}
+						]
+					},
+					{
+						"name": "screen_imgbtn1",
+						"type": "imgbtn",
+						"pos": [
+							21,
+							21
+						],
+						"size": [
+							100,
+							100
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"toggle": false,
+						"text": "test",
+						"color_format": "true-color-alpha",
+						"src_released": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/image008.jpg",
+						"src_pressed": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/image008_dark.jpg",
+						"style": [
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255,
+								"font_family": "simsun",
+								"text_color": "#000000",
+								"font": 12
+							},
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_PRESSED",
+								"disable": true,
+								"image_recolor": "#000000",
+								"image_recolor_opa": 0,
+								"text_color": "#FF33FF",
+								"font_family": "simsun",
+								"font": 16
+							},
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_CHECKED",
+								"disable": true,
+								"image_recolor": "#000000",
+								"image_recolor_opa": 0,
+								"text_color": "#FF33FF",
+								"font_family": "simsun",
+								"font": 16
+							}
+						]
+					}
+				]
+			},
+			{
+				"name": "screen2",
+				"type": "scr",
+				"widgets": [
+					{
+						"name": "screen2_img0",
+						"type": "img",
+						"pos": [
+							281,
+							67
+						],
+						"size": [
+							158,
+							158
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"img_path": "/home/jbtamezpena/Documents/MCUXpresso_11.3.1_5262/workspace/MaaX_v2_demo_cm7/GuiderProject/import/image009.jpg",
+						"color_format": "true-color-alpha",
+						"rotate": 0,
+						"pivot": "0,0",
+						"style": [
+							{
+								"part": "LV_IMG_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255
+							}
+						]
+					}
+				]
+			}
+		],
+		"event": [
+			{
+				"src": "welcome_screen_redbtn0",
+				"trigger": "pressed",
+				"dst": "welcome_screen_redlabel0",
+				"action": "set_text",
+				"font_family": "simsun",
+				"font": "20",
+				"value": "Red LED active"
+			},
+			{
+				"src": "welcome_screen_redbtn0",
+				"trigger": "pressed",
+				"dst": "welcome_screen_usruntglimg0",
+				"action": "hidden"
+			},
+			{
+				"src": "welcome_screen_greenbtn0",
+				"trigger": "pressed",
+				"dst": "welcome_screen_greenlabel0",
+				"action": "set_text",
+				"font_family": "simsun",
+				"font": "20",
+				"value": "Green LED active"
+			},
+			{
+				"src": "welcome_screen_bluebtn0",
+				"trigger": "pressed",
+				"dst": "welcome_screen_bluelabel0",
+				"action": "set_text",
+				"font_family": "simsun",
+				"font": "20",
+				"value": "Blue LED active"
+			},
+			{
+				"src": "screen_imgbtn1",
+				"trigger": "pressed",
+				"dst": "screen2",
+				"action": "load_screen"
+			}
+		]
+	}
+}
