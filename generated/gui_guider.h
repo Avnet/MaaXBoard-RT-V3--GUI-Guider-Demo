@@ -15,6 +15,7 @@ extern "C" {
 typedef struct
 {
 	lv_obj_t *welcome_screen;
+	lv_obj_t *welcome_screen_bkgimg;
 	lv_obj_t *welcome_screen_rightbtn0;
 	lv_obj_t *welcome_screen_rightbtn0_label;
 	lv_obj_t *welcome_screen_avlogoimg0;
@@ -26,27 +27,25 @@ typedef struct
 	lv_obj_t *welcome_screen_greenbtn0_label;
 	lv_obj_t *welcome_screen_bluebtn0;
 	lv_obj_t *welcome_screen_bluebtn0_label;
-	lv_obj_t *welcome_screen_usruntglimg0;
 	lv_obj_t *welcome_screen_usrtglimg0;
+	lv_obj_t *welcome_screen_usruntglimg0;
 	lv_obj_t *welcome_screen_userlabel0;
 	lv_obj_t *welcome_screen_redlabel0;
 	lv_obj_t *welcome_screen_greenlabel0;
 	lv_obj_t *welcome_screen_bluelabel0;
 	lv_obj_t *welcome_screen_helplabel0;
 	lv_obj_t *welcome_screen_wifilabel0;
-	lv_obj_t *screen;
-	lv_obj_t *screen_img1;
-	lv_obj_t *screen_imgbtn1;
-	lv_obj_t *screen_imgbtn1_label;
-	lv_obj_t *screen2;
-	lv_obj_t *screen2_img0;
+	lv_obj_t *welcome_screen_iotimg;
+	lv_obj_t *help_screen;
+	lv_obj_t *help_screen_img1;
+	lv_obj_t *help_screen_imgbtn1;
+	lv_obj_t *help_screen_imgbtn1_label;
 }lv_ui;
 
 void setup_ui(lv_ui *ui);
 extern lv_ui guider_ui;
 void setup_scr_welcome_screen(lv_ui *ui);
-void setup_scr_screen(lv_ui *ui);
-void setup_scr_screen2(lv_ui *ui);
+void setup_scr_help_screen(lv_ui *ui);
 LV_IMG_DECLARE(_green_button_alpha_200x200);
 LV_IMG_DECLARE(_AvnetIcon310x310_alpha_250x250);
 LV_IMG_DECLARE(_left_arrow_alpha_150x150);
@@ -61,9 +60,10 @@ LV_IMG_DECLARE(_right_arrow_alpha_150x150);
 LV_IMG_DECLARE(_left_arrow_dark_alpha_150x150);
 LV_IMG_DECLARE(_image008_alpha_100x100);
 LV_IMG_DECLARE(_image008_dark_alpha_100x100);
+LV_IMG_DECLARE(_whitebkg_alpha_720x1280);
 LV_IMG_DECLARE(_green_button_dark_alpha_200x200);
 LV_IMG_DECLARE(_cyan_active_button_alpha_100x100);
-LV_IMG_DECLARE(_image009_alpha_158x158);
+LV_IMG_DECLARE(_IoT_Smart_Asset_Monitoring_G_600ppi_alpha_400x400);
 
 #ifdef __cplusplus
 }

@@ -10,5 +10,4 @@
 
 void events_init(lv_ui *ui);
 void events_init_welcome_screen(lv_ui *ui);
-void events_init_screen(lv_ui *ui);
 #endif /* EVENT_CB_H_ */
