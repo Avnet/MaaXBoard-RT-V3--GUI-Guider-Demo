@@ -51,6 +51,33 @@ void setup_scr_welcome_screen(lv_ui *ui){
 	lv_imgbtn_set_src(ui->welcome_screen_rightbtn0,LV_BTN_STATE_RELEASED,&_right_arrow_alpha_150x150);
 	lv_imgbtn_set_src(ui->welcome_screen_rightbtn0,LV_BTN_STATE_PRESSED,&_right_arrow_dark_alpha_150x150);
 
+	//Write codes welcome_screen_wifilabel0
+	ui->welcome_screen_wifilabel0 = lv_label_create(ui->welcome_screen, NULL);
+	lv_label_set_text(ui->welcome_screen_wifilabel0, "NET");
+	lv_label_set_long_mode(ui->welcome_screen_wifilabel0, LV_LABEL_LONG_BREAK);
+	lv_label_set_align(ui->welcome_screen_wifilabel0, LV_LABEL_ALIGN_CENTER);
+
+	//Write style LV_LABEL_PART_MAIN for welcome_screen_wifilabel0
+	static lv_style_t style_welcome_screen_wifilabel0_main;
+	lv_style_init(&style_welcome_screen_wifilabel0_main);
+
+	//Write style state: LV_STATE_DEFAULT for style_welcome_screen_wifilabel0_main
+	lv_style_set_radius(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_bg_color(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	lv_style_set_bg_grad_color(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	lv_style_set_bg_grad_dir(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, LV_GRAD_DIR_VER);
+	lv_style_set_bg_opa(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, 255);
+	lv_style_set_text_color(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, lv_color_make(0x00, 0x00, 0x00));
+	lv_style_set_text_font(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, &lv_font_simsun_36);
+	lv_style_set_text_letter_space(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, 2);
+	lv_style_set_pad_left(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_right(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_top(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_bottom(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, 0);
+	lv_obj_add_style(ui->welcome_screen_wifilabel0, LV_LABEL_PART_MAIN, &style_welcome_screen_wifilabel0_main);
+	lv_obj_set_pos(ui->welcome_screen_wifilabel0, 550, 300);
+	lv_obj_set_size(ui->welcome_screen_wifilabel0, 120, 0);
+
 	//Write codes welcome_screen_avlogoimg0
 	ui->welcome_screen_avlogoimg0 = lv_img_create(ui->welcome_screen, NULL);
 
@@ -87,6 +114,33 @@ void setup_scr_welcome_screen(lv_ui *ui){
 	lv_obj_set_size(ui->welcome_screen_leftbtn0, 150, 150);
 	lv_imgbtn_set_src(ui->welcome_screen_leftbtn0,LV_BTN_STATE_RELEASED,&_left_arrow_alpha_150x150);
 	lv_imgbtn_set_src(ui->welcome_screen_leftbtn0,LV_BTN_STATE_PRESSED,&_left_arrow_dark_alpha_150x150);
+
+	//Write codes welcome_screen_helplabel0
+	ui->welcome_screen_helplabel0 = lv_label_create(ui->welcome_screen, NULL);
+	lv_label_set_text(ui->welcome_screen_helplabel0, "HELP");
+	lv_label_set_long_mode(ui->welcome_screen_helplabel0, LV_LABEL_LONG_BREAK);
+	lv_label_set_align(ui->welcome_screen_helplabel0, LV_LABEL_ALIGN_CENTER);
+
+	//Write style LV_LABEL_PART_MAIN for welcome_screen_helplabel0
+	static lv_style_t style_welcome_screen_helplabel0_main;
+	lv_style_init(&style_welcome_screen_helplabel0_main);
+
+	//Write style state: LV_STATE_DEFAULT for style_welcome_screen_helplabel0_main
+	lv_style_set_radius(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_bg_color(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	lv_style_set_bg_grad_color(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	lv_style_set_bg_grad_dir(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, LV_GRAD_DIR_VER);
+	lv_style_set_bg_opa(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, 255);
+	lv_style_set_text_color(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, lv_color_make(0x00, 0x00, 0x00));
+	lv_style_set_text_font(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, &lv_font_simsun_36);
+	lv_style_set_text_letter_space(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, 2);
+	lv_style_set_pad_left(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_right(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_top(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, 0);
+	lv_style_set_pad_bottom(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, 0);
+	lv_obj_add_style(ui->welcome_screen_helplabel0, LV_LABEL_PART_MAIN, &style_welcome_screen_helplabel0_main);
+	lv_obj_set_pos(ui->welcome_screen_helplabel0, 46, 300);
+	lv_obj_set_size(ui->welcome_screen_helplabel0, 130, 0);
 
 	//Write codes welcome_screen_redbtn0
 	ui->welcome_screen_redbtn0 = lv_imgbtn_create(ui->welcome_screen, NULL);
@@ -296,60 +350,6 @@ void setup_scr_welcome_screen(lv_ui *ui){
 	lv_obj_add_style(ui->welcome_screen_bluelabel0, LV_LABEL_PART_MAIN, &style_welcome_screen_bluelabel0_main);
 	lv_obj_set_pos(ui->welcome_screen_bluelabel0, 505, 978);
 	lv_obj_set_size(ui->welcome_screen_bluelabel0, 170, 0);
-
-	//Write codes welcome_screen_helplabel0
-	ui->welcome_screen_helplabel0 = lv_label_create(ui->welcome_screen, NULL);
-	lv_label_set_text(ui->welcome_screen_helplabel0, "HELP");
-	lv_label_set_long_mode(ui->welcome_screen_helplabel0, LV_LABEL_LONG_BREAK);
-	lv_label_set_align(ui->welcome_screen_helplabel0, LV_LABEL_ALIGN_CENTER);
-
-	//Write style LV_LABEL_PART_MAIN for welcome_screen_helplabel0
-	static lv_style_t style_welcome_screen_helplabel0_main;
-	lv_style_init(&style_welcome_screen_helplabel0_main);
-
-	//Write style state: LV_STATE_DEFAULT for style_welcome_screen_helplabel0_main
-	lv_style_set_radius(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, 0);
-	lv_style_set_bg_color(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
-	lv_style_set_bg_grad_color(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
-	lv_style_set_bg_grad_dir(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, LV_GRAD_DIR_VER);
-	lv_style_set_bg_opa(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, 255);
-	lv_style_set_text_color(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, lv_color_make(0x00, 0x00, 0x00));
-	lv_style_set_text_font(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, &lv_font_simsun_36);
-	lv_style_set_text_letter_space(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, 2);
-	lv_style_set_pad_left(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, 0);
-	lv_style_set_pad_right(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, 0);
-	lv_style_set_pad_top(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, 0);
-	lv_style_set_pad_bottom(&style_welcome_screen_helplabel0_main, LV_STATE_DEFAULT, 0);
-	lv_obj_add_style(ui->welcome_screen_helplabel0, LV_LABEL_PART_MAIN, &style_welcome_screen_helplabel0_main);
-	lv_obj_set_pos(ui->welcome_screen_helplabel0, 46, 300);
-	lv_obj_set_size(ui->welcome_screen_helplabel0, 130, 0);
-
-	//Write codes welcome_screen_wifilabel0
-	ui->welcome_screen_wifilabel0 = lv_label_create(ui->welcome_screen, NULL);
-	lv_label_set_text(ui->welcome_screen_wifilabel0, "NET");
-	lv_label_set_long_mode(ui->welcome_screen_wifilabel0, LV_LABEL_LONG_BREAK);
-	lv_label_set_align(ui->welcome_screen_wifilabel0, LV_LABEL_ALIGN_CENTER);
-
-	//Write style LV_LABEL_PART_MAIN for welcome_screen_wifilabel0
-	static lv_style_t style_welcome_screen_wifilabel0_main;
-	lv_style_init(&style_welcome_screen_wifilabel0_main);
-
-	//Write style state: LV_STATE_DEFAULT for style_welcome_screen_wifilabel0_main
-	lv_style_set_radius(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, 0);
-	lv_style_set_bg_color(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
-	lv_style_set_bg_grad_color(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
-	lv_style_set_bg_grad_dir(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, LV_GRAD_DIR_VER);
-	lv_style_set_bg_opa(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, 255);
-	lv_style_set_text_color(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, lv_color_make(0x00, 0x00, 0x00));
-	lv_style_set_text_font(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, &lv_font_simsun_36);
-	lv_style_set_text_letter_space(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, 2);
-	lv_style_set_pad_left(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, 0);
-	lv_style_set_pad_right(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, 0);
-	lv_style_set_pad_top(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, 0);
-	lv_style_set_pad_bottom(&style_welcome_screen_wifilabel0_main, LV_STATE_DEFAULT, 0);
-	lv_obj_add_style(ui->welcome_screen_wifilabel0, LV_LABEL_PART_MAIN, &style_welcome_screen_wifilabel0_main);
-	lv_obj_set_pos(ui->welcome_screen_wifilabel0, 550, 300);
-	lv_obj_set_size(ui->welcome_screen_wifilabel0, 120, 0);
 
 	//Write codes welcome_screen_iotimg
 	ui->welcome_screen_iotimg = lv_img_create(ui->welcome_screen, NULL);
