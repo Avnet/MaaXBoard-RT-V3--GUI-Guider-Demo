@@ -401,10 +401,12 @@ static lv_design_res_t lv_anim_img_design(lv_obj_t * img, const lv_area_t * clip
         return LV_DESIGN_RES_COVER;
     }
     else if(mode == LV_DESIGN_DRAW_MAIN) {
+        lv_obj_invalidate(lv_obj_get_parent(img));
         ancestor_design(img, clip_area, mode);
 
     }
     else if(mode == LV_DESIGN_DRAW_POST) {
+        lv_obj_invalidate(lv_obj_get_parent(img));
         ancestor_design(img, clip_area, mode);
     }
 
@@ -445,20 +447,11 @@ static lv_style_list_t * lv_anim_img_get_style(lv_obj_t * img, uint8_t type)
 
 static void index_change(lv_obj_t * obj, lv_anim_value_t index)
 {
-    static lv_coord_t last_index = -1;
-    lv_anim_img_ext_t* ext_attr = lv_obj_get_ext_attr(obj);
+    lv_coord_t idx;
 
-    if(index == ext_attr->pic_count)
-    {
-        return;
-    }
-
-    if(last_index != index)
-    {
-        lv_anim_img_set_src(obj, ext_attr->dsc[index]);
-        last_index = index;
-    }
-
+    lv_anim_img_ext_t * ext_attr = lv_obj_get_ext_attr(obj);
+    idx = index % ext_attr->pic_count;
+    lv_anim_img_set_src(obj, ext_attr->dsc[idx]);
 }
 
 

@@ -26,7 +26,7 @@ typedef int16_t lv_coord_t;
 #define LV_MEM_ADR 0
 #define LV_MEM_AUTO_DEFRAG 1
 #else /* LV_MEM_CUSTOM */
-#define LV_MEM_CUSTOM_INCLUDE FreeRTOS.h
+#define LV_MEM_CUSTOM_INCLUDE "FreeRTOS.h"
 #define LV_MEM_CUSTOM_ALLOC pvPortMalloc
 #define LV_MEM_CUSTOM_FREE vPortFree
 #endif    /* LV_MEM_CUSTOM */
@@ -73,8 +73,7 @@ typedef void * lv_group_user_data_t;
 
 #define LV_USE_GPU 1
 #define LV_USE_GPU_NXP_PXP 0
-#define LV_USE_GPU_NXP_PXP_DEFAULT_OSA 0
-#define LV_USE_GPU_NXP_VG_LITE 0
+#define LV_USE_GPU_NXP_PXP_AUTO_INIT 1
 #define LV_USE_FILESYSTEM 1
 
 #if LV_USE_FILESYSTEM
@@ -93,8 +92,12 @@ typedef void * lv_img_decoder_user_data_t;
 #define LV_ATTRIBUTE_TICK_INC
 #define LV_ATTRIBUTE_TASK_HANDLER
 #define LV_ATTRIBUTE_FLUSH_READY
-#define LV_ATTRIBUTE_MEM_ALIGN_SIZE
-#define LV_ATTRIBUTE_MEM_ALIGN
+
+#if LV_USE_GPU_NXP_VG_LITE
+#define LV_ATTRIBUTE_MEM_ALIGN_SIZE 64
+#define LV_ATTRIBUTE_MEM_ALIGN __attribute__((aligned(LV_ATTRIBUTE_MEM_ALIGN_SIZE)))
+#endif /* LV_USE_GPU_NXP_VG_LITE */
+
 #define LV_ATTRIBUTE_LARGE_CONST
 #define LV_ATTRIBUTE_FAST_MEM
 #define LV_EXPORT_CONST_INT(int_value) struct _silence_gcc_warning
@@ -332,5 +335,6 @@ typedef void * lv_font_user_data_t;
 #endif
 
 #define LV_USE_ANIM_IMG 1
+#define LV_USE_GUIDER_SIMULATOR 0
 
 #endif

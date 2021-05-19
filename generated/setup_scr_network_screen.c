@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include "gui_guider.h"
 #include "events_init.h"
+#include "custom.h"
 
 
 void setup_scr_network_screen(lv_ui *ui){
@@ -172,7 +173,6 @@ void setup_scr_network_screen(lv_ui *ui){
 	//Write codes network_screen_ssidlist
 	ui->network_screen_ssidlist = lv_list_create(ui->network_screen, NULL);
 	lv_list_set_edge_flash(ui->network_screen_ssidlist, true);
-	lv_list_set_anim_time(ui->network_screen_ssidlist, 255);
 
 	//Write style LV_LIST_PART_BG for network_screen_ssidlist
 	static lv_style_t style_network_screen_ssidlist_bg;
@@ -182,6 +182,9 @@ void setup_scr_network_screen(lv_ui *ui){
 	lv_style_set_radius(&style_network_screen_ssidlist_bg, LV_STATE_DEFAULT, 3);
 	lv_style_set_border_color(&style_network_screen_ssidlist_bg, LV_STATE_DEFAULT, lv_color_make(0xe1, 0xe6, 0xee));
 	lv_style_set_border_width(&style_network_screen_ssidlist_bg, LV_STATE_DEFAULT, 1);
+	lv_style_set_pad_left(&style_network_screen_ssidlist_bg, LV_STATE_DEFAULT, 5);
+	lv_style_set_pad_right(&style_network_screen_ssidlist_bg, LV_STATE_DEFAULT, 5);
+	lv_style_set_pad_top(&style_network_screen_ssidlist_bg, LV_STATE_DEFAULT, 5);
 	lv_obj_add_style(ui->network_screen_ssidlist, LV_LIST_PART_BG, &style_network_screen_ssidlist_bg);
 
 	//Write style LV_LIST_PART_SCROLLABLE for network_screen_ssidlist
