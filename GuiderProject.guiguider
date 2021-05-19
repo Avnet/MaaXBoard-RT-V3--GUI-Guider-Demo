@@ -136,7 +136,7 @@
 					"name": "rightbtn0",
 					"type": "imgbtn",
 					"left": 530,
-					"top": 140,
+					"top": 40,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -219,7 +219,7 @@
 					"name": "wifilabel0",
 					"type": "label",
 					"left": 550,
-					"top": 300,
+					"top": 200,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -255,7 +255,7 @@
 					"name": "avlogoimg0",
 					"type": "img",
 					"left": 235,
-					"top": 80,
+					"top": 60,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -319,7 +319,7 @@
 					"name": "leftbtn0",
 					"type": "imgbtn",
 					"left": 40,
-					"top": 140,
+					"top": 40,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -402,7 +402,7 @@
 					"name": "helplabel0",
 					"type": "label",
 					"left": 46,
-					"top": 300,
+					"top": 200,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -1300,7 +1300,7 @@
 					"name": "rightbtn0",
 					"type": "imgbtn",
 					"left": 530,
-					"top": 140,
+					"top": 40,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -1383,7 +1383,7 @@
 					"name": "usblabel",
 					"type": "label",
 					"left": 545,
-					"top": 300,
+					"top": 200,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -1483,7 +1483,7 @@
 					"name": "leftbtn0",
 					"type": "imgbtn",
 					"left": 40,
-					"top": 140,
+					"top": 40,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -1566,7 +1566,7 @@
 					"name": "startlabel",
 					"type": "label",
 					"left": 46,
-					"top": 300,
+					"top": 200,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -2954,7 +2954,7 @@
 						"type": "imgbtn",
 						"pos": [
 							530,
-							140
+							40
 						],
 						"size": [
 							150,
@@ -3014,7 +3014,7 @@
 						"type": "label",
 						"pos": [
 							550,
-							300
+							200
 						],
 						"size": [
 							120,
@@ -3077,7 +3077,7 @@
 						"type": "img",
 						"pos": [
 							235,
-							80
+							60
 						],
 						"size": [
 							250,
@@ -3113,7 +3113,7 @@
 						"type": "imgbtn",
 						"pos": [
 							40,
-							140
+							40
 						],
 						"size": [
 							150,
@@ -3173,7 +3173,7 @@
 						"type": "label",
 						"pos": [
 							46,
-							300
+							200
 						],
 						"size": [
 							130,
@@ -3962,7 +3962,7 @@
 						"type": "imgbtn",
 						"pos": [
 							530,
-							140
+							40
 						],
 						"size": [
 							150,
@@ -4022,7 +4022,7 @@
 						"type": "label",
 						"pos": [
 							545,
-							300
+							200
 						],
 						"size": [
 							128,
@@ -4121,7 +4121,7 @@
 						"type": "imgbtn",
 						"pos": [
 							40,
-							140
+							40
 						],
 						"size": [
 							150,
@@ -4181,7 +4181,7 @@
 						"type": "label",
 						"pos": [
 							46,
-							300
+							200
 						],
 						"size": [
 							128,
