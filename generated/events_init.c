@@ -11,52 +11,14 @@ void events_init(lv_ui *ui)
 {
 }
 
-static void welcome_screen_rightbtn0event_handler(lv_obj_t * obj, lv_event_t event)
-{
-	switch (event)
-	{
-	case LV_EVENT_RELEASED:
-	{
-		lv_obj_clean(lv_scr_act());
-		setup_scr_network_screen(&guider_ui);
-		lv_scr_load(guider_ui.network_screen);
-	}
-		break;
-	default:
-		break;
-	}
-}
-
-static void welcome_screen_leftbtn0event_handler(lv_obj_t * obj, lv_event_t event)
-{
-	switch (event)
-	{
-	case LV_EVENT_RELEASED:
-	{
-		lv_obj_clean(lv_scr_act());
-		setup_scr_help_screen(&guider_ui);
-		lv_scr_load(guider_ui.help_screen);
-	}
-		break;
-	default:
-		break;
-	}
-}
-
-static void welcome_screen_redbtn0event_handler(lv_obj_t * obj, lv_event_t event)
+static void screen1_LEDs_left_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 {
 	switch (event)
 	{
 	case LV_EVENT_PRESSED:
 	{
-		lv_obj_set_style_local_text_font(guider_ui.welcome_screen_redlabel0, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, &lv_font_simsun_28);
-		lv_label_set_text(guider_ui.welcome_screen_redlabel0, "Red LED ON!");
-	}
-		break;
-	case LV_EVENT_RELEASED:
-	{
-		lv_obj_set_style_local_text_font(guider_ui.welcome_screen_redlabel0, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, &lv_font_simsun_28);
-		lv_label_set_text(guider_ui.welcome_screen_redlabel0, "Red LED OFF");
+		setup_scr_screen0_MENU(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen0_MENU, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
 	default:
@@ -64,20 +26,35 @@ static void welcome_screen_redbtn0event_handler(lv_obj_t * obj, lv_event_t event
 	}
 }
 
-static void welcome_screen_greenbtn0event_handler(lv_obj_t * obj, lv_event_t event)
+static void screen1_LEDs_right_btnevent_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_RELEASED:
+	{
+		setup_scr_screen2_WIFI(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen2_WIFI, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+void events_init_screen1_LEDs(lv_ui *ui)
+{
+	lv_obj_set_event_cb(ui->screen1_LEDs_left_btn, screen1_LEDs_left_btnevent_handler);
+	lv_obj_set_event_cb(ui->screen1_LEDs_right_btn, screen1_LEDs_right_btnevent_handler);
+}
+
+static void screen0_MENU_btn_1event_handler(lv_obj_t * obj, lv_event_t event)
 {
 	switch (event)
 	{
 	case LV_EVENT_PRESSED:
 	{
-		lv_obj_set_style_local_text_font(guider_ui.welcome_screen_greenlabel0, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, &lv_font_simsun_28);
-		lv_label_set_text(guider_ui.welcome_screen_greenlabel0, "Green LED ON!");
-	}
-		break;
-	case LV_EVENT_RELEASED:
-	{
-		lv_obj_set_style_local_text_font(guider_ui.welcome_screen_greenlabel0, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, &lv_font_simsun_28);
-		lv_label_set_text(guider_ui.welcome_screen_greenlabel0, "Green LED OFF");
+		setup_scr_screen1_LEDs(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen1_LEDs, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
 	default:
@@ -85,20 +62,14 @@ static void welcome_screen_greenbtn0event_handler(lv_obj_t * obj, lv_event_t eve
 	}
 }
 
-static void welcome_screen_bluebtn0event_handler(lv_obj_t * obj, lv_event_t event)
+static void screen0_MENU_btn_2event_handler(lv_obj_t * obj, lv_event_t event)
 {
 	switch (event)
 	{
 	case LV_EVENT_PRESSED:
 	{
-		lv_obj_set_style_local_text_font(guider_ui.welcome_screen_bluelabel0, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, &lv_font_simsun_28);
-		lv_label_set_text(guider_ui.welcome_screen_bluelabel0, "Blue LED ON!");
-	}
-		break;
-	case LV_EVENT_RELEASED:
-	{
-		lv_obj_set_style_local_text_font(guider_ui.welcome_screen_bluelabel0, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, &lv_font_simsun_28);
-		lv_label_set_text(guider_ui.welcome_screen_bluelabel0, "Blue LED OFF!");
+		setup_scr_screen2_WIFI(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen2_WIFI, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
 	default:
@@ -106,24 +77,99 @@ static void welcome_screen_bluebtn0event_handler(lv_obj_t * obj, lv_event_t even
 	}
 }
 
-void events_init_welcome_screen(lv_ui *ui)
+static void screen0_MENU_btn_3event_handler(lv_obj_t * obj, lv_event_t event)
 {
-	lv_obj_set_event_cb(ui->welcome_screen_rightbtn0, welcome_screen_rightbtn0event_handler);
-	lv_obj_set_event_cb(ui->welcome_screen_leftbtn0, welcome_screen_leftbtn0event_handler);
-	lv_obj_set_event_cb(ui->welcome_screen_redbtn0, welcome_screen_redbtn0event_handler);
-	lv_obj_set_event_cb(ui->welcome_screen_greenbtn0, welcome_screen_greenbtn0event_handler);
-	lv_obj_set_event_cb(ui->welcome_screen_bluebtn0, welcome_screen_bluebtn0event_handler);
+	switch (event)
+	{
+	case LV_EVENT_PRESSED:
+	{
+		setup_scr_screen3_USB(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen3_USB, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
+	}
+		break;
+	default:
+		break;
+	}
 }
 
-static void network_screen_rightbtn0event_handler(lv_obj_t * obj, lv_event_t event)
+static void screen0_MENU_btn_4event_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_PRESSED:
+	{
+		setup_scr_screen4_AV(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen4_AV, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+static void screen0_MENU_btn_5event_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_PRESSED:
+	{
+		setup_scr_screen5_SYSTEM(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen5_SYSTEM, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+static void screen0_MENU_btn_6event_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_PRESSED:
+	{
+		setup_scr_screen6_HELP(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen6_HELP, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+void events_init_screen0_MENU(lv_ui *ui)
+{
+	lv_obj_set_event_cb(ui->screen0_MENU_btn_1, screen0_MENU_btn_1event_handler);
+	lv_obj_set_event_cb(ui->screen0_MENU_btn_2, screen0_MENU_btn_2event_handler);
+	lv_obj_set_event_cb(ui->screen0_MENU_btn_3, screen0_MENU_btn_3event_handler);
+	lv_obj_set_event_cb(ui->screen0_MENU_btn_4, screen0_MENU_btn_4event_handler);
+	lv_obj_set_event_cb(ui->screen0_MENU_btn_5, screen0_MENU_btn_5event_handler);
+	lv_obj_set_event_cb(ui->screen0_MENU_btn_6, screen0_MENU_btn_6event_handler);
+}
+
+static void screen2_WIFI_left_btnevent_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_PRESSED:
+	{
+		setup_scr_screen0_MENU(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen0_MENU, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+static void screen2_WIFI_right_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 {
 	switch (event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		lv_obj_clean(lv_scr_act());
-		setup_scr_usb_screen(&guider_ui);
-		lv_scr_load(guider_ui.usb_screen);
+		setup_scr_screen3_USB(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen3_USB, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
 	default:
@@ -131,15 +177,35 @@ static void network_screen_rightbtn0event_handler(lv_obj_t * obj, lv_event_t eve
 	}
 }
 
-static void network_screen_leftbtn0event_handler(lv_obj_t * obj, lv_event_t event)
+void events_init_screen2_WIFI(lv_ui *ui)
+{
+	lv_obj_set_event_cb(ui->screen2_WIFI_left_btn, screen2_WIFI_left_btnevent_handler);
+	lv_obj_set_event_cb(ui->screen2_WIFI_right_btn, screen2_WIFI_right_btnevent_handler);
+}
+
+static void screen3_USB_left_btnevent_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_PRESSED:
+	{
+		setup_scr_screen0_MENU(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen0_MENU, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+static void screen3_USB_right_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 {
 	switch (event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		lv_obj_clean(lv_scr_act());
-		setup_scr_welcome_screen(&guider_ui);
-		lv_scr_load(guider_ui.welcome_screen);
+		setup_scr_screen4_AV(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen4_AV, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
 	default:
@@ -147,21 +213,35 @@ static void network_screen_leftbtn0event_handler(lv_obj_t * obj, lv_event_t even
 	}
 }
 
-void events_init_network_screen(lv_ui *ui)
+void events_init_screen3_USB(lv_ui *ui)
 {
-	lv_obj_set_event_cb(ui->network_screen_rightbtn0, network_screen_rightbtn0event_handler);
-	lv_obj_set_event_cb(ui->network_screen_leftbtn0, network_screen_leftbtn0event_handler);
+	lv_obj_set_event_cb(ui->screen3_USB_left_btn, screen3_USB_left_btnevent_handler);
+	lv_obj_set_event_cb(ui->screen3_USB_right_btn, screen3_USB_right_btnevent_handler);
 }
 
-static void usb_screen_rightbtn0event_handler(lv_obj_t * obj, lv_event_t event)
+static void screen4_AV_left_btnevent_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_PRESSED:
+	{
+		setup_scr_screen0_MENU(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen0_MENU, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+static void screen4_AV_right_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 {
 	switch (event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		lv_obj_clean(lv_scr_act());
-		setup_scr_video_screen(&guider_ui);
-		lv_scr_load(guider_ui.video_screen);
+		setup_scr_screen5_SYSTEM(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen5_SYSTEM, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
 	default:
@@ -169,15 +249,35 @@ static void usb_screen_rightbtn0event_handler(lv_obj_t * obj, lv_event_t event)
 	}
 }
 
-static void usb_screen_leftbtn0event_handler(lv_obj_t * obj, lv_event_t event)
+void events_init_screen4_AV(lv_ui *ui)
+{
+	lv_obj_set_event_cb(ui->screen4_AV_left_btn, screen4_AV_left_btnevent_handler);
+	lv_obj_set_event_cb(ui->screen4_AV_right_btn, screen4_AV_right_btnevent_handler);
+}
+
+static void screen5_SYSTEM_left_btnevent_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_PRESSED:
+	{
+		setup_scr_screen0_MENU(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen0_MENU, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+static void screen5_SYSTEM_right_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 {
 	switch (event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		lv_obj_clean(lv_scr_act());
-		setup_scr_network_screen(&guider_ui);
-		lv_scr_load(guider_ui.network_screen);
+		setup_scr_screen1_LEDs(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen1_LEDs, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
 	default:
@@ -185,21 +285,20 @@ static void usb_screen_leftbtn0event_handler(lv_obj_t * obj, lv_event_t event)
 	}
 }
 
-void events_init_usb_screen(lv_ui *ui)
+void events_init_screen5_SYSTEM(lv_ui *ui)
 {
-	lv_obj_set_event_cb(ui->usb_screen_rightbtn0, usb_screen_rightbtn0event_handler);
-	lv_obj_set_event_cb(ui->usb_screen_leftbtn0, usb_screen_leftbtn0event_handler);
+	lv_obj_set_event_cb(ui->screen5_SYSTEM_left_btn, screen5_SYSTEM_left_btnevent_handler);
+	lv_obj_set_event_cb(ui->screen5_SYSTEM_right_btn, screen5_SYSTEM_right_btnevent_handler);
 }
 
-static void video_screen_rightbtn0event_handler(lv_obj_t * obj, lv_event_t event)
+static void screen6_HELP_leftbtn0event_handler(lv_obj_t * obj, lv_event_t event)
 {
 	switch (event)
 	{
-	case LV_EVENT_RELEASED:
+	case LV_EVENT_PRESSED:
 	{
-		lv_obj_clean(lv_scr_act());
-		setup_scr_system_screen(&guider_ui);
-		lv_scr_load(guider_ui.system_screen);
+		setup_scr_screen0_MENU(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen0_MENU, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
 	default:
@@ -207,62 +306,7 @@ static void video_screen_rightbtn0event_handler(lv_obj_t * obj, lv_event_t event
 	}
 }
 
-static void video_screen_leftbtn0event_handler(lv_obj_t * obj, lv_event_t event)
+void events_init_screen6_HELP(lv_ui *ui)
 {
-	switch (event)
-	{
-	case LV_EVENT_RELEASED:
-	{
-		lv_obj_clean(lv_scr_act());
-		setup_scr_usb_screen(&guider_ui);
-		lv_scr_load(guider_ui.usb_screen);
-	}
-		break;
-	default:
-		break;
-	}
-}
-
-void events_init_video_screen(lv_ui *ui)
-{
-	lv_obj_set_event_cb(ui->video_screen_rightbtn0, video_screen_rightbtn0event_handler);
-	lv_obj_set_event_cb(ui->video_screen_leftbtn0, video_screen_leftbtn0event_handler);
-}
-
-static void system_screen_rightbtn0event_handler(lv_obj_t * obj, lv_event_t event)
-{
-	switch (event)
-	{
-	case LV_EVENT_RELEASED:
-	{
-		lv_obj_clean(lv_scr_act());
-		setup_scr_help_screen(&guider_ui);
-		lv_scr_load(guider_ui.help_screen);
-	}
-		break;
-	default:
-		break;
-	}
-}
-
-static void system_screen_leftbtn0event_handler(lv_obj_t * obj, lv_event_t event)
-{
-	switch (event)
-	{
-	case LV_EVENT_RELEASED:
-	{
-		lv_obj_clean(lv_scr_act());
-		setup_scr_video_screen(&guider_ui);
-		lv_scr_load(guider_ui.video_screen);
-	}
-		break;
-	default:
-		break;
-	}
-}
-
-void events_init_system_screen(lv_ui *ui)
-{
-	lv_obj_set_event_cb(ui->system_screen_rightbtn0, system_screen_rightbtn0event_handler);
-	lv_obj_set_event_cb(ui->system_screen_leftbtn0, system_screen_leftbtn0event_handler);
+	lv_obj_set_event_cb(ui->screen6_HELP_leftbtn0, screen6_HELP_leftbtn0event_handler);
 }

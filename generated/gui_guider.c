@@ -9,6 +9,6 @@
 
 
 void setup_ui(lv_ui *ui){
-	setup_scr_welcome_screen(ui);
-	lv_scr_load(ui->welcome_screen);
+	setup_scr_screen1_LEDs(ui);
+	lv_scr_load(ui->screen1_LEDs);
 }
