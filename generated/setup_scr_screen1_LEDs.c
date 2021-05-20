@@ -201,10 +201,10 @@ void setup_scr_screen1_LEDs(lv_ui *ui){
 	lv_obj_add_style(ui->screen1_LEDs_redbtn0, LV_IMGBTN_PART_MAIN, &style_screen1_LEDs_redbtn0_main);
 	lv_obj_set_pos(ui->screen1_LEDs_redbtn0, 27, 1063);
 	lv_obj_set_size(ui->screen1_LEDs_redbtn0, 190, 190);
-	lv_imgbtn_set_src(ui->screen1_LEDs_redbtn0,LV_BTN_STATE_RELEASED,&_ButtonRed_alpha_190x190);
-	lv_imgbtn_set_src(ui->screen1_LEDs_redbtn0,LV_BTN_STATE_PRESSED,&_ButtonRedDARK_alpha_190x190);
-	lv_imgbtn_set_src(ui->screen1_LEDs_redbtn0,LV_BTN_STATE_CHECKED_RELEASED,&_ButtonRedDARK_alpha_190x190);
-	lv_imgbtn_set_src(ui->screen1_LEDs_redbtn0,LV_BTN_STATE_CHECKED_PRESSED,&_ButtonRed_alpha_190x190);
+	lv_imgbtn_set_src(ui->screen1_LEDs_redbtn0,LV_BTN_STATE_RELEASED,&_ButtonRedDARK_alpha_190x190);
+	lv_imgbtn_set_src(ui->screen1_LEDs_redbtn0,LV_BTN_STATE_PRESSED,&_ButtonRed_alpha_190x190);
+	lv_imgbtn_set_src(ui->screen1_LEDs_redbtn0,LV_BTN_STATE_CHECKED_RELEASED,&_ButtonRed_alpha_190x190);
+	lv_imgbtn_set_src(ui->screen1_LEDs_redbtn0,LV_BTN_STATE_CHECKED_PRESSED,&_ButtonRedDARK_alpha_190x190);
 	lv_imgbtn_set_checkable(ui->screen1_LEDs_redbtn0, true);
 
 	//Write codes screen1_LEDs_greenbtn0
@@ -222,10 +222,10 @@ void setup_scr_screen1_LEDs(lv_ui *ui){
 	lv_obj_add_style(ui->screen1_LEDs_greenbtn0, LV_IMGBTN_PART_MAIN, &style_screen1_LEDs_greenbtn0_main);
 	lv_obj_set_pos(ui->screen1_LEDs_greenbtn0, 264, 1062);
 	lv_obj_set_size(ui->screen1_LEDs_greenbtn0, 190, 190);
-	lv_imgbtn_set_src(ui->screen1_LEDs_greenbtn0,LV_BTN_STATE_RELEASED,&_ButtonGreen_alpha_190x190);
-	lv_imgbtn_set_src(ui->screen1_LEDs_greenbtn0,LV_BTN_STATE_PRESSED,&_ButtonGreenDARK_alpha_190x190);
-	lv_imgbtn_set_src(ui->screen1_LEDs_greenbtn0,LV_BTN_STATE_CHECKED_RELEASED,&_ButtonGreenDARK_alpha_190x190);
-	lv_imgbtn_set_src(ui->screen1_LEDs_greenbtn0,LV_BTN_STATE_CHECKED_PRESSED,&_ButtonGreen_alpha_190x190);
+	lv_imgbtn_set_src(ui->screen1_LEDs_greenbtn0,LV_BTN_STATE_RELEASED,&_ButtonGreenDARK_alpha_190x190);
+	lv_imgbtn_set_src(ui->screen1_LEDs_greenbtn0,LV_BTN_STATE_PRESSED,&_ButtonGreen_alpha_190x190);
+	lv_imgbtn_set_src(ui->screen1_LEDs_greenbtn0,LV_BTN_STATE_CHECKED_RELEASED,&_ButtonGreen_alpha_190x190);
+	lv_imgbtn_set_src(ui->screen1_LEDs_greenbtn0,LV_BTN_STATE_CHECKED_PRESSED,&_ButtonGreenDARK_alpha_190x190);
 	lv_imgbtn_set_checkable(ui->screen1_LEDs_greenbtn0, true);
 
 	//Write codes screen1_LEDs_bluebtn0
@@ -243,10 +243,10 @@ void setup_scr_screen1_LEDs(lv_ui *ui){
 	lv_obj_add_style(ui->screen1_LEDs_bluebtn0, LV_IMGBTN_PART_MAIN, &style_screen1_LEDs_bluebtn0_main);
 	lv_obj_set_pos(ui->screen1_LEDs_bluebtn0, 503, 1061);
 	lv_obj_set_size(ui->screen1_LEDs_bluebtn0, 190, 190);
-	lv_imgbtn_set_src(ui->screen1_LEDs_bluebtn0,LV_BTN_STATE_RELEASED,&_ButtonBlue_alpha_190x190);
-	lv_imgbtn_set_src(ui->screen1_LEDs_bluebtn0,LV_BTN_STATE_PRESSED,&_ButtonBlueDARK_alpha_190x190);
-	lv_imgbtn_set_src(ui->screen1_LEDs_bluebtn0,LV_BTN_STATE_CHECKED_RELEASED,&_ButtonBlueDARK_alpha_190x190);
-	lv_imgbtn_set_src(ui->screen1_LEDs_bluebtn0,LV_BTN_STATE_CHECKED_PRESSED,&_ButtonBlue_alpha_190x190);
+	lv_imgbtn_set_src(ui->screen1_LEDs_bluebtn0,LV_BTN_STATE_RELEASED,&_ButtonBlueDARK_alpha_190x190);
+	lv_imgbtn_set_src(ui->screen1_LEDs_bluebtn0,LV_BTN_STATE_PRESSED,&_ButtonBlue_alpha_190x190);
+	lv_imgbtn_set_src(ui->screen1_LEDs_bluebtn0,LV_BTN_STATE_CHECKED_RELEASED,&_ButtonBlue_alpha_190x190);
+	lv_imgbtn_set_src(ui->screen1_LEDs_bluebtn0,LV_BTN_STATE_CHECKED_PRESSED,&_ButtonBlueDARK_alpha_190x190);
 	lv_imgbtn_set_checkable(ui->screen1_LEDs_bluebtn0, true);
 
 	//Init events for screen
