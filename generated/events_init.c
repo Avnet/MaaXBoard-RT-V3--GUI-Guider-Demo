@@ -291,7 +291,7 @@ void events_init_screen5_SYSTEM(lv_ui *ui)
 	lv_obj_set_event_cb(ui->screen5_SYSTEM_right_btn, screen5_SYSTEM_right_btnevent_handler);
 }
 
-static void screen6_HELP_leftbtn0event_handler(lv_obj_t * obj, lv_event_t event)
+static void screen6_HELP_left_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 {
 	switch (event)
 	{
@@ -308,5 +308,5 @@ static void screen6_HELP_leftbtn0event_handler(lv_obj_t * obj, lv_event_t event)
 
 void events_init_screen6_HELP(lv_ui *ui)
 {
-	lv_obj_set_event_cb(ui->screen6_HELP_leftbtn0, screen6_HELP_leftbtn0event_handler);
+	lv_obj_set_event_cb(ui->screen6_HELP_left_btn, screen6_HELP_left_btnevent_handler);
 }

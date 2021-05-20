@@ -55,6 +55,14 @@ typedef struct
 	lv_obj_t *screen2_WIFI_right_btn_label;
 	lv_obj_t *screen2_WIFI_right_label;
 	lv_obj_t *screen2_WIFI_img_5oodt29s;
+	lv_obj_t *screen2_WIFI_SSIDs_label;
+	lv_obj_t *screen2_WIFI_ssid_list;
+	lv_obj_t *screen2_WIFI_e100Mb_label;
+	lv_obj_t *screen2_WIFI_e100Mb_cont;
+	lv_obj_t *screen2_WIFI_e100Mb_text;
+	lv_obj_t *screen2_WIFI_e1Gb_label;
+	lv_obj_t *screen2_WIFI_e1Gb_cont;
+	lv_obj_t *screen2_WIFI_e1Gb_text;
 	lv_obj_t *screen3_USB;
 	lv_obj_t *screen3_USB_canvas_white;
 	lv_obj_t *screen3_USB_left_btn;
@@ -87,9 +95,9 @@ typedef struct
 	lv_obj_t *screen5_SYSTEM_img_5oodt29s;
 	lv_obj_t *screen6_HELP;
 	lv_obj_t *screen6_HELP_canvas_white;
-	lv_obj_t *screen6_HELP_leftbtn0;
-	lv_obj_t *screen6_HELP_leftbtn0_label;
-	lv_obj_t *screen6_HELP_label_MENU4;
+	lv_obj_t *screen6_HELP_left_btn;
+	lv_obj_t *screen6_HELP_left_btn_label;
+	lv_obj_t *screen6_HELP_left_label;
 	lv_obj_t *screen6_HELP_img_5oodt29s;
 	lv_obj_t *screen6_HELP_label_1;
 }lv_ui;
