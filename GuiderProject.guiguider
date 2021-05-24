@@ -138,7 +138,7 @@
 					"default_style": false,
 					"event": [
 						{
-							"src": "leftbtn0",
+							"src": "left_btn",
 							"trigger": "pressed",
 							"dst": "screen",
 							"action": "load_screen",
@@ -321,8 +321,8 @@
 					"default_style": false,
 					"event": [
 						{
-							"src": "btn_WIFI",
-							"trigger": "released",
+							"src": "right_btn",
+							"trigger": "pressed",
 							"dst": "screen1_LEDs2",
 							"action": "load_screen",
 							"anim_type": "LV_SCR_LOAD_ANIM_NONE",
@@ -574,17 +574,7 @@
 					"duration": 100,
 					"id": "v1kocb38",
 					"default_style": false,
-					"event": [
-						{
-							"src": "redbtn0",
-							"trigger": "pressed",
-							"dst": "",
-							"action": "set_text",
-							"font_family": "simsun",
-							"font": "20",
-							"value": "Red LED active"
-						}
-					]
+					"event": []
 				},
 				{
 					"width": 190,
@@ -649,17 +639,7 @@
 					"duration": 100,
 					"id": "g3aq687u",
 					"default_style": false,
-					"event": [
-						{
-							"src": "greenbtn0",
-							"trigger": "pressed",
-							"dst": "",
-							"action": "set_text",
-							"font_family": "simsun",
-							"font": "20",
-							"value": "Green LED active"
-						}
-					]
+					"event": []
 				},
 				{
 					"width": 190,
@@ -724,17 +704,7 @@
 					"duration": 100,
 					"id": "9kchkpfx",
 					"default_style": false,
-					"event": [
-						{
-							"src": "bluebtn0",
-							"trigger": "pressed",
-							"dst": "",
-							"action": "set_text",
-							"font_family": "simsun",
-							"font": "20",
-							"value": "Blue LED active"
-						}
-					]
+					"event": []
 				}
 			]
 		},
@@ -1604,7 +1574,7 @@
 					"default_style": false,
 					"event": [
 						{
-							"src": "leftbtn0",
+							"src": "left_btn",
 							"trigger": "pressed",
 							"dst": "screen",
 							"action": "load_screen",
@@ -1788,7 +1758,7 @@
 					"event": [
 						{
 							"src": "right_btn",
-							"trigger": "released",
+							"trigger": "pressed",
 							"dst": "screen2_WIFI7",
 							"action": "load_screen",
 							"anim_type": "LV_SCR_LOAD_ANIM_NONE",
@@ -2783,7 +2753,7 @@
 					"event": [
 						{
 							"src": "right_btn",
-							"trigger": "released",
+							"trigger": "pressed",
 							"dst": "screen3_USB7",
 							"action": "load_screen",
 							"anim_type": "LV_SCR_LOAD_ANIM_NONE",
@@ -3184,7 +3154,7 @@
 					"event": [
 						{
 							"src": "right_btn",
-							"trigger": "released",
+							"trigger": "pressed",
 							"dst": "screen3_AV28",
 							"action": "load_screen",
 							"anim_type": "LV_SCR_LOAD_ANIM_NONE",
@@ -3585,7 +3555,7 @@
 					"event": [
 						{
 							"src": "right_btn",
-							"trigger": "released",
+							"trigger": "pressed",
 							"dst": "tyyf75tz",
 							"action": "load_screen",
 							"anim_type": "LV_SCR_LOAD_ANIM_NONE",
@@ -3802,7 +3772,7 @@
 					"default_style": false,
 					"event": [
 						{
-							"src": "leftbtn0",
+							"src": "left_btn",
 							"trigger": "pressed",
 							"dst": "screen",
 							"action": "load_screen",
@@ -7489,39 +7459,12 @@
 			},
 			{
 				"src": "screen1_LEDs_right_btn",
-				"trigger": "released",
+				"trigger": "pressed",
 				"dst": "screen2_WIFI",
 				"action": "load_screen",
 				"anim_type": "LV_SCR_LOAD_ANIM_NONE",
 				"delay": 0,
 				"duration": 0
-			},
-			{
-				"src": "screen1_LEDs_redbtn0",
-				"trigger": "pressed",
-				"dst": "",
-				"action": "set_text",
-				"font_family": "simsun",
-				"font": "20",
-				"value": "Red LED active"
-			},
-			{
-				"src": "screen1_LEDs_greenbtn0",
-				"trigger": "pressed",
-				"dst": "",
-				"action": "set_text",
-				"font_family": "simsun",
-				"font": "20",
-				"value": "Green LED active"
-			},
-			{
-				"src": "screen1_LEDs_bluebtn0",
-				"trigger": "pressed",
-				"dst": "",
-				"action": "set_text",
-				"font_family": "simsun",
-				"font": "20",
-				"value": "Blue LED active"
 			},
 			{
 				"src": "screen0_MENU_btn_1",
@@ -7588,7 +7531,7 @@
 			},
 			{
 				"src": "screen2_WIFI_right_btn",
-				"trigger": "released",
+				"trigger": "pressed",
 				"dst": "screen3_USB",
 				"action": "load_screen",
 				"anim_type": "LV_SCR_LOAD_ANIM_NONE",
@@ -7606,7 +7549,7 @@
 			},
 			{
 				"src": "screen3_USB_right_btn",
-				"trigger": "released",
+				"trigger": "pressed",
 				"dst": "screen4_AV",
 				"action": "load_screen",
 				"anim_type": "LV_SCR_LOAD_ANIM_NONE",
@@ -7624,7 +7567,7 @@
 			},
 			{
 				"src": "screen4_AV_right_btn",
-				"trigger": "released",
+				"trigger": "pressed",
 				"dst": "screen5_SYSTEM",
 				"action": "load_screen",
 				"anim_type": "LV_SCR_LOAD_ANIM_NONE",
@@ -7642,7 +7585,7 @@
 			},
 			{
 				"src": "screen5_SYSTEM_right_btn",
-				"trigger": "released",
+				"trigger": "pressed",
 				"dst": "screen1_LEDs",
 				"action": "load_screen",
 				"anim_type": "LV_SCR_LOAD_ANIM_NONE",

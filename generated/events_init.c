@@ -30,7 +30,7 @@ static void screen1_LEDs_right_btnevent_handler(lv_obj_t * obj, lv_event_t event
 {
 	switch (event)
 	{
-	case LV_EVENT_RELEASED:
+	case LV_EVENT_PRESSED:
 	{
 		setup_scr_screen2_WIFI(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen2_WIFI, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
@@ -166,7 +166,7 @@ static void screen2_WIFI_right_btnevent_handler(lv_obj_t * obj, lv_event_t event
 {
 	switch (event)
 	{
-	case LV_EVENT_RELEASED:
+	case LV_EVENT_PRESSED:
 	{
 		setup_scr_screen3_USB(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen3_USB, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
@@ -202,7 +202,7 @@ static void screen3_USB_right_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 {
 	switch (event)
 	{
-	case LV_EVENT_RELEASED:
+	case LV_EVENT_PRESSED:
 	{
 		setup_scr_screen4_AV(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen4_AV, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
@@ -238,7 +238,7 @@ static void screen4_AV_right_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 {
 	switch (event)
 	{
-	case LV_EVENT_RELEASED:
+	case LV_EVENT_PRESSED:
 	{
 		setup_scr_screen5_SYSTEM(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen5_SYSTEM, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
@@ -274,7 +274,7 @@ static void screen5_SYSTEM_right_btnevent_handler(lv_obj_t * obj, lv_event_t eve
 {
 	switch (event)
 	{
-	case LV_EVENT_RELEASED:
+	case LV_EVENT_PRESSED:
 	{
 		setup_scr_screen1_LEDs(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen1_LEDs, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
