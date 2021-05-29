@@ -38,9 +38,9 @@
 	"ImportFonts": {
 		"simsun": "simsun.woff",
 		"montserratMedium": "Montserrat-medium.ttf",
-		"OpenSans_Light": "font/OpenSans_Light.ttf",
-		"OpenSans_Regular": "font/OpenSans_Regular.ttf",
-		"OpenSans_SemiBold": "font/OpenSans_SemiBold.ttf"
+		"OpenSans_Light": "font/opensans_light.ttf",
+		"OpenSans_Regular": "font/opensans_regular.ttf",
+		"OpenSans_SemiBold": "font/opensans_semibold.ttf"
 	},
 	"FrontJson": [
 		{
@@ -142,7 +142,7 @@
 					"event": [
 						{
 							"src": "left_btn",
-							"trigger": "pressed",
+							"trigger": "released",
 							"dst": "screen",
 							"action": "load_screen",
 							"anim_type": "LV_SCR_LOAD_ANIM_NONE",
@@ -325,7 +325,7 @@
 					"event": [
 						{
 							"src": "right_btn",
-							"trigger": "pressed",
+							"trigger": "released",
 							"dst": "screen1_LEDs2",
 							"action": "load_screen",
 							"anim_type": "LV_SCR_LOAD_ANIM_NONE",
@@ -505,7 +505,14 @@
 					"duration": 100,
 					"id": "v1kocb38",
 					"default_style": false,
-					"event": []
+					"event": [
+						{
+							"src": "redbtn0",
+							"trigger": "pressed",
+							"dst": "na40puhx",
+							"action": "hidden"
+						}
+					]
 				},
 				{
 					"width": 190,
@@ -570,7 +577,14 @@
 					"duration": 100,
 					"id": "g3aq687u",
 					"default_style": false,
-					"event": []
+					"event": [
+						{
+							"src": "greenbtn0",
+							"trigger": "pressed",
+							"dst": "j033habp",
+							"action": "hidden"
+						}
+					]
 				},
 				{
 					"width": 190,
@@ -635,7 +649,14 @@
 					"duration": 100,
 					"id": "9kchkpfx",
 					"default_style": false,
-					"event": []
+					"event": [
+						{
+							"src": "bluebtn0",
+							"trigger": "pressed",
+							"dst": "mfqj2bls",
+							"action": "hidden"
+						}
+					]
 				},
 				{
 					"name": "led_red_on",
@@ -774,8 +795,8 @@
 					"default_style": false,
 					"event": [
 						{
-							"src": "left_btn",
-							"trigger": "pressed",
+							"src": "home_btn",
+							"trigger": "released",
 							"dst": "screen",
 							"action": "load_screen",
 							"anim_type": "LV_SCR_LOAD_ANIM_NONE",
@@ -8020,7 +8041,7 @@
 		"event": [
 			{
 				"src": "screen1_LEDs_left_btn",
-				"trigger": "pressed",
+				"trigger": "released",
 				"dst": "screen0_MENU",
 				"action": "load_screen",
 				"anim_type": "LV_SCR_LOAD_ANIM_NONE",
@@ -8029,7 +8050,7 @@
 			},
 			{
 				"src": "screen1_LEDs_right_btn",
-				"trigger": "pressed",
+				"trigger": "released",
 				"dst": "screen2_WIFI",
 				"action": "load_screen",
 				"anim_type": "LV_SCR_LOAD_ANIM_NONE",
@@ -8037,8 +8058,26 @@
 				"duration": 0
 			},
 			{
-				"src": "screen1_LEDs_home_btn",
+				"src": "screen1_LEDs_redbtn0",
 				"trigger": "pressed",
+				"dst": "screen1_LEDs_led_red_off",
+				"action": "hidden"
+			},
+			{
+				"src": "screen1_LEDs_greenbtn0",
+				"trigger": "pressed",
+				"dst": "screen1_LEDs_led_green_off",
+				"action": "hidden"
+			},
+			{
+				"src": "screen1_LEDs_bluebtn0",
+				"trigger": "pressed",
+				"dst": "screen1_LEDs_led_blue_off",
+				"action": "hidden"
+			},
+			{
+				"src": "screen1_LEDs_home_btn",
+				"trigger": "released",
 				"dst": "screen0_MENU",
 				"action": "load_screen",
 				"anim_type": "LV_SCR_LOAD_ANIM_NONE",

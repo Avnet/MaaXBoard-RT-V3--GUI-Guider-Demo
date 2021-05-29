@@ -15,7 +15,7 @@ static void screen1_LEDs_left_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 {
 	switch (event)
 	{
-	case LV_EVENT_PRESSED:
+	case LV_EVENT_RELEASED:
 	{
 		setup_scr_screen0_MENU(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen0_MENU, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
@@ -30,10 +30,52 @@ static void screen1_LEDs_right_btnevent_handler(lv_obj_t * obj, lv_event_t event
 {
 	switch (event)
 	{
-	case LV_EVENT_PRESSED:
+	case LV_EVENT_RELEASED:
 	{
 		setup_scr_screen2_WIFI(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen2_WIFI, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+static void screen1_LEDs_redbtn0event_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_PRESSED:
+	{
+		lv_obj_set_hidden(guider_ui.screen1_LEDs_led_red_off, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+static void screen1_LEDs_greenbtn0event_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_PRESSED:
+	{
+		lv_obj_set_hidden(guider_ui.screen1_LEDs_led_green_off, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+static void screen1_LEDs_bluebtn0event_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_PRESSED:
+	{
+		lv_obj_set_hidden(guider_ui.screen1_LEDs_led_blue_off, true);
 	}
 		break;
 	default:
@@ -45,7 +87,7 @@ static void screen1_LEDs_home_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 {
 	switch (event)
 	{
-	case LV_EVENT_PRESSED:
+	case LV_EVENT_RELEASED:
 	{
 		setup_scr_screen0_MENU(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen0_MENU, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
@@ -60,6 +102,9 @@ void events_init_screen1_LEDs(lv_ui *ui)
 {
 	lv_obj_set_event_cb(ui->screen1_LEDs_left_btn, screen1_LEDs_left_btnevent_handler);
 	lv_obj_set_event_cb(ui->screen1_LEDs_right_btn, screen1_LEDs_right_btnevent_handler);
+	lv_obj_set_event_cb(ui->screen1_LEDs_redbtn0, screen1_LEDs_redbtn0event_handler);
+	lv_obj_set_event_cb(ui->screen1_LEDs_greenbtn0, screen1_LEDs_greenbtn0event_handler);
+	lv_obj_set_event_cb(ui->screen1_LEDs_bluebtn0, screen1_LEDs_bluebtn0event_handler);
 	lv_obj_set_event_cb(ui->screen1_LEDs_home_btn, screen1_LEDs_home_btnevent_handler);
 }
 
