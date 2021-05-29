@@ -166,7 +166,7 @@
 					"bg_opa": 255,
 					"text_color": "#138036",
 					"font": "40",
-					"font_family": "OpenSans_Light",
+					"font_family": "OpenSans_Regular",
 					"letter_space": 2,
 					"radius": 0,
 					"paddingTop": 0,
@@ -181,7 +181,7 @@
 							"radius": 0,
 							"text_color": "#138036",
 							"font": "40",
-							"font_family": "OpenSans_Light",
+							"font_family": "OpenSans_Regular",
 							"letter_space": 2,
 							"bg_color": "#ffffff",
 							"bg_grad_color": "#ffffff",
@@ -349,7 +349,7 @@
 					"bg_opa": 255,
 					"text_color": "#138036",
 					"font": "40",
-					"font_family": "OpenSans_Light",
+					"font_family": "OpenSans_Regular",
 					"letter_space": 2,
 					"radius": 0,
 					"paddingTop": 0,
@@ -364,7 +364,7 @@
 							"radius": 0,
 							"text_color": "#138036",
 							"font": "40",
-							"font_family": "OpenSans_Light",
+							"font_family": "OpenSans_Regular",
 							"letter_space": 2,
 							"bg_color": "#ffffff",
 							"bg_grad_color": "#ffffff",
@@ -458,9 +458,9 @@
 					"image_recolor": "#ffffff",
 					"image_recolor_opa": 0,
 					"image_opa": 255,
-					"font_family": "simsun",
+					"font_family": "OpenSans_Regular",
 					"text_color": "#000000",
-					"font": 12,
+					"font": "36",
 					"style": [
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
@@ -469,9 +469,9 @@
 							"image_recolor": "#ffffff",
 							"image_recolor_opa": 0,
 							"image_opa": 255,
-							"font_family": "simsun",
+							"font_family": "OpenSans_Regular",
 							"text_color": "#000000",
-							"font": 12
+							"font": "36"
 						},
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
@@ -523,9 +523,9 @@
 					"image_recolor": "#ffffff",
 					"image_recolor_opa": 0,
 					"image_opa": 255,
-					"font_family": "simsun",
+					"font_family": "OpenSans_Regular",
 					"text_color": "#000000",
-					"font": 12,
+					"font": "36",
 					"style": [
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
@@ -534,9 +534,9 @@
 							"image_recolor": "#ffffff",
 							"image_recolor_opa": 0,
 							"image_opa": 255,
-							"font_family": "simsun",
+							"font_family": "OpenSans_Regular",
 							"text_color": "#000000",
-							"font": 12
+							"font": "36"
 						},
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
@@ -588,9 +588,9 @@
 					"image_recolor": "#ffffff",
 					"image_recolor_opa": 0,
 					"image_opa": 255,
-					"font_family": "simsun",
+					"font_family": "OpenSans_Regular",
 					"text_color": "#000000",
-					"font": 12,
+					"font": "36",
 					"style": [
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
@@ -599,9 +599,9 @@
 							"image_recolor": "#ffffff",
 							"image_recolor_opa": 0,
 							"image_opa": 255,
-							"font_family": "simsun",
+							"font_family": "OpenSans_Regular",
 							"text_color": "#000000",
-							"font": 12
+							"font": "36"
 						},
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
@@ -808,7 +808,7 @@
 					"bg_opa": 255,
 					"text_color": "#138036",
 					"font": "48",
-					"font_family": "OpenSans_Light",
+					"font_family": "OpenSans_Regular",
 					"letter_space": 2,
 					"radius": 0,
 					"paddingTop": 0,
@@ -823,7 +823,7 @@
 							"radius": 0,
 							"text_color": "#138036",
 							"font": "48",
-							"font_family": "OpenSans_Light",
+							"font_family": "OpenSans_Regular",
 							"letter_space": 2,
 							"bg_color": "#ffffff",
 							"bg_grad_color": "#ffffff",
@@ -4392,7 +4392,7 @@
 								"radius": 0,
 								"text_color": "#138036",
 								"font": "40",
-								"font_family": "OpenSans_Light",
+								"font_family": "OpenSans_Regular",
 								"letter_space": 2,
 								"bg_color": "#ffffff",
 								"bg_grad_color": "#ffffff",
@@ -4551,7 +4551,7 @@
 								"radius": 0,
 								"text_color": "#138036",
 								"font": "40",
-								"font_family": "OpenSans_Light",
+								"font_family": "OpenSans_Regular",
 								"letter_space": 2,
 								"bg_color": "#ffffff",
 								"bg_grad_color": "#ffffff",
@@ -4654,9 +4654,9 @@
 								"image_recolor": "#ffffff",
 								"image_recolor_opa": 0,
 								"image_opa": 255,
-								"font_family": "simsun",
+								"font_family": "OpenSans_Regular",
 								"text_color": "#000000",
-								"font": 12
+								"font": "36"
 							},
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -4716,9 +4716,9 @@
 								"image_recolor": "#ffffff",
 								"image_recolor_opa": 0,
 								"image_opa": 255,
-								"font_family": "simsun",
+								"font_family": "OpenSans_Regular",
 								"text_color": "#000000",
-								"font": 12
+								"font": "36"
 							},
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -4778,9 +4778,9 @@
 								"image_recolor": "#ffffff",
 								"image_recolor_opa": 0,
 								"image_opa": 255,
-								"font_family": "simsun",
+								"font_family": "OpenSans_Regular",
 								"text_color": "#000000",
-								"font": 12
+								"font": "36"
 							},
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -4968,7 +4968,7 @@
 								"radius": 0,
 								"text_color": "#138036",
 								"font": "48",
-								"font_family": "OpenSans_Light",
+								"font_family": "OpenSans_Regular",
 								"letter_space": 2,
 								"bg_color": "#ffffff",
 								"bg_grad_color": "#ffffff",
