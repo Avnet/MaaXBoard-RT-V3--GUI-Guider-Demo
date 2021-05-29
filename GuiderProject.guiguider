@@ -77,8 +77,8 @@
 					"default_style": false
 				},
 				{
-					"width": 150,
-					"height": 150,
+					"width": 132,
+					"height": 132,
 					"text": "",
 					"toggle": false,
 					"src_released": "left_icon.png",
@@ -130,8 +130,8 @@
 					],
 					"name": "left_btn",
 					"type": "imgbtn",
-					"left": 10,
-					"top": 10,
+					"left": 20,
+					"top": 1100,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -213,8 +213,8 @@
 					],
 					"name": "left_label",
 					"type": "label",
-					"left": 0,
-					"top": 160,
+					"left": 20,
+					"top": 1200,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -224,8 +224,8 @@
 					"default_style": false
 				},
 				{
-					"width": 250,
-					"height": 250,
+					"width": 110,
+					"height": 110,
 					"img_path": "avnet_logo.png",
 					"rotate": 0,
 					"x": 0,
@@ -249,7 +249,7 @@
 					],
 					"name": "avlogoimg0",
 					"type": "img",
-					"left": 235,
+					"left": 20,
 					"top": 20,
 					"is_move_animation": false,
 					"desX": 0,
@@ -313,8 +313,8 @@
 					],
 					"name": "right_btn",
 					"type": "imgbtn",
-					"left": 560,
-					"top": 10,
+					"left": 544,
+					"top": 1093,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -396,8 +396,8 @@
 					],
 					"name": "right_label",
 					"type": "label",
-					"left": 540,
-					"top": 160,
+					"left": 520,
+					"top": 1200,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -638,7 +638,7 @@
 					"event": []
 				},
 				{
-					"name": "img_6",
+					"name": "led_red_on",
 					"type": "img",
 					"left": 60,
 					"top": 760,
@@ -674,7 +674,7 @@
 					"default_style": false
 				},
 				{
-					"name": "img_7",
+					"name": "led_red_off",
 					"type": "img",
 					"left": 60,
 					"top": 760,
@@ -707,6 +707,297 @@
 						}
 					],
 					"id": "na40puhx",
+					"default_style": false
+				},
+				{
+					"width": 132,
+					"height": 132,
+					"text": "",
+					"toggle": false,
+					"src_released": "home-icon.png",
+					"src_pressed": "home-icon.png",
+					"src_checked_released": "",
+					"src_checked_pressed": "",
+					"color_format": "true-color-alpha",
+					"part": "LV_IMGBTN_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"image_recolor": "#ffffff",
+					"image_recolor_opa": 0,
+					"image_opa": 255,
+					"font_family": "simsun",
+					"text_color": "#000000",
+					"font": 12,
+					"style": [
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255,
+							"font_family": "simsun",
+							"text_color": "#000000",
+							"font": 12
+						},
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_PRESSED",
+							"disable": true,
+							"image_recolor": "#000000",
+							"image_recolor_opa": 0,
+							"text_color": "#FF33FF",
+							"font_family": "simsun",
+							"font": 16
+						},
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_CHECKED",
+							"disable": true,
+							"image_recolor": "#000000",
+							"image_recolor_opa": 0,
+							"text_color": "#FF33FF",
+							"font_family": "simsun",
+							"font": 16
+						}
+					],
+					"name": "home_btn",
+					"type": "imgbtn",
+					"left": 294,
+					"top": 1100,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"id": "1m1uqjel",
+					"default_style": false,
+					"event": [
+						{
+							"src": "left_btn",
+							"trigger": "pressed",
+							"dst": "screen",
+							"action": "load_screen",
+							"anim_type": "LV_SCR_LOAD_ANIM_NONE",
+							"delay": 0,
+							"duration": 0
+						}
+					]
+				},
+				{
+					"name": "page_label",
+					"type": "label",
+					"left": 403,
+					"top": 53,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 100,
+					"height": 0,
+					"text": "LED Control",
+					"text_align": "center",
+					"long_mode": "LV_LABEL_LONG_BREAK",
+					"part": "LV_LABEL_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"bg_color": "#ffffff",
+					"bg_grad_color": "#ffffff",
+					"bg_grad_dir": "LV_GRAD_DIR_VER",
+					"bg_opa": 255,
+					"text_color": "#000000",
+					"font": 12,
+					"font_family": "simsun",
+					"letter_space": 2,
+					"radius": 0,
+					"paddingTop": 0,
+					"paddingRight": 0,
+					"paddingBottom": 0,
+					"paddingLeft": 0,
+					"style": [
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": 12,
+							"font_family": "simsun",
+							"letter_space": 2,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 0,
+							"paddingRight": 0,
+							"paddingBottom": 0,
+							"paddingLeft": 0
+						},
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DISABLED",
+							"disable": true,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": 12,
+							"font_family": "simsun",
+							"letter_space": 2,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 0,
+							"paddingRight": 0,
+							"paddingBottom": 0,
+							"paddingLeft": 0
+						}
+					],
+					"id": "cuzcqxt9",
+					"default_style": false
+				},
+				{
+					"name": "led_green_on",
+					"type": "img",
+					"left": 305,
+					"top": 760,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 110,
+					"height": 110,
+					"img_path": "led_green_on.png",
+					"rotate": 0,
+					"x": 0,
+					"y": 0,
+					"color_format": "true-color-alpha",
+					"part": "LV_IMG_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"image_recolor": "#ffffff",
+					"image_recolor_opa": 0,
+					"image_opa": 255,
+					"style": [
+						{
+							"part": "LV_IMG_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255
+						}
+					],
+					"id": "2xw2hv70",
+					"default_style": false
+				},
+				{
+					"name": "led_green_off",
+					"type": "img",
+					"left": 305,
+					"top": 760,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 110,
+					"height": 110,
+					"img_path": "led_green_off.png",
+					"rotate": 0,
+					"x": 0,
+					"y": 0,
+					"color_format": "true-color-alpha",
+					"part": "LV_IMG_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"image_recolor": "#ffffff",
+					"image_recolor_opa": 0,
+					"image_opa": 255,
+					"style": [
+						{
+							"part": "LV_IMG_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255
+						}
+					],
+					"id": "j033habp",
+					"default_style": false
+				},
+				{
+					"name": "led_blue_on",
+					"type": "img",
+					"left": 550,
+					"top": 760,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 110,
+					"height": 110,
+					"img_path": "led_blue_on.png",
+					"rotate": 0,
+					"x": 0,
+					"y": 0,
+					"color_format": "true-color-alpha",
+					"part": "LV_IMG_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"image_recolor": "#ffffff",
+					"image_recolor_opa": 0,
+					"image_opa": 255,
+					"style": [
+						{
+							"part": "LV_IMG_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255
+						}
+					],
+					"id": "76zh3kw0",
+					"default_style": false
+				},
+				{
+					"name": "led_blue_off",
+					"type": "img",
+					"left": 550,
+					"top": 760,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 110,
+					"height": 110,
+					"img_path": "led_blue_off.png",
+					"rotate": 0,
+					"x": 0,
+					"y": 0,
+					"color_format": "true-color-alpha",
+					"part": "LV_IMG_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"image_recolor": "#ffffff",
+					"image_recolor_opa": 0,
+					"image_opa": 255,
+					"style": [
+						{
+							"part": "LV_IMG_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255
+						}
+					],
+					"id": "mfqj2bls",
 					"default_style": false
 				}
 			]
@@ -4013,12 +4304,12 @@
 						"name": "screen1_LEDs_left_btn",
 						"type": "imgbtn",
 						"pos": [
-							10,
-							10
+							20,
+							1100
 						],
 						"size": [
-							150,
-							150
+							132,
+							132
 						],
 						"is_move_animation": false,
 						"path_type": "linear",
@@ -4073,8 +4364,8 @@
 						"name": "screen1_LEDs_left_label",
 						"type": "label",
 						"pos": [
-							0,
-							160
+							20,
+							1200
 						],
 						"size": [
 							180,
@@ -4136,12 +4427,12 @@
 						"name": "screen1_LEDs_avlogoimg0",
 						"type": "img",
 						"pos": [
-							235,
+							20,
 							20
 						],
 						"size": [
-							250,
-							250
+							110,
+							110
 						],
 						"is_move_animation": false,
 						"path_type": "linear",
@@ -4172,8 +4463,8 @@
 						"name": "screen1_LEDs_right_btn",
 						"type": "imgbtn",
 						"pos": [
-							560,
-							10
+							544,
+							1093
 						],
 						"size": [
 							150,
@@ -4232,8 +4523,8 @@
 						"name": "screen1_LEDs_right_label",
 						"type": "label",
 						"pos": [
-							540,
-							160
+							520,
+							1200
 						],
 						"size": [
 							180,
@@ -4514,7 +4805,7 @@
 						]
 					},
 					{
-						"name": "screen1_LEDs_img_6",
+						"name": "screen1_LEDs_led_red_on",
 						"type": "img",
 						"pos": [
 							60,
@@ -4550,7 +4841,7 @@
 						]
 					},
 					{
-						"name": "screen1_LEDs_img_7",
+						"name": "screen1_LEDs_led_red_off",
 						"type": "img",
 						"pos": [
 							60,
@@ -4571,6 +4862,273 @@
 						},
 						"default_style": false,
 						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/led_red_off.png",
+						"color_format": "true-color-alpha",
+						"rotate": 0,
+						"pivot": "0,0",
+						"style": [
+							{
+								"part": "LV_IMG_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255
+							}
+						]
+					},
+					{
+						"name": "screen1_LEDs_home_btn",
+						"type": "imgbtn",
+						"pos": [
+							294,
+							1100
+						],
+						"size": [
+							132,
+							132
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"toggle": false,
+						"text": "",
+						"color_format": "true-color-alpha",
+						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/home-icon.png",
+						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/home-icon.png",
+						"style": [
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255,
+								"font_family": "simsun",
+								"text_color": "#000000",
+								"font": 12
+							},
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_PRESSED",
+								"disable": true,
+								"image_recolor": "#000000",
+								"image_recolor_opa": 0,
+								"text_color": "#FF33FF",
+								"font_family": "simsun",
+								"font": 16
+							},
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_CHECKED",
+								"disable": true,
+								"image_recolor": "#000000",
+								"image_recolor_opa": 0,
+								"text_color": "#FF33FF",
+								"font_family": "simsun",
+								"font": 16
+							}
+						]
+					},
+					{
+						"name": "screen1_LEDs_page_label",
+						"type": "label",
+						"pos": [
+							403,
+							53
+						],
+						"size": [
+							100,
+							0
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"text": "LED Control",
+						"long_mode": "LV_LABEL_LONG_BREAK",
+						"text_align": "center",
+						"style": [
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": 12,
+								"font_family": "simsun",
+								"letter_space": 2,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 0,
+								"paddingRight": 0,
+								"paddingBottom": 0,
+								"paddingLeft": 0
+							},
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DISABLED",
+								"disable": true,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": 12,
+								"font_family": "simsun",
+								"letter_space": 2,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 0,
+								"paddingRight": 0,
+								"paddingBottom": 0,
+								"paddingLeft": 0
+							}
+						]
+					},
+					{
+						"name": "screen1_LEDs_led_green_on",
+						"type": "img",
+						"pos": [
+							305,
+							760
+						],
+						"size": [
+							110,
+							110
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/led_green_on.png",
+						"color_format": "true-color-alpha",
+						"rotate": 0,
+						"pivot": "0,0",
+						"style": [
+							{
+								"part": "LV_IMG_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255
+							}
+						]
+					},
+					{
+						"name": "screen1_LEDs_led_green_off",
+						"type": "img",
+						"pos": [
+							305,
+							760
+						],
+						"size": [
+							110,
+							110
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/led_green_off.png",
+						"color_format": "true-color-alpha",
+						"rotate": 0,
+						"pivot": "0,0",
+						"style": [
+							{
+								"part": "LV_IMG_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255
+							}
+						]
+					},
+					{
+						"name": "screen1_LEDs_led_blue_on",
+						"type": "img",
+						"pos": [
+							550,
+							760
+						],
+						"size": [
+							110,
+							110
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/led_blue_on.png",
+						"color_format": "true-color-alpha",
+						"rotate": 0,
+						"pivot": "0,0",
+						"style": [
+							{
+								"part": "LV_IMG_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255
+							}
+						]
+					},
+					{
+						"name": "screen1_LEDs_led_blue_off",
+						"type": "img",
+						"pos": [
+							550,
+							760
+						],
+						"size": [
+							110,
+							110
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/led_blue_off.png",
 						"color_format": "true-color-alpha",
 						"rotate": 0,
 						"pivot": "0,0",
@@ -7473,6 +8031,15 @@
 				"src": "screen1_LEDs_right_btn",
 				"trigger": "pressed",
 				"dst": "screen2_WIFI",
+				"action": "load_screen",
+				"anim_type": "LV_SCR_LOAD_ANIM_NONE",
+				"delay": 0,
+				"duration": 0
+			},
+			{
+				"src": "screen1_LEDs_home_btn",
+				"trigger": "pressed",
+				"dst": "screen0_MENU",
 				"action": "load_screen",
 				"anim_type": "LV_SCR_LOAD_ANIM_NONE",
 				"delay": 0,
