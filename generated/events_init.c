@@ -41,10 +41,26 @@ static void screen1_LEDs_right_btnevent_handler(lv_obj_t * obj, lv_event_t event
 	}
 }
 
+static void screen1_LEDs_home_btnevent_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_PRESSED:
+	{
+		setup_scr_screen0_MENU(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen0_MENU, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
 void events_init_screen1_LEDs(lv_ui *ui)
 {
 	lv_obj_set_event_cb(ui->screen1_LEDs_left_btn, screen1_LEDs_left_btnevent_handler);
 	lv_obj_set_event_cb(ui->screen1_LEDs_right_btn, screen1_LEDs_right_btnevent_handler);
+	lv_obj_set_event_cb(ui->screen1_LEDs_home_btn, screen1_LEDs_home_btnevent_handler);
 }
 
 static void screen0_MENU_btn_1event_handler(lv_obj_t * obj, lv_event_t event)
