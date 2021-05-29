@@ -37,7 +37,10 @@
 	},
 	"ImportFonts": {
 		"simsun": "simsun.woff",
-		"montserratMedium": "Montserrat-medium.ttf"
+		"montserratMedium": "Montserrat-medium.ttf",
+		"OpenSans_Light": "font/OpenSans_Light.ttf",
+		"OpenSans_Regular": "font/OpenSans_Regular.ttf",
+		"OpenSans_SemiBold": "font/OpenSans_SemiBold.ttf"
 	},
 	"FrontJson": [
 		{
@@ -78,8 +81,8 @@
 					"height": 150,
 					"text": "",
 					"toggle": false,
-					"src_released": "left_arrow.png",
-					"src_pressed": "left_arrow_dark.png",
+					"src_released": "left_icon.png",
+					"src_pressed": "left_icon.png",
 					"src_checked_released": "",
 					"src_checked_pressed": "",
 					"color_format": "true-color-alpha",
@@ -151,7 +154,7 @@
 				{
 					"width": 180,
 					"height": 0,
-					"text": "MENU",
+					"text": "QSG",
 					"text_align": "center",
 					"long_mode": "LV_LABEL_LONG_BREAK",
 					"part": "LV_LABEL_PART_MAIN",
@@ -223,7 +226,7 @@
 				{
 					"width": 250,
 					"height": 250,
-					"img_path": "AvnetIcon310x310.png",
+					"img_path": "avnet_logo.png",
 					"rotate": 0,
 					"x": 0,
 					"y": 0,
@@ -261,8 +264,8 @@
 					"height": 150,
 					"text": "",
 					"toggle": false,
-					"src_released": "right_arrow.png",
-					"src_pressed": "right_arrow_dark.png",
+					"src_released": "right_icon.png",
+					"src_pressed": "right_icon.png",
 					"src_checked_released": "",
 					"src_checked_pressed": "",
 					"color_format": "true-color-alpha",
@@ -404,8 +407,8 @@
 					"default_style": false
 				},
 				{
-					"width": 550,
-					"height": 550,
+					"width": 500,
+					"height": 500,
 					"img_path": "IoT_Smart_Asset_Monitoring_G_600ppi.png",
 					"rotate": 0,
 					"x": 0,
@@ -429,8 +432,8 @@
 					],
 					"name": "img_5oodt29s",
 					"type": "img",
-					"left": 85,
-					"top": 383,
+					"left": 110,
+					"top": 200,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -440,86 +443,14 @@
 					"default_style": false
 				},
 				{
-					"width": 640,
-					"height": 0,
-					"text": "User LED Control ",
-					"text_align": "center",
-					"long_mode": "LV_LABEL_LONG_BREAK",
-					"part": "LV_LABEL_PART_MAIN",
-					"state": "LV_STATE_DEFAULT",
-					"disable": false,
-					"bg_color": "#ffffff",
-					"bg_grad_color": "#ffffff",
-					"bg_grad_dir": "LV_GRAD_DIR_VER",
-					"bg_opa": 255,
-					"text_color": "#000000",
-					"font": "48",
-					"font_family": "simsun",
-					"letter_space": 2,
-					"radius": 0,
-					"paddingTop": 0,
-					"paddingRight": 0,
-					"paddingBottom": 0,
-					"paddingLeft": 0,
-					"style": [
-						{
-							"part": "LV_LABEL_PART_MAIN",
-							"state": "LV_STATE_DEFAULT",
-							"disable": false,
-							"radius": 0,
-							"text_color": "#000000",
-							"font": "48",
-							"font_family": "simsun",
-							"letter_space": 2,
-							"bg_color": "#ffffff",
-							"bg_grad_color": "#ffffff",
-							"bg_opa": 255,
-							"bg_grad_dir": "LV_GRAD_DIR_VER",
-							"paddingTop": 0,
-							"paddingRight": 0,
-							"paddingBottom": 0,
-							"paddingLeft": 0
-						},
-						{
-							"part": "LV_LABEL_PART_MAIN",
-							"state": "LV_STATE_DISABLED",
-							"disable": true,
-							"radius": 0,
-							"text_color": "#000000",
-							"font": 12,
-							"font_family": "simsun",
-							"letter_space": 2,
-							"bg_color": "#ffffff",
-							"bg_grad_color": "#ffffff",
-							"bg_opa": 255,
-							"bg_grad_dir": "LV_GRAD_DIR_VER",
-							"paddingTop": 0,
-							"paddingRight": 0,
-							"paddingBottom": 0,
-							"paddingLeft": 0
-						}
-					],
-					"name": "label_LED_buttons",
-					"type": "label",
-					"left": 40,
-					"top": 990,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
-					"id": "vzy6wtkb",
-					"default_style": false
-				},
-				{
 					"width": 190,
-					"height": 190,
-					"text": "",
+					"height": 106,
+					"text": "LED 1",
 					"toggle": true,
-					"src_released": "ButtonRedDARK.png",
-					"src_pressed": "ButtonRed.png",
-					"src_checked_released": "ButtonRed.png",
-					"src_checked_pressed": "ButtonRedDARK.png",
+					"src_released": "button.png",
+					"src_pressed": "button_on.png",
+					"src_checked_released": "button_on.png",
+					"src_checked_pressed": "button.png",
 					"color_format": "true-color-alpha",
 					"part": "LV_IMGBTN_PART_MAIN",
 					"state": "LV_STATE_DEFAULT",
@@ -565,8 +496,8 @@
 					],
 					"name": "redbtn0",
 					"type": "imgbtn",
-					"left": 27,
-					"top": 1063,
+					"left": 20,
+					"top": 900,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -578,13 +509,13 @@
 				},
 				{
 					"width": 190,
-					"height": 190,
-					"text": "",
+					"height": 106,
+					"text": "LED 2",
 					"toggle": true,
-					"src_released": "ButtonGreenDARK.png",
-					"src_pressed": "ButtonGreen.png",
-					"src_checked_released": "ButtonGreen.png",
-					"src_checked_pressed": "ButtonGreenDARK.png",
+					"src_released": "button.png",
+					"src_pressed": "button_on.png",
+					"src_checked_released": "button_on.png",
+					"src_checked_pressed": "button.png",
 					"color_format": "true-color-alpha",
 					"part": "LV_IMGBTN_PART_MAIN",
 					"state": "LV_STATE_DEFAULT",
@@ -630,8 +561,8 @@
 					],
 					"name": "greenbtn0",
 					"type": "imgbtn",
-					"left": 264,
-					"top": 1062,
+					"left": 265,
+					"top": 900,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -643,13 +574,13 @@
 				},
 				{
 					"width": 190,
-					"height": 190,
-					"text": "",
+					"height": 106,
+					"text": "LED 3",
 					"toggle": true,
-					"src_released": "ButtonBlueDARK.png",
-					"src_pressed": "ButtonBlue.png",
-					"src_checked_released": "ButtonBlue.png",
-					"src_checked_pressed": "ButtonBlueDARK.png",
+					"src_released": "button.png",
+					"src_pressed": "button_on.png",
+					"src_checked_released": "button_on.png",
+					"src_checked_pressed": "button.png",
 					"color_format": "true-color-alpha",
 					"part": "LV_IMGBTN_PART_MAIN",
 					"state": "LV_STATE_DEFAULT",
@@ -695,8 +626,8 @@
 					],
 					"name": "bluebtn0",
 					"type": "imgbtn",
-					"left": 503,
-					"top": 1061,
+					"left": 510,
+					"top": 900,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -705,6 +636,78 @@
 					"id": "9kchkpfx",
 					"default_style": false,
 					"event": []
+				},
+				{
+					"name": "img_6",
+					"type": "img",
+					"left": 60,
+					"top": 760,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 110,
+					"height": 110,
+					"img_path": "led_red_on.png",
+					"rotate": 0,
+					"x": 0,
+					"y": 0,
+					"color_format": "true-color-alpha",
+					"part": "LV_IMG_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"image_recolor": "#ffffff",
+					"image_recolor_opa": 0,
+					"image_opa": 255,
+					"style": [
+						{
+							"part": "LV_IMG_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255
+						}
+					],
+					"id": "6zztumol",
+					"default_style": false
+				},
+				{
+					"name": "img_7",
+					"type": "img",
+					"left": 60,
+					"top": 760,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 110,
+					"height": 110,
+					"img_path": "led_red_off.png",
+					"rotate": 0,
+					"x": 0,
+					"y": 0,
+					"color_format": "true-color-alpha",
+					"part": "LV_IMG_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"image_recolor": "#ffffff",
+					"image_recolor_opa": 0,
+					"image_opa": 255,
+					"style": [
+						{
+							"part": "LV_IMG_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255
+						}
+					],
+					"id": "na40puhx",
+					"default_style": false
 				}
 			]
 		},
@@ -4030,8 +4033,8 @@
 						"toggle": false,
 						"text": "",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/left_arrow.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/left_arrow_dark.png",
+						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/left_icon.png",
+						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/left_icon.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -4087,7 +4090,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"text": "MENU",
+						"text": "QSG",
 						"long_mode": "LV_LABEL_LONG_BREAK",
 						"text_align": "center",
 						"style": [
@@ -4150,7 +4153,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/AvnetIcon310x310.png",
+						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/avnet_logo.png",
 						"color_format": "true-color-alpha",
 						"rotate": 0,
 						"pivot": "0,0",
@@ -4189,8 +4192,8 @@
 						"toggle": false,
 						"text": "",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/right_arrow.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/right_arrow_dark.png",
+						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/right_icon.png",
+						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/right_icon.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -4292,12 +4295,12 @@
 						"name": "screen1_LEDs_img_5oodt29s",
 						"type": "img",
 						"pos": [
-							85,
-							383
+							110,
+							200
 						],
 						"size": [
-							550,
-							550
+							500,
+							500
 						],
 						"is_move_animation": false,
 						"path_type": "linear",
@@ -4325,78 +4328,15 @@
 						]
 					},
 					{
-						"name": "screen1_LEDs_label_LED_buttons",
-						"type": "label",
-						"pos": [
-							40,
-							990
-						],
-						"size": [
-							640,
-							0
-						],
-						"is_move_animation": false,
-						"path_type": "linear",
-						"move_animation": {
-							"des_pos": [
-								0,
-								0
-							],
-							"duration": 100
-						},
-						"default_style": false,
-						"text": "User LED Control ",
-						"long_mode": "LV_LABEL_LONG_BREAK",
-						"text_align": "center",
-						"style": [
-							{
-								"part": "LV_LABEL_PART_MAIN",
-								"state": "LV_STATE_DEFAULT",
-								"disable": false,
-								"radius": 0,
-								"text_color": "#000000",
-								"font": "48",
-								"font_family": "simsun",
-								"letter_space": 2,
-								"bg_color": "#ffffff",
-								"bg_grad_color": "#ffffff",
-								"bg_opa": 255,
-								"bg_grad_dir": "LV_GRAD_DIR_VER",
-								"paddingTop": 0,
-								"paddingRight": 0,
-								"paddingBottom": 0,
-								"paddingLeft": 0
-							},
-							{
-								"part": "LV_LABEL_PART_MAIN",
-								"state": "LV_STATE_DISABLED",
-								"disable": true,
-								"radius": 0,
-								"text_color": "#000000",
-								"font": 12,
-								"font_family": "simsun",
-								"letter_space": 2,
-								"bg_color": "#ffffff",
-								"bg_grad_color": "#ffffff",
-								"bg_opa": 255,
-								"bg_grad_dir": "LV_GRAD_DIR_VER",
-								"paddingTop": 0,
-								"paddingRight": 0,
-								"paddingBottom": 0,
-								"paddingLeft": 0
-							}
-						]
-					},
-					{
 						"name": "screen1_LEDs_redbtn0",
 						"type": "imgbtn",
 						"pos": [
-							27,
-							1063
+							20,
+							900
 						],
 						"size": [
 							190,
-							190
+							106
 						],
 						"is_move_animation": false,
 						"path_type": "linear",
@@ -4409,12 +4349,12 @@
 						},
 						"default_style": false,
 						"toggle": true,
-						"text": "",
+						"text": "LED 1",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/ButtonRedDARK.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/ButtonRed.png",
-						"src_checked_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/ButtonRed.png",
-						"src_checked_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/ButtonRedDARK.png",
+						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
+						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
+						"src_checked_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
+						"src_checked_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -4453,12 +4393,12 @@
 						"name": "screen1_LEDs_greenbtn0",
 						"type": "imgbtn",
 						"pos": [
-							264,
-							1062
+							265,
+							900
 						],
 						"size": [
 							190,
-							190
+							106
 						],
 						"is_move_animation": false,
 						"path_type": "linear",
@@ -4471,12 +4411,12 @@
 						},
 						"default_style": false,
 						"toggle": true,
-						"text": "",
+						"text": "LED 2",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/ButtonGreenDARK.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/ButtonGreen.png",
-						"src_checked_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/ButtonGreen.png",
-						"src_checked_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/ButtonGreenDARK.png",
+						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
+						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
+						"src_checked_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
+						"src_checked_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -4515,12 +4455,12 @@
 						"name": "screen1_LEDs_bluebtn0",
 						"type": "imgbtn",
 						"pos": [
-							503,
-							1061
+							510,
+							900
 						],
 						"size": [
 							190,
-							190
+							106
 						],
 						"is_move_animation": false,
 						"path_type": "linear",
@@ -4533,12 +4473,12 @@
 						},
 						"default_style": false,
 						"toggle": true,
-						"text": "",
+						"text": "LED 3",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/ButtonBlueDARK.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/ButtonBlue.png",
-						"src_checked_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/ButtonBlue.png",
-						"src_checked_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/ButtonBlueDARK.png",
+						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
+						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
+						"src_checked_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
+						"src_checked_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -4570,6 +4510,78 @@
 								"text_color": "#FF33FF",
 								"font_family": "simsun",
 								"font": 16
+							}
+						]
+					},
+					{
+						"name": "screen1_LEDs_img_6",
+						"type": "img",
+						"pos": [
+							60,
+							760
+						],
+						"size": [
+							110,
+							110
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/led_red_on.png",
+						"color_format": "true-color-alpha",
+						"rotate": 0,
+						"pivot": "0,0",
+						"style": [
+							{
+								"part": "LV_IMG_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255
+							}
+						]
+					},
+					{
+						"name": "screen1_LEDs_img_7",
+						"type": "img",
+						"pos": [
+							60,
+							760
+						],
+						"size": [
+							110,
+							110
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/led_red_off.png",
+						"color_format": "true-color-alpha",
+						"rotate": 0,
+						"pivot": "0,0",
+						"style": [
+							{
+								"part": "LV_IMG_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255
 							}
 						]
 					}

@@ -46,8 +46,8 @@ void setup_scr_screen1_LEDs(lv_ui *ui){
 	lv_obj_add_style(ui->screen1_LEDs_left_btn, LV_IMGBTN_PART_MAIN, &style_screen1_LEDs_left_btn_main);
 	lv_obj_set_pos(ui->screen1_LEDs_left_btn, 10, 10);
 	lv_obj_set_size(ui->screen1_LEDs_left_btn, 150, 150);
-	lv_imgbtn_set_src(ui->screen1_LEDs_left_btn,LV_BTN_STATE_RELEASED,&_left_arrow_alpha_150x150);
-	lv_imgbtn_set_src(ui->screen1_LEDs_left_btn,LV_BTN_STATE_PRESSED,&_left_arrow_dark_alpha_150x150);
+	lv_imgbtn_set_src(ui->screen1_LEDs_left_btn,LV_BTN_STATE_RELEASED,&_left_icon_alpha_150x150);
+	lv_imgbtn_set_src(ui->screen1_LEDs_left_btn,LV_BTN_STATE_PRESSED,&_left_icon_alpha_150x150);
 
 	//Write codes screen1_LEDs_left_label
 	ui->screen1_LEDs_left_label = lv_label_create(ui->screen1_LEDs, NULL);
@@ -91,7 +91,7 @@ void setup_scr_screen1_LEDs(lv_ui *ui){
 	lv_obj_set_pos(ui->screen1_LEDs_avlogoimg0, 235, 20);
 	lv_obj_set_size(ui->screen1_LEDs_avlogoimg0, 250, 250);
 	lv_obj_set_click(ui->screen1_LEDs_avlogoimg0, true);
-	lv_img_set_src(ui->screen1_LEDs_avlogoimg0,&_AvnetIcon310x310_alpha_250x250);
+	lv_img_set_src(ui->screen1_LEDs_avlogoimg0,&_avnet_logo_alpha_250x250);
 	lv_img_set_pivot(ui->screen1_LEDs_avlogoimg0, 0,0);
 	lv_img_set_angle(ui->screen1_LEDs_avlogoimg0, 0);
 
@@ -110,8 +110,8 @@ void setup_scr_screen1_LEDs(lv_ui *ui){
 	lv_obj_add_style(ui->screen1_LEDs_right_btn, LV_IMGBTN_PART_MAIN, &style_screen1_LEDs_right_btn_main);
 	lv_obj_set_pos(ui->screen1_LEDs_right_btn, 560, 10);
 	lv_obj_set_size(ui->screen1_LEDs_right_btn, 150, 150);
-	lv_imgbtn_set_src(ui->screen1_LEDs_right_btn,LV_BTN_STATE_RELEASED,&_right_arrow_alpha_150x150);
-	lv_imgbtn_set_src(ui->screen1_LEDs_right_btn,LV_BTN_STATE_PRESSED,&_right_arrow_dark_alpha_150x150);
+	lv_imgbtn_set_src(ui->screen1_LEDs_right_btn,LV_BTN_STATE_RELEASED,&_right_icon_alpha_150x150);
+	lv_imgbtn_set_src(ui->screen1_LEDs_right_btn,LV_BTN_STATE_PRESSED,&_right_icon_alpha_150x150);
 
 	//Write codes screen1_LEDs_right_label
 	ui->screen1_LEDs_right_label = lv_label_create(ui->screen1_LEDs, NULL);
@@ -158,33 +158,6 @@ void setup_scr_screen1_LEDs(lv_ui *ui){
 	lv_img_set_src(ui->screen1_LEDs_img_5oodt29s,&_IoT_Smart_Asset_Monitoring_G_600ppi_alpha_550x550);
 	lv_img_set_pivot(ui->screen1_LEDs_img_5oodt29s, 0,0);
 	lv_img_set_angle(ui->screen1_LEDs_img_5oodt29s, 0);
-
-	//Write codes screen1_LEDs_label_LED_buttons
-	ui->screen1_LEDs_label_LED_buttons = lv_label_create(ui->screen1_LEDs, NULL);
-	lv_label_set_text(ui->screen1_LEDs_label_LED_buttons, "User LED Control ");
-	lv_label_set_long_mode(ui->screen1_LEDs_label_LED_buttons, LV_LABEL_LONG_BREAK);
-	lv_label_set_align(ui->screen1_LEDs_label_LED_buttons, LV_LABEL_ALIGN_CENTER);
-
-	//Write style LV_LABEL_PART_MAIN for screen1_LEDs_label_LED_buttons
-	static lv_style_t style_screen1_LEDs_label_LED_buttons_main;
-	lv_style_init(&style_screen1_LEDs_label_LED_buttons_main);
-
-	//Write style state: LV_STATE_DEFAULT for style_screen1_LEDs_label_LED_buttons_main
-	lv_style_set_radius(&style_screen1_LEDs_label_LED_buttons_main, LV_STATE_DEFAULT, 0);
-	lv_style_set_bg_color(&style_screen1_LEDs_label_LED_buttons_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
-	lv_style_set_bg_grad_color(&style_screen1_LEDs_label_LED_buttons_main, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
-	lv_style_set_bg_grad_dir(&style_screen1_LEDs_label_LED_buttons_main, LV_STATE_DEFAULT, LV_GRAD_DIR_VER);
-	lv_style_set_bg_opa(&style_screen1_LEDs_label_LED_buttons_main, LV_STATE_DEFAULT, 255);
-	lv_style_set_text_color(&style_screen1_LEDs_label_LED_buttons_main, LV_STATE_DEFAULT, lv_color_make(0x00, 0x00, 0x00));
-	lv_style_set_text_font(&style_screen1_LEDs_label_LED_buttons_main, LV_STATE_DEFAULT, &lv_font_simsun_48);
-	lv_style_set_text_letter_space(&style_screen1_LEDs_label_LED_buttons_main, LV_STATE_DEFAULT, 2);
-	lv_style_set_pad_left(&style_screen1_LEDs_label_LED_buttons_main, LV_STATE_DEFAULT, 0);
-	lv_style_set_pad_right(&style_screen1_LEDs_label_LED_buttons_main, LV_STATE_DEFAULT, 0);
-	lv_style_set_pad_top(&style_screen1_LEDs_label_LED_buttons_main, LV_STATE_DEFAULT, 0);
-	lv_style_set_pad_bottom(&style_screen1_LEDs_label_LED_buttons_main, LV_STATE_DEFAULT, 0);
-	lv_obj_add_style(ui->screen1_LEDs_label_LED_buttons, LV_LABEL_PART_MAIN, &style_screen1_LEDs_label_LED_buttons_main);
-	lv_obj_set_pos(ui->screen1_LEDs_label_LED_buttons, 40, 990);
-	lv_obj_set_size(ui->screen1_LEDs_label_LED_buttons, 640, 0);
 
 	//Write codes screen1_LEDs_redbtn0
 	ui->screen1_LEDs_redbtn0 = lv_imgbtn_create(ui->screen1_LEDs, NULL);

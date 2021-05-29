@@ -24,7 +24,6 @@ typedef struct
 	lv_obj_t *screen1_LEDs_right_btn_label;
 	lv_obj_t *screen1_LEDs_right_label;
 	lv_obj_t *screen1_LEDs_img_5oodt29s;
-	lv_obj_t *screen1_LEDs_label_LED_buttons;
 	lv_obj_t *screen1_LEDs_redbtn0;
 	lv_obj_t *screen1_LEDs_redbtn0_label;
 	lv_obj_t *screen1_LEDs_greenbtn0;
@@ -113,22 +112,24 @@ void setup_scr_screen5_SYSTEM(lv_ui *ui);
 void setup_scr_screen6_HELP(lv_ui *ui);
 LV_IMG_DECLARE(_ButtonBlueDARK_alpha_190x190);
 LV_IMG_DECLARE(_ButtonBlue_alpha_190x190);
+LV_IMG_DECLARE(_left_icon_alpha_150x150);
 LV_IMG_DECLARE(_IoT_Smart_Asset_Monitoring_G_600ppi_alpha_550x550);
 LV_IMG_DECLARE(_AV_alpha_512x512);
-LV_IMG_DECLARE(_AvnetIcon310x310_alpha_250x250);
 LV_IMG_DECLARE(_left_arrow_alpha_150x150);
 LV_IMG_DECLARE(_right_arrow_dark_alpha_150x150);
 LV_IMG_DECLARE(_ButtonRed_alpha_190x190);
 LV_IMG_DECLARE(_SBC_Help_Image_alpha_566x860);
+LV_IMG_DECLARE(_avnet_logo_alpha_250x250);
 LV_IMG_DECLARE(_wifi_green_512_alpha_512x512);
 LV_IMG_DECLARE(_ButtonGreen_alpha_190x190);
 LV_IMG_DECLARE(_AvnetIcon310x310_alpha_176x176);
 LV_IMG_DECLARE(_lock_alpha_512x512);
+LV_IMG_DECLARE(_right_icon_alpha_150x150);
 LV_IMG_DECLARE(_ButtonRedDARK_alpha_190x190);
 LV_IMG_DECLARE(_USB_alpha_512x512);
+LV_IMG_DECLARE(_ButtonGreenDARK_alpha_190x190);
 LV_IMG_DECLARE(_left_arrow_dark_alpha_150x150);
 LV_IMG_DECLARE(_right_arrow_alpha_150x150);
-LV_IMG_DECLARE(_ButtonGreenDARK_alpha_190x190);
 LV_IMG_DECLARE(_Avnet_designedby_hrz_rgb_alpha_310x151);
 
 #ifdef __cplusplus
