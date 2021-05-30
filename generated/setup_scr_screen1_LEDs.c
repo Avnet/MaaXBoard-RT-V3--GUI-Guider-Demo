@@ -115,7 +115,7 @@ void setup_scr_screen1_LEDs(lv_ui *ui){
 
 	//Write codes screen1_LEDs_right_label
 	ui->screen1_LEDs_right_label = lv_label_create(ui->screen1_LEDs, NULL);
-	lv_label_set_text(ui->screen1_LEDs_right_label, "WIFI");
+	lv_label_set_text(ui->screen1_LEDs_right_label, "Wi-Fi");
 	lv_label_set_long_mode(ui->screen1_LEDs_right_label, LV_LABEL_LONG_BREAK);
 	lv_label_set_align(ui->screen1_LEDs_right_label, LV_LABEL_ALIGN_CENTER);
 

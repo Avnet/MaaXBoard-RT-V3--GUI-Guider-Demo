@@ -11,96 +11,6 @@ void events_init(lv_ui *ui)
 {
 }
 
-static void screen0_MENU_btn_1event_handler(lv_obj_t * obj, lv_event_t event)
-{
-	switch (event)
-	{
-	case LV_EVENT_PRESSED:
-	{
-		setup_scr_screen1_LEDs(&guider_ui);
-		lv_scr_load_anim(guider_ui.screen1_LEDs, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
-	}
-		break;
-	default:
-		break;
-	}
-}
-
-static void screen0_MENU_btn_2event_handler(lv_obj_t * obj, lv_event_t event)
-{
-	switch (event)
-	{
-	case LV_EVENT_PRESSED:
-	{
-		setup_scr_screen2_WIFI(&guider_ui);
-		lv_scr_load_anim(guider_ui.screen2_WIFI, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
-	}
-		break;
-	default:
-		break;
-	}
-}
-
-static void screen0_MENU_btn_3event_handler(lv_obj_t * obj, lv_event_t event)
-{
-	switch (event)
-	{
-	case LV_EVENT_PRESSED:
-	{
-		setup_scr_screen3_USB(&guider_ui);
-		lv_scr_load_anim(guider_ui.screen3_USB, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
-	}
-		break;
-	default:
-		break;
-	}
-}
-
-static void screen0_MENU_btn_4event_handler(lv_obj_t * obj, lv_event_t event)
-{
-	switch (event)
-	{
-	case LV_EVENT_PRESSED:
-	{
-		setup_scr_screen4_AV(&guider_ui);
-		lv_scr_load_anim(guider_ui.screen4_AV, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
-	}
-		break;
-	default:
-		break;
-	}
-}
-
-static void screen0_MENU_btn_5event_handler(lv_obj_t * obj, lv_event_t event)
-{
-	switch (event)
-	{
-	case LV_EVENT_PRESSED:
-	{
-		setup_scr_screen5_SYSTEM(&guider_ui);
-		lv_scr_load_anim(guider_ui.screen5_SYSTEM, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
-	}
-		break;
-	default:
-		break;
-	}
-}
-
-static void screen0_MENU_btn_6event_handler(lv_obj_t * obj, lv_event_t event)
-{
-	switch (event)
-	{
-	case LV_EVENT_PRESSED:
-	{
-		setup_scr_screen6_HELP(&guider_ui);
-		lv_scr_load_anim(guider_ui.screen6_HELP, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
-	}
-		break;
-	default:
-		break;
-	}
-}
-
 static void screen0_MENU_imgbtn_1event_handler(lv_obj_t * obj, lv_event_t event)
 {
 	switch (event)
@@ -131,16 +41,74 @@ static void screen0_MENU_imgbtn_2event_handler(lv_obj_t * obj, lv_event_t event)
 	}
 }
 
+static void screen0_MENU_imgbtn_3event_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_RELEASED:
+	{
+		setup_scr_screen2_WIFI(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen2_WIFI, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+static void screen0_MENU_imgbtn_4event_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_RELEASED:
+	{
+		setup_scr_screen5_SYSTEM(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen5_SYSTEM, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+static void screen0_MENU_imgbtn_5event_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_RELEASED:
+	{
+		setup_scr_screen3_USB(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen3_USB, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+static void screen0_MENU_imgbtn_6event_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_RELEASED:
+	{
+		setup_scr_screen6_HELP(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen6_HELP, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
 void events_init_screen0_MENU(lv_ui *ui)
 {
-	lv_obj_set_event_cb(ui->screen0_MENU_btn_1, screen0_MENU_btn_1event_handler);
-	lv_obj_set_event_cb(ui->screen0_MENU_btn_2, screen0_MENU_btn_2event_handler);
-	lv_obj_set_event_cb(ui->screen0_MENU_btn_3, screen0_MENU_btn_3event_handler);
-	lv_obj_set_event_cb(ui->screen0_MENU_btn_4, screen0_MENU_btn_4event_handler);
-	lv_obj_set_event_cb(ui->screen0_MENU_btn_5, screen0_MENU_btn_5event_handler);
-	lv_obj_set_event_cb(ui->screen0_MENU_btn_6, screen0_MENU_btn_6event_handler);
 	lv_obj_set_event_cb(ui->screen0_MENU_imgbtn_1, screen0_MENU_imgbtn_1event_handler);
 	lv_obj_set_event_cb(ui->screen0_MENU_imgbtn_2, screen0_MENU_imgbtn_2event_handler);
+	lv_obj_set_event_cb(ui->screen0_MENU_imgbtn_3, screen0_MENU_imgbtn_3event_handler);
+	lv_obj_set_event_cb(ui->screen0_MENU_imgbtn_4, screen0_MENU_imgbtn_4event_handler);
+	lv_obj_set_event_cb(ui->screen0_MENU_imgbtn_5, screen0_MENU_imgbtn_5event_handler);
+	lv_obj_set_event_cb(ui->screen0_MENU_imgbtn_6, screen0_MENU_imgbtn_6event_handler);
 }
 
 static void screen1_LEDs_left_btnevent_handler(lv_obj_t * obj, lv_event_t event)
