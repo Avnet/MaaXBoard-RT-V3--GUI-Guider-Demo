@@ -2655,7 +2655,7 @@
 		},
 		{
 			"id": "screen2_WIFI7",
-			"name": "screen3_USB2",
+			"name": "screen3_USB",
 			"list": [
 				{
 					"width": 720,
@@ -3367,7 +3367,7 @@
 					"name": "input_label",
 					"type": "label",
 					"left": 30,
-					"top": 770,
+					"top": 800,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -3519,8 +3519,8 @@
 					"duration": 100,
 					"width": 0,
 					"height": 0,
-					"columns": 16,
-					"row": 8,
+					"columns": 17,
+					"row": 9,
 					"row_str": [
 						{
 							"text": "00,--,--,--,--,--,--"
@@ -3646,7 +3646,7 @@
 					"name": "input_area",
 					"type": "ta",
 					"left": 20,
-					"top": 825,
+					"top": 855,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -3746,7 +3746,7 @@
 					"name": "kbd_imgbtn",
 					"type": "imgbtn",
 					"left": 360,
-					"top": 766,
+					"top": 796,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -3810,7 +3810,7 @@
 					"name": "mouse_imgbtn",
 					"type": "imgbtn",
 					"left": 530,
-					"top": 766,
+					"top": 796,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -3869,49 +3869,23 @@
 					],
 					"id": "rdntshoa",
 					"default_style": false
-				}
-			]
-		},
-		{
-			"id": "screen2_WIFI7",
-			"name": "screen3_USB",
-			"list": [
+				},
 				{
-					"width": 720,
-					"height": 1280,
-					"part": "LV_CANVAS_PART_MAIN",
-					"state": "LV_STATE_DEFAULT",
-					"disable": false,
-					"image_recolor": "#ffffff",
-					"image_recolor_opa": 255,
-					"style": [
-						{
-							"part": "LV_CANVAS_PART_MAIN",
-							"state": "LV_STATE_DEFAULT",
-							"disable": false,
-							"image_recolor": "#ffffff",
-							"image_recolor_opa": 255
-						}
-					],
-					"name": "canvas_white",
-					"type": "canvas",
-					"left": 0,
-					"top": 0,
+					"name": "ic2_scan_imgbtn",
+					"type": "imgbtn",
+					"left": 530,
+					"top": 426,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
-					"id": "f60ry9zl",
-					"default_style": false
-				},
-				{
-					"width": 150,
-					"height": 150,
-					"text": "",
+					"width": 160,
+					"height": 50,
+					"text": "scan",
 					"toggle": false,
-					"src_released": "left_arrow.png",
-					"src_pressed": "left_arrow_dark.png",
+					"src_released": "button.png",
+					"src_pressed": "button_on.png",
 					"src_checked_released": "",
 					"src_checked_pressed": "",
 					"color_format": "true-color-alpha",
@@ -3921,9 +3895,9 @@
 					"image_recolor": "#ffffff",
 					"image_recolor_opa": 0,
 					"image_opa": 255,
-					"font_family": "simsun",
+					"font_family": "OpenSans_Regular",
 					"text_color": "#000000",
-					"font": 12,
+					"font": "24",
 					"style": [
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
@@ -3932,9 +3906,9 @@
 							"image_recolor": "#ffffff",
 							"image_recolor_opa": 0,
 							"image_opa": 255,
-							"font_family": "simsun",
+							"font_family": "OpenSans_Regular",
 							"text_color": "#000000",
-							"font": 12
+							"font": "24"
 						},
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
@@ -3957,318 +3931,7 @@
 							"font": 16
 						}
 					],
-					"name": "left_btn",
-					"type": "imgbtn",
-					"left": 10,
-					"top": 10,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
-					"id": "k0qlijc1",
-					"default_style": false,
-					"event": [
-						{
-							"src": "leftbtn0",
-							"trigger": "pressed",
-							"dst": "screen",
-							"action": "load_screen",
-							"anim_type": "LV_SCR_LOAD_ANIM_NONE",
-							"delay": 0,
-							"duration": 0
-						}
-					]
-				},
-				{
-					"width": 180,
-					"height": 0,
-					"text": "MENU",
-					"text_align": "center",
-					"long_mode": "LV_LABEL_LONG_BREAK",
-					"part": "LV_LABEL_PART_MAIN",
-					"state": "LV_STATE_DEFAULT",
-					"disable": false,
-					"bg_color": "#ffffff",
-					"bg_grad_color": "#ffffff",
-					"bg_grad_dir": "LV_GRAD_DIR_VER",
-					"bg_opa": 255,
-					"text_color": "#000000",
-					"font": "48",
-					"font_family": "simsun",
-					"letter_space": 2,
-					"radius": 0,
-					"paddingTop": 0,
-					"paddingRight": 0,
-					"paddingBottom": 0,
-					"paddingLeft": 0,
-					"style": [
-						{
-							"part": "LV_LABEL_PART_MAIN",
-							"state": "LV_STATE_DEFAULT",
-							"disable": false,
-							"radius": 0,
-							"text_color": "#000000",
-							"font": "48",
-							"font_family": "simsun",
-							"letter_space": 2,
-							"bg_color": "#ffffff",
-							"bg_grad_color": "#ffffff",
-							"bg_opa": 255,
-							"bg_grad_dir": "LV_GRAD_DIR_VER",
-							"paddingTop": 0,
-							"paddingRight": 0,
-							"paddingBottom": 0,
-							"paddingLeft": 0
-						},
-						{
-							"part": "LV_LABEL_PART_MAIN",
-							"state": "LV_STATE_DISABLED",
-							"disable": true,
-							"radius": 0,
-							"text_color": "#000000",
-							"font": 12,
-							"font_family": "simsun",
-							"letter_space": 2,
-							"bg_color": "#ffffff",
-							"bg_grad_color": "#ffffff",
-							"bg_opa": 255,
-							"bg_grad_dir": "LV_GRAD_DIR_VER",
-							"paddingTop": 0,
-							"paddingRight": 0,
-							"paddingBottom": 0,
-							"paddingLeft": 0
-						}
-					],
-					"name": "left_label",
-					"type": "label",
-					"left": 0,
-					"top": 160,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
-					"id": "5te1ilym",
-					"default_style": false
-				},
-				{
-					"width": 176,
-					"height": 176,
-					"img_path": "AvnetIcon310x310.png",
-					"rotate": 0,
-					"x": 0,
-					"y": 0,
-					"color_format": "true-color-alpha",
-					"part": "LV_IMG_PART_MAIN",
-					"state": "LV_STATE_DEFAULT",
-					"disable": false,
-					"image_recolor": "#ffffff",
-					"image_recolor_opa": 0,
-					"image_opa": 255,
-					"style": [
-						{
-							"part": "LV_IMG_PART_MAIN",
-							"state": "LV_STATE_DEFAULT",
-							"disable": false,
-							"image_recolor": "#ffffff",
-							"image_recolor_opa": 0,
-							"image_opa": 255
-						}
-					],
-					"name": "avlogoimg0",
-					"type": "img",
-					"left": 272,
-					"top": 20,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
-					"id": "f9q83rhu",
-					"default_style": false
-				},
-				{
-					"width": 150,
-					"height": 150,
-					"text": "",
-					"toggle": false,
-					"src_released": "right_arrow.png",
-					"src_pressed": "right_arrow_dark.png",
-					"src_checked_released": "",
-					"src_checked_pressed": "",
-					"color_format": "true-color-alpha",
-					"part": "LV_IMGBTN_PART_MAIN",
-					"state": "LV_STATE_DEFAULT",
-					"disable": false,
-					"image_recolor": "#ffffff",
-					"image_recolor_opa": 0,
-					"image_opa": 255,
-					"font_family": "simsun",
-					"text_color": "#000000",
-					"font": 12,
-					"style": [
-						{
-							"part": "LV_IMGBTN_PART_MAIN",
-							"state": "LV_STATE_DEFAULT",
-							"disable": false,
-							"image_recolor": "#ffffff",
-							"image_recolor_opa": 0,
-							"image_opa": 255,
-							"font_family": "simsun",
-							"text_color": "#000000",
-							"font": 12
-						},
-						{
-							"part": "LV_IMGBTN_PART_MAIN",
-							"state": "LV_STATE_PRESSED",
-							"disable": true,
-							"image_recolor": "#000000",
-							"image_recolor_opa": 0,
-							"text_color": "#FF33FF",
-							"font_family": "simsun",
-							"font": 16
-						},
-						{
-							"part": "LV_IMGBTN_PART_MAIN",
-							"state": "LV_STATE_CHECKED",
-							"disable": true,
-							"image_recolor": "#000000",
-							"image_recolor_opa": 0,
-							"text_color": "#FF33FF",
-							"font_family": "simsun",
-							"font": 16
-						}
-					],
-					"name": "right_btn",
-					"type": "imgbtn",
-					"left": 560,
-					"top": 10,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
-					"id": "hv83zbjz",
-					"default_style": false,
-					"event": [
-						{
-							"src": "right_btn",
-							"trigger": "pressed",
-							"dst": "screen3_USB7",
-							"action": "load_screen",
-							"anim_type": "LV_SCR_LOAD_ANIM_NONE",
-							"delay": 0,
-							"duration": 0
-						}
-					]
-				},
-				{
-					"width": 180,
-					"height": 0,
-					"text": "A/V",
-					"text_align": "center",
-					"long_mode": "LV_LABEL_LONG_BREAK",
-					"part": "LV_LABEL_PART_MAIN",
-					"state": "LV_STATE_DEFAULT",
-					"disable": false,
-					"bg_color": "#ffffff",
-					"bg_grad_color": "#ffffff",
-					"bg_grad_dir": "LV_GRAD_DIR_VER",
-					"bg_opa": 255,
-					"text_color": "#000000",
-					"font": "48",
-					"font_family": "simsun",
-					"letter_space": 2,
-					"radius": 0,
-					"paddingTop": 0,
-					"paddingRight": 0,
-					"paddingBottom": 0,
-					"paddingLeft": 0,
-					"style": [
-						{
-							"part": "LV_LABEL_PART_MAIN",
-							"state": "LV_STATE_DEFAULT",
-							"disable": false,
-							"radius": 0,
-							"text_color": "#000000",
-							"font": "48",
-							"font_family": "simsun",
-							"letter_space": 2,
-							"bg_color": "#ffffff",
-							"bg_grad_color": "#ffffff",
-							"bg_opa": 255,
-							"bg_grad_dir": "LV_GRAD_DIR_VER",
-							"paddingTop": 0,
-							"paddingRight": 0,
-							"paddingBottom": 0,
-							"paddingLeft": 0
-						},
-						{
-							"part": "LV_LABEL_PART_MAIN",
-							"state": "LV_STATE_DISABLED",
-							"disable": true,
-							"radius": 0,
-							"text_color": "#000000",
-							"font": 12,
-							"font_family": "simsun",
-							"letter_space": 2,
-							"bg_color": "#ffffff",
-							"bg_grad_color": "#ffffff",
-							"bg_opa": 255,
-							"bg_grad_dir": "LV_GRAD_DIR_VER",
-							"paddingTop": 0,
-							"paddingRight": 0,
-							"paddingBottom": 0,
-							"paddingLeft": 0
-						}
-					],
-					"name": "right_label",
-					"type": "label",
-					"left": 540,
-					"top": 160,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
-					"id": "qugcw07a",
-					"default_style": false
-				},
-				{
-					"width": 512,
-					"height": 512,
-					"img_path": "USB.png",
-					"rotate": 0,
-					"x": 0,
-					"y": 0,
-					"color_format": "true-color-alpha",
-					"part": "LV_IMG_PART_MAIN",
-					"state": "LV_STATE_DEFAULT",
-					"disable": false,
-					"image_recolor": "#ffffff",
-					"image_recolor_opa": 0,
-					"image_opa": 255,
-					"style": [
-						{
-							"part": "LV_IMG_PART_MAIN",
-							"state": "LV_STATE_DEFAULT",
-							"disable": false,
-							"image_recolor": "#ffffff",
-							"image_recolor_opa": 0,
-							"image_opa": 255
-						}
-					],
-					"name": "img_5oodt29s",
-					"type": "img",
-					"left": 102,
-					"top": 480,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
-					"id": "5oodt29s",
+					"id": "ebxc93lh",
 					"default_style": false
 				}
 			]
@@ -7663,11 +7326,11 @@
 				]
 			},
 			{
-				"name": "screen3_USB2",
+				"name": "screen3_USB",
 				"type": "scr",
 				"widgets": [
 					{
-						"name": "screen3_USB2_canvas_white",
+						"name": "screen3_USB_canvas_white",
 						"type": "canvas",
 						"pos": [
 							0,
@@ -7698,7 +7361,7 @@
 						]
 					},
 					{
-						"name": "screen3_USB2_left_btn",
+						"name": "screen3_USB_left_btn",
 						"type": "imgbtn",
 						"pos": [
 							44,
@@ -7758,7 +7421,7 @@
 						]
 					},
 					{
-						"name": "screen3_USB2_left_label",
+						"name": "screen3_USB_left_label",
 						"type": "label",
 						"pos": [
 							20,
@@ -7821,7 +7484,7 @@
 						]
 					},
 					{
-						"name": "screen3_USB2_avlogoimg0",
+						"name": "screen3_USB_avlogoimg0",
 						"type": "img",
 						"pos": [
 							0,
@@ -7857,7 +7520,7 @@
 						]
 					},
 					{
-						"name": "screen3_USB2_right_btn",
+						"name": "screen3_USB_right_btn",
 						"type": "imgbtn",
 						"pos": [
 							544,
@@ -7917,7 +7580,7 @@
 						]
 					},
 					{
-						"name": "screen3_USB2_right_label",
+						"name": "screen3_USB_right_label",
 						"type": "label",
 						"pos": [
 							520,
@@ -7980,7 +7643,7 @@
 						]
 					},
 					{
-						"name": "screen3_USB2_home_btn",
+						"name": "screen3_USB_home_btn",
 						"type": "imgbtn",
 						"pos": [
 							294,
@@ -8040,7 +7703,7 @@
 						]
 					},
 					{
-						"name": "screen3_USB2_page_label",
+						"name": "screen3_USB_page_label",
 						"type": "label",
 						"pos": [
 							180,
@@ -8103,7 +7766,7 @@
 						]
 					},
 					{
-						"name": "screen3_USB2_usb_list",
+						"name": "screen3_USB_usb_list",
 						"type": "list",
 						"pos": [
 							0,
@@ -8224,7 +7887,7 @@
 						"edge_flash": true
 					},
 					{
-						"name": "screen3_USB2_usb_devices_label",
+						"name": "screen3_USB_usb_devices_label",
 						"type": "label",
 						"pos": [
 							30,
@@ -8287,11 +7950,11 @@
 						]
 					},
 					{
-						"name": "screen3_USB2_input_label",
+						"name": "screen3_USB_input_label",
 						"type": "label",
 						"pos": [
 							30,
-							770
+							800
 						],
 						"size": [
 							300,
@@ -8350,7 +8013,7 @@
 						]
 					},
 					{
-						"name": "screen3_USB2_ic2_nodes_label",
+						"name": "screen3_USB_ic2_nodes_label",
 						"type": "label",
 						"pos": [
 							30,
@@ -8413,7 +8076,7 @@
 						]
 					},
 					{
-						"name": "screen3_USB2_ic2_table",
+						"name": "screen3_USB_ic2_table",
 						"type": "table",
 						"pos": [
 							0,
@@ -8508,7 +8171,7 @@
 							}
 						],
 						"columns": 11,
-						"row": 8,
+						"row": 9,
 						"table_header": [
 							" ",
 							"00",
@@ -8530,6 +8193,7 @@
 							"40",
 							"50",
 							"60",
+							"70",
 							"--",
 							"--",
 							"--",
@@ -8537,6 +8201,7 @@
 							"--",
 							"--",
 							"--",
+							"",
 							"--",
 							"--",
 							"--",
@@ -8544,6 +8209,7 @@
 							"--",
 							"--",
 							"--",
+							"",
 							"--",
 							"--",
 							"--",
@@ -8551,6 +8217,7 @@
 							"--",
 							"--",
 							"--",
+							"",
 							"--",
 							"--",
 							"--",
@@ -8558,6 +8225,7 @@
 							"--",
 							"--",
 							"--",
+							"",
 							"--",
 							"--",
 							"--",
@@ -8565,6 +8233,7 @@
 							"--",
 							"--",
 							"--",
+							"",
 							"--",
 							"--",
 							"--",
@@ -8572,6 +8241,11 @@
 							"--",
 							"--",
 							"--",
+							"",
+							"",
+							"",
+							"",
+							"",
 							"",
 							"",
 							"",
@@ -8605,11 +8279,11 @@
 						"pad_ver": 0
 					},
 					{
-						"name": "screen3_USB2_input_area",
+						"name": "screen3_USB_input_area",
 						"type": "ta",
 						"pos": [
 							20,
-							825
+							855
 						],
 						"size": [
 							680,
@@ -8694,11 +8368,11 @@
 						]
 					},
 					{
-						"name": "screen3_USB2_kbd_imgbtn",
+						"name": "screen3_USB_kbd_imgbtn",
 						"type": "imgbtn",
 						"pos": [
 							360,
-							766
+							796
 						],
 						"size": [
 							160,
@@ -8756,11 +8430,11 @@
 						]
 					},
 					{
-						"name": "screen3_USB2_mouse_imgbtn",
+						"name": "screen3_USB_mouse_imgbtn",
 						"type": "imgbtn",
 						"pos": [
 							530,
-							766
+							796
 						],
 						"size": [
 							160,
@@ -8816,54 +8490,17 @@
 								"font": 16
 							}
 						]
-					}
-				]
-			},
-			{
-				"name": "screen3_USB",
-				"type": "scr",
-				"widgets": [
-					{
-						"name": "screen3_USB_canvas_white",
-						"type": "canvas",
-						"pos": [
-							0,
-							0
-						],
-						"size": [
-							720,
-							1280
-						],
-						"is_move_animation": false,
-						"path_type": "linear",
-						"move_animation": {
-							"des_pos": [
-								0,
-								0
-							],
-							"duration": 100
-						},
-						"default_style": false,
-						"style": [
-							{
-								"part": "LV_CANVAS_PART_MAIN",
-								"state": "LV_STATE_DEFAULT",
-								"disable": false,
-								"image_recolor": "#ffffff",
-								"image_recolor_opa": 255
-							}
-						]
 					},
 					{
-						"name": "screen3_USB_left_btn",
+						"name": "screen3_USB_ic2_scan_imgbtn",
 						"type": "imgbtn",
 						"pos": [
-							10,
-							10
+							530,
+							426
 						],
 						"size": [
-							150,
-							150
+							160,
+							50
 						],
 						"is_move_animation": false,
 						"path_type": "linear",
@@ -8876,10 +8513,10 @@
 						},
 						"default_style": false,
 						"toggle": false,
-						"text": "",
+						"text": "scan",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/left_arrow.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/left_arrow_dark.png",
+						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
+						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -8888,9 +8525,9 @@
 								"image_recolor": "#ffffff",
 								"image_recolor_opa": 0,
 								"image_opa": 255,
-								"font_family": "simsun",
+								"font_family": "OpenSans_Regular",
 								"text_color": "#000000",
-								"font": 12
+								"font": "24"
 							},
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -8911,264 +8548,6 @@
 								"text_color": "#FF33FF",
 								"font_family": "simsun",
 								"font": 16
-							}
-						]
-					},
-					{
-						"name": "screen3_USB_left_label",
-						"type": "label",
-						"pos": [
-							0,
-							160
-						],
-						"size": [
-							180,
-							0
-						],
-						"is_move_animation": false,
-						"path_type": "linear",
-						"move_animation": {
-							"des_pos": [
-								0,
-								0
-							],
-							"duration": 100
-						},
-						"default_style": false,
-						"text": "MENU",
-						"long_mode": "LV_LABEL_LONG_BREAK",
-						"text_align": "center",
-						"style": [
-							{
-								"part": "LV_LABEL_PART_MAIN",
-								"state": "LV_STATE_DEFAULT",
-								"disable": false,
-								"radius": 0,
-								"text_color": "#000000",
-								"font": "48",
-								"font_family": "simsun",
-								"letter_space": 2,
-								"bg_color": "#ffffff",
-								"bg_grad_color": "#ffffff",
-								"bg_opa": 255,
-								"bg_grad_dir": "LV_GRAD_DIR_VER",
-								"paddingTop": 0,
-								"paddingRight": 0,
-								"paddingBottom": 0,
-								"paddingLeft": 0
-							},
-							{
-								"part": "LV_LABEL_PART_MAIN",
-								"state": "LV_STATE_DISABLED",
-								"disable": true,
-								"radius": 0,
-								"text_color": "#000000",
-								"font": 12,
-								"font_family": "simsun",
-								"letter_space": 2,
-								"bg_color": "#ffffff",
-								"bg_grad_color": "#ffffff",
-								"bg_opa": 255,
-								"bg_grad_dir": "LV_GRAD_DIR_VER",
-								"paddingTop": 0,
-								"paddingRight": 0,
-								"paddingBottom": 0,
-								"paddingLeft": 0
-							}
-						]
-					},
-					{
-						"name": "screen3_USB_avlogoimg0",
-						"type": "img",
-						"pos": [
-							272,
-							20
-						],
-						"size": [
-							176,
-							176
-						],
-						"is_move_animation": false,
-						"path_type": "linear",
-						"move_animation": {
-							"des_pos": [
-								0,
-								0
-							],
-							"duration": 100
-						},
-						"default_style": false,
-						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/AvnetIcon310x310.png",
-						"color_format": "true-color-alpha",
-						"rotate": 0,
-						"pivot": "0,0",
-						"style": [
-							{
-								"part": "LV_IMG_PART_MAIN",
-								"state": "LV_STATE_DEFAULT",
-								"disable": false,
-								"image_recolor": "#ffffff",
-								"image_recolor_opa": 0,
-								"image_opa": 255
-							}
-						]
-					},
-					{
-						"name": "screen3_USB_right_btn",
-						"type": "imgbtn",
-						"pos": [
-							560,
-							10
-						],
-						"size": [
-							150,
-							150
-						],
-						"is_move_animation": false,
-						"path_type": "linear",
-						"move_animation": {
-							"des_pos": [
-								0,
-								0
-							],
-							"duration": 100
-						},
-						"default_style": false,
-						"toggle": false,
-						"text": "",
-						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/right_arrow.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/right_arrow_dark.png",
-						"style": [
-							{
-								"part": "LV_IMGBTN_PART_MAIN",
-								"state": "LV_STATE_DEFAULT",
-								"disable": false,
-								"image_recolor": "#ffffff",
-								"image_recolor_opa": 0,
-								"image_opa": 255,
-								"font_family": "simsun",
-								"text_color": "#000000",
-								"font": 12
-							},
-							{
-								"part": "LV_IMGBTN_PART_MAIN",
-								"state": "LV_STATE_PRESSED",
-								"disable": true,
-								"image_recolor": "#000000",
-								"image_recolor_opa": 0,
-								"text_color": "#FF33FF",
-								"font_family": "simsun",
-								"font": 16
-							},
-							{
-								"part": "LV_IMGBTN_PART_MAIN",
-								"state": "LV_STATE_CHECKED",
-								"disable": true,
-								"image_recolor": "#000000",
-								"image_recolor_opa": 0,
-								"text_color": "#FF33FF",
-								"font_family": "simsun",
-								"font": 16
-							}
-						]
-					},
-					{
-						"name": "screen3_USB_right_label",
-						"type": "label",
-						"pos": [
-							540,
-							160
-						],
-						"size": [
-							180,
-							0
-						],
-						"is_move_animation": false,
-						"path_type": "linear",
-						"move_animation": {
-							"des_pos": [
-								0,
-								0
-							],
-							"duration": 100
-						},
-						"default_style": false,
-						"text": "A/V",
-						"long_mode": "LV_LABEL_LONG_BREAK",
-						"text_align": "center",
-						"style": [
-							{
-								"part": "LV_LABEL_PART_MAIN",
-								"state": "LV_STATE_DEFAULT",
-								"disable": false,
-								"radius": 0,
-								"text_color": "#000000",
-								"font": "48",
-								"font_family": "simsun",
-								"letter_space": 2,
-								"bg_color": "#ffffff",
-								"bg_grad_color": "#ffffff",
-								"bg_opa": 255,
-								"bg_grad_dir": "LV_GRAD_DIR_VER",
-								"paddingTop": 0,
-								"paddingRight": 0,
-								"paddingBottom": 0,
-								"paddingLeft": 0
-							},
-							{
-								"part": "LV_LABEL_PART_MAIN",
-								"state": "LV_STATE_DISABLED",
-								"disable": true,
-								"radius": 0,
-								"text_color": "#000000",
-								"font": 12,
-								"font_family": "simsun",
-								"letter_space": 2,
-								"bg_color": "#ffffff",
-								"bg_grad_color": "#ffffff",
-								"bg_opa": 255,
-								"bg_grad_dir": "LV_GRAD_DIR_VER",
-								"paddingTop": 0,
-								"paddingRight": 0,
-								"paddingBottom": 0,
-								"paddingLeft": 0
-							}
-						]
-					},
-					{
-						"name": "screen3_USB_img_5oodt29s",
-						"type": "img",
-						"pos": [
-							102,
-							480
-						],
-						"size": [
-							512,
-							512
-						],
-						"is_move_animation": false,
-						"path_type": "linear",
-						"move_animation": {
-							"des_pos": [
-								0,
-								0
-							],
-							"duration": 100
-						},
-						"default_style": false,
-						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/USB.png",
-						"color_format": "true-color-alpha",
-						"rotate": 0,
-						"pivot": "0,0",
-						"style": [
-							{
-								"part": "LV_IMG_PART_MAIN",
-								"state": "LV_STATE_DEFAULT",
-								"disable": false,
-								"image_recolor": "#ffffff",
-								"image_recolor_opa": 0,
-								"image_opa": 255
 							}
 						]
 					}
@@ -10184,7 +9563,7 @@
 			{
 				"src": "screen0_MENU_imgbtn_5",
 				"trigger": "released",
-				"dst": "screen3_USB2",
+				"dst": "screen3_USB",
 				"action": "load_screen",
 				"anim_type": "LV_SCR_LOAD_ANIM_NONE",
 				"delay": 0,
@@ -10256,7 +9635,7 @@
 			{
 				"src": "screen2_WIFI_right_btn",
 				"trigger": "released",
-				"dst": "screen3_USB2",
+				"dst": "screen3_USB",
 				"action": "load_screen",
 				"anim_type": "LV_SCR_LOAD_ANIM_NONE",
 				"delay": 0,
@@ -10272,7 +9651,7 @@
 				"duration": 0
 			},
 			{
-				"src": "screen3_USB2_left_btn",
+				"src": "screen3_USB_left_btn",
 				"trigger": "released",
 				"dst": "screen2_WIFI",
 				"action": "load_screen",
@@ -10281,36 +9660,18 @@
 				"duration": 0
 			},
 			{
-				"src": "screen3_USB2_right_btn",
-				"trigger": "released",
-				"dst": "screen4_AV",
-				"action": "load_screen",
-				"anim_type": "LV_SCR_LOAD_ANIM_NONE",
-				"delay": 0,
-				"duration": 0
-			},
-			{
-				"src": "screen3_USB2_home_btn",
-				"trigger": "released",
-				"dst": "screen0_MENU",
-				"action": "load_screen",
-				"anim_type": "LV_SCR_LOAD_ANIM_NONE",
-				"delay": 0,
-				"duration": 0
-			},
-			{
-				"src": "screen3_USB_left_btn",
-				"trigger": "pressed",
-				"dst": "screen0_MENU",
-				"action": "load_screen",
-				"anim_type": "LV_SCR_LOAD_ANIM_NONE",
-				"delay": 0,
-				"duration": 0
-			},
-			{
 				"src": "screen3_USB_right_btn",
-				"trigger": "pressed",
+				"trigger": "released",
 				"dst": "screen4_AV",
+				"action": "load_screen",
+				"anim_type": "LV_SCR_LOAD_ANIM_NONE",
+				"delay": 0,
+				"duration": 0
+			},
+			{
+				"src": "screen3_USB_home_btn",
+				"trigger": "released",
+				"dst": "screen0_MENU",
 				"action": "load_screen",
 				"anim_type": "LV_SCR_LOAD_ANIM_NONE",
 				"delay": 0,
