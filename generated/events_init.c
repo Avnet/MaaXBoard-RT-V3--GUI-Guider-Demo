@@ -420,7 +420,37 @@ static void screen6_HELP_left_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 {
 	switch (event)
 	{
-	case LV_EVENT_PRESSED:
+	case LV_EVENT_RELEASED:
+	{
+		setup_scr_screen5_SYSTEM(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen5_SYSTEM, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+static void screen6_HELP_right_btnevent_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_RELEASED:
+	{
+		setup_scr_screen0_MENU(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen0_MENU, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+static void screen6_HELP_home_btnevent_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_RELEASED:
 	{
 		setup_scr_screen0_MENU(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen0_MENU, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
@@ -434,4 +464,6 @@ static void screen6_HELP_left_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 void events_init_screen6_HELP(lv_ui *ui)
 {
 	lv_obj_set_event_cb(ui->screen6_HELP_left_btn, screen6_HELP_left_btnevent_handler);
+	lv_obj_set_event_cb(ui->screen6_HELP_right_btn, screen6_HELP_right_btnevent_handler);
+	lv_obj_set_event_cb(ui->screen6_HELP_home_btn, screen6_HELP_home_btnevent_handler);
 }
