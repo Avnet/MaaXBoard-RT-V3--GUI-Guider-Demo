@@ -107,7 +107,16 @@ typedef struct
 	lv_obj_t *screen4_AV_right_btn;
 	lv_obj_t *screen4_AV_right_btn_label;
 	lv_obj_t *screen4_AV_right_label;
-	lv_obj_t *screen4_AV_img_5oodt29s;
+	lv_obj_t *screen4_AV_home_btn;
+	lv_obj_t *screen4_AV_home_btn_label;
+	lv_obj_t *screen4_AV_page_label;
+	lv_obj_t *screen4_AV_camera_label;
+	lv_obj_t *screen4_AV_mic_label;
+	lv_obj_t *screen4_AV_camera_state_label;
+	lv_obj_t *screen4_AV_mic_state_label;
+	lv_obj_t *screen4_AV_playback_label;
+	lv_obj_t *screen4_AV_audio_test_imgbtn;
+	lv_obj_t *screen4_AV_audio_test_imgbtn_label;
 	lv_obj_t *screen5_SYSTEM;
 	lv_obj_t *screen5_SYSTEM_canvas_white;
 	lv_obj_t *screen5_SYSTEM_left_btn;
@@ -144,6 +153,7 @@ LV_IMG_DECLARE(_lock_alpha_512x512);
 LV_IMG_DECLARE(_led_green_on_alpha_110x110);
 LV_IMG_DECLARE(_left_icon_alpha_132x132);
 LV_IMG_DECLARE(_SBC_Help_Image_alpha_424x645);
+LV_IMG_DECLARE(_button_on_alpha_190x80);
 LV_IMG_DECLARE(_IoT_Smart_Asset_Monitoring_G_600ppi_alpha_500x500);
 LV_IMG_DECLARE(_button_on_alpha_320x106);
 LV_IMG_DECLARE(_button_on_alpha_160x50);
@@ -155,13 +165,13 @@ LV_IMG_DECLARE(_button_alpha_190x106);
 LV_IMG_DECLARE(_button_on_alpha_190x106);
 LV_IMG_DECLARE(_button_alpha_320x106);
 LV_IMG_DECLARE(_led_red_on_alpha_110x110);
-LV_IMG_DECLARE(_AV_alpha_512x512);
 LV_IMG_DECLARE(_left_arrow_alpha_150x150);
 LV_IMG_DECLARE(_right_arrow_dark_alpha_150x150);
 LV_IMG_DECLARE(_home_icon_alpha_132x132);
 LV_IMG_DECLARE(_left_arrow_dark_alpha_150x150);
 LV_IMG_DECLARE(_right_icon_alpha_132x132);
 LV_IMG_DECLARE(_led_blue_on_alpha_110x110);
+LV_IMG_DECLARE(_button_alpha_190x80);
 
 #ifdef __cplusplus
 }

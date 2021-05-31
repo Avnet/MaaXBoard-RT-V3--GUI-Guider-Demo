@@ -316,10 +316,10 @@ static void screen4_AV_left_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 {
 	switch (event)
 	{
-	case LV_EVENT_PRESSED:
+	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen0_MENU(&guider_ui);
-		lv_scr_load_anim(guider_ui.screen0_MENU, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
+		setup_scr_screen3_USB(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen3_USB, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
 	default:
@@ -331,10 +331,25 @@ static void screen4_AV_right_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 {
 	switch (event)
 	{
-	case LV_EVENT_PRESSED:
+	case LV_EVENT_RELEASED:
 	{
 		setup_scr_screen5_SYSTEM(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen5_SYSTEM, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
+	}
+		break;
+	default:
+		break;
+	}
+}
+
+static void screen4_AV_home_btnevent_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_RELEASED:
+	{
+		setup_scr_screen0_MENU(&guider_ui);
+		lv_scr_load_anim(guider_ui.screen0_MENU, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
 	default:
@@ -346,6 +361,7 @@ void events_init_screen4_AV(lv_ui *ui)
 {
 	lv_obj_set_event_cb(ui->screen4_AV_left_btn, screen4_AV_left_btnevent_handler);
 	lv_obj_set_event_cb(ui->screen4_AV_right_btn, screen4_AV_right_btnevent_handler);
+	lv_obj_set_event_cb(ui->screen4_AV_home_btn, screen4_AV_home_btnevent_handler);
 }
 
 static void screen5_SYSTEM_left_btnevent_handler(lv_obj_t * obj, lv_event_t event)
