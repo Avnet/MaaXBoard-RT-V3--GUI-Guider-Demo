@@ -115,7 +115,7 @@ void setup_scr_screen4_AV(lv_ui *ui){
 
 	//Write codes screen4_AV_right_label
 	ui->screen4_AV_right_label = lv_label_create(ui->screen4_AV, NULL);
-	lv_label_set_text(ui->screen4_AV_right_label, "TEST");
+	lv_label_set_text(ui->screen4_AV_right_label, "SYSTEM");
 	lv_label_set_long_mode(ui->screen4_AV_right_label, LV_LABEL_LONG_BREAK);
 	lv_label_set_align(ui->screen4_AV_right_label, LV_LABEL_ALIGN_CENTER);
 
