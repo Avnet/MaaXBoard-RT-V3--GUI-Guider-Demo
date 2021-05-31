@@ -145,6 +145,15 @@ typedef struct
 	lv_obj_t *screen6_HELP_label_1;
 	lv_obj_t *screen6_HELP_label_2;
 	lv_obj_t *screen6_HELP_label_3;
+	lv_obj_t *screen6_HELP_label_4;
+	lv_obj_t *screen6_HELP_label_5;
+	lv_obj_t *screen6_HELP_label_6;
+	lv_obj_t *screen6_HELP_label_7;
+	lv_obj_t *screen6_HELP_label_8;
+	lv_obj_t *screen6_HELP_label_9;
+	lv_obj_t *screen6_HELP_label_10;
+	lv_obj_t *screen6_HELP_label_11;
+	lv_obj_t *screen6_HELP_label_12;
 }lv_ui;
 
 void setup_ui(lv_ui *ui);
