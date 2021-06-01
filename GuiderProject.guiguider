@@ -3510,7 +3510,7 @@
 				{
 					"name": "ic2_table",
 					"type": "table",
-					"left": 0,
+					"left": 24,
 					"top": 485,
 					"is_move_animation": false,
 					"desX": 0,
@@ -3519,35 +3519,35 @@
 					"duration": 100,
 					"width": 0,
 					"height": 0,
-					"columns": 17,
+					"columns": 5,
 					"row": 9,
 					"row_str": [
 						{
-							"text": "00,--,--,--,--,--,--"
+							"text": "00,-- -- -- --,-- -- -- --,-- -- -- --,-- -- -- --"
 						},
 						{
-							"text": "10,--,--,--,--,--,--"
+							"text": "10,-- -- -- --,-- -- -- --,-- -- -- --,-- -- -- --"
 						},
 						{
-							"text": "20,--,--,--,--,--,--"
+							"text": "20,-- -- -- --,-- -- -- --,-- -- -- --,-- -- -- --"
 						},
 						{
-							"text": "30,--,--,--,--,--,--"
+							"text": "30,-- -- -- --,-- -- -- --,-- -- -- --,-- -- -- --"
 						},
 						{
-							"text": "40,--,--,--,--,--,--"
+							"text": "40,-- -- -- --,-- -- -- --,-- -- -- --,-- -- -- --"
 						},
 						{
-							"text": "50,--,--,--,--,--,--"
+							"text": "50,-- -- -- --,-- -- -- --,-- -- -- --,-- -- -- --"
 						},
 						{
-							"text": "60,--,--,--,--,--,--"
+							"text": "60,-- -- -- --,-- -- -- --,-- -- -- --,-- -- -- --"
 						},
 						{
 							"text": "70"
 						}
 					],
-					"columns_str": " ,00,01,02,03,04,05,06,07,08,09,0A,0B,0C,0D,0E,0F",
+					"columns_str": " ,00 01 02 03,04 05 06 07,08 09 0A 0B,0C 0D 0E 0F",
 					"pad_hor": 10,
 					"pad_ver": 0,
 					"part": "LV_TABLE_PART_CELL1",
@@ -3804,7 +3804,16 @@
 						}
 					],
 					"id": "yhsg3ub4",
-					"default_style": false
+					"default_style": false,
+					"event": [
+						{
+							"src": "kbd_imgbtn",
+							"trigger": "released",
+							"dst": "yhsg3ub4",
+							"action": "bg_color",
+							"value": "#ffffff"
+						}
+					]
 				},
 				{
 					"name": "mouse_imgbtn",
@@ -3868,7 +3877,16 @@
 						}
 					],
 					"id": "rdntshoa",
-					"default_style": false
+					"default_style": false,
+					"event": [
+						{
+							"src": "mouse_imgbtn",
+							"trigger": "released",
+							"dst": "rdntshoa",
+							"action": "bg_color",
+							"value": "#ffffff"
+						}
+					]
 				},
 				{
 					"name": "ic2_scan_imgbtn",
@@ -3932,7 +3950,16 @@
 						}
 					],
 					"id": "ebxc93lh",
-					"default_style": false
+					"default_style": false,
+					"event": [
+						{
+							"src": "ic2_scan_imgbtn",
+							"trigger": "released",
+							"dst": "ebxc93lh",
+							"action": "bg_color",
+							"value": "#ffffff"
+						}
+					]
 				}
 			]
 		},
@@ -9883,7 +9910,7 @@
 						"name": "screen3_USB_ic2_table",
 						"type": "table",
 						"pos": [
-							0,
+							24,
 							485
 						],
 						"size": [
@@ -9974,20 +10001,14 @@
 								"border_color": "#d5dee6"
 							}
 						],
-						"columns": 11,
+						"columns": 5,
 						"row": 9,
 						"table_header": [
 							" ",
-							"00",
-							"01",
-							"02",
-							"03",
-							"04",
-							"05",
-							"06",
-							"07",
-							"08",
-							"09"
+							"00 01 02 03",
+							"04 05 06 07",
+							"08 09 0A 0B",
+							"0C 0D 0E 0F"
 						],
 						"table_value": [
 							"00",
@@ -9998,85 +10019,37 @@
 							"50",
 							"60",
 							"70",
-							"--",
-							"--",
-							"--",
-							"--",
-							"--",
-							"--",
-							"--",
+							"-- -- -- --",
+							"-- -- -- --",
+							"-- -- -- --",
+							"-- -- -- --",
+							"-- -- -- --",
+							"-- -- -- --",
+							"-- -- -- --",
 							"",
-							"--",
-							"--",
-							"--",
-							"--",
-							"--",
-							"--",
-							"--",
+							"-- -- -- --",
+							"-- -- -- --",
+							"-- -- -- --",
+							"-- -- -- --",
+							"-- -- -- --",
+							"-- -- -- --",
+							"-- -- -- --",
 							"",
-							"--",
-							"--",
-							"--",
-							"--",
-							"--",
-							"--",
-							"--",
+							"-- -- -- --",
+							"-- -- -- --",
+							"-- -- -- --",
+							"-- -- -- --",
+							"-- -- -- --",
+							"-- -- -- --",
+							"-- -- -- --",
 							"",
-							"--",
-							"--",
-							"--",
-							"--",
-							"--",
-							"--",
-							"--",
-							"",
-							"--",
-							"--",
-							"--",
-							"--",
-							"--",
-							"--",
-							"--",
-							"",
-							"--",
-							"--",
-							"--",
-							"--",
-							"--",
-							"--",
-							"--",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
-							"",
+							"-- -- -- --",
+							"-- -- -- --",
+							"-- -- -- --",
+							"-- -- -- --",
+							"-- -- -- --",
+							"-- -- -- --",
+							"-- -- -- --",
 							""
 						],
 						"pad_hor": 10,
@@ -13033,6 +13006,27 @@
 				"anim_type": "LV_SCR_LOAD_ANIM_NONE",
 				"delay": 0,
 				"duration": 0
+			},
+			{
+				"src": "screen3_USB_kbd_imgbtn",
+				"trigger": "released",
+				"dst": "screen3_USB_kbd_imgbtn",
+				"action": "bg_color",
+				"value": "#ffffff"
+			},
+			{
+				"src": "screen3_USB_mouse_imgbtn",
+				"trigger": "released",
+				"dst": "screen3_USB_mouse_imgbtn",
+				"action": "bg_color",
+				"value": "#ffffff"
+			},
+			{
+				"src": "screen3_USB_ic2_scan_imgbtn",
+				"trigger": "released",
+				"dst": "screen3_USB_ic2_scan_imgbtn",
+				"action": "bg_color",
+				"value": "#ffffff"
 			},
 			{
 				"src": "screen4_AV_left_btn",
