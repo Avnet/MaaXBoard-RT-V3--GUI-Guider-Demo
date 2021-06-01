@@ -2650,6 +2650,62 @@
 					],
 					"id": "talf7wlm",
 					"default_style": false
+				},
+				{
+					"name": "ssid_list_spinner",
+					"type": "spinner",
+					"left": 310,
+					"top": 460,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 100,
+					"height": 100,
+					"arc_length": 60,
+					"spin_time": 1000,
+					"preload_set_type": "LV_SPINNER_TYPE_SPINNING_ARC",
+					"preload_set_dir": "LV_SPINNER_DIR_FORWARD",
+					"part": "LV_SPINNER_PART_INDIC",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"padding_top": 5,
+					"padding_bottom": 5,
+					"padding_left": 5,
+					"padding_right": 5,
+					"bg_color": "#eeeef6",
+					"bg_grad_color": "#eeeef6",
+					"bg_opa": 255,
+					"bg_grad_dir": "LV_GRAD_DIR_NONE",
+					"line_color": "#41c363",
+					"line_width": 16,
+					"style": [
+						{
+							"part": "LV_SPINNER_PART_BG",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"padding_top": 5,
+							"padding_bottom": 5,
+							"padding_left": 5,
+							"padding_right": 5,
+							"bg_color": "#eeeef6",
+							"bg_grad_color": "#eeeef6",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_NONE",
+							"line_color": "#d5d6de",
+							"line_width": 16
+						},
+						{
+							"part": "LV_SPINNER_PART_INDIC",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"line_color": "#41c363",
+							"line_width": 16
+						}
+					],
+					"id": "lj3ylp16",
+					"default_style": false
 				}
 			]
 		},
@@ -3436,7 +3492,7 @@
 					"default_style": false
 				},
 				{
-					"name": "ic2_nodes_label",
+					"name": "i2c_nodes_label",
 					"type": "label",
 					"left": 30,
 					"top": 430,
@@ -3447,7 +3503,7 @@
 					"duration": 100,
 					"width": 600,
 					"height": 0,
-					"text": "Discovered IC2 Nodes",
+					"text": "Discovered I2C Nodes",
 					"text_align": "left",
 					"long_mode": "LV_LABEL_LONG_BREAK",
 					"part": "LV_LABEL_PART_MAIN",
@@ -3508,7 +3564,7 @@
 					"default_style": false
 				},
 				{
-					"name": "ic2_table",
+					"name": "i2c_table",
 					"type": "table",
 					"left": 24,
 					"top": 485,
@@ -3889,7 +3945,7 @@
 					]
 				},
 				{
-					"name": "ic2_scan_imgbtn",
+					"name": "i2c_scan_imgbtn",
 					"type": "imgbtn",
 					"left": 530,
 					"top": 426,
@@ -9225,6 +9281,58 @@
 								"paddingLeft": 0
 							}
 						]
+					},
+					{
+						"name": "screen2_WIFI_ssid_list_spinner",
+						"type": "spinner",
+						"pos": [
+							310,
+							460
+						],
+						"size": [
+							100,
+							100
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"width": 100,
+						"height": 100,
+						"arc_length": 60,
+						"spin_time": 1000,
+						"preload_set_type": "LV_SPINNER_TYPE_SPINNING_ARC",
+						"preload_set_dir": "LV_SPINNER_DIR_FORWARD",
+						"style": [
+							{
+								"part": "LV_SPINNER_PART_BG",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"padding_top": 5,
+								"padding_bottom": 5,
+								"padding_left": 5,
+								"padding_right": 5,
+								"bg_color": "#eeeef6",
+								"bg_grad_color": "#eeeef6",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_NONE",
+								"line_color": "#d5d6de",
+								"line_width": 16
+							},
+							{
+								"part": "LV_SPINNER_PART_INDIC",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"line_color": "#41c363",
+								"line_width": 16
+							}
+						]
 					}
 				]
 			},
@@ -9916,7 +10024,7 @@
 						]
 					},
 					{
-						"name": "screen3_USB_ic2_nodes_label",
+						"name": "screen3_USB_i2c_nodes_label",
 						"type": "label",
 						"pos": [
 							30,
@@ -9936,7 +10044,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"text": "Discovered IC2 Nodes",
+						"text": "Discovered I2C Nodes",
 						"long_mode": "LV_LABEL_LONG_BREAK",
 						"text_align": "left",
 						"style": [
@@ -9979,7 +10087,7 @@
 						]
 					},
 					{
-						"name": "screen3_USB_ic2_table",
+						"name": "screen3_USB_i2c_table",
 						"type": "table",
 						"pos": [
 							24,
@@ -10341,7 +10449,7 @@
 						]
 					},
 					{
-						"name": "screen3_USB_ic2_scan_imgbtn",
+						"name": "screen3_USB_i2c_scan_imgbtn",
 						"type": "imgbtn",
 						"pos": [
 							530,
@@ -13157,9 +13265,9 @@
 				"value": "#ffffff"
 			},
 			{
-				"src": "screen3_USB_ic2_scan_imgbtn",
+				"src": "screen3_USB_i2c_scan_imgbtn",
 				"trigger": "released",
-				"dst": "screen3_USB_ic2_scan_imgbtn",
+				"dst": "screen3_USB_i2c_scan_imgbtn",
 				"action": "bg_color",
 				"value": "#ffffff"
 			},

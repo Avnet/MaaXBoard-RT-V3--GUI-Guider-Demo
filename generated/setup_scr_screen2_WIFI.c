@@ -338,6 +338,41 @@ void setup_scr_screen2_WIFI(lv_ui *ui){
 	lv_obj_set_pos(ui->screen2_WIFI_ip_addr_edit_label, 30, 895);
 	lv_obj_set_size(ui->screen2_WIFI_ip_addr_edit_label, 500, 0);
 
+	//Write codes screen2_WIFI_ssid_list_spinner
+	ui->screen2_WIFI_ssid_list_spinner = lv_spinner_create(ui->screen2_WIFI, NULL);
+	lv_spinner_set_arc_length(ui->screen2_WIFI_ssid_list_spinner,60);
+	lv_spinner_set_spin_time(ui->screen2_WIFI_ssid_list_spinner,1000);
+	lv_spinner_set_type(ui->screen2_WIFI_ssid_list_spinner,LV_SPINNER_TYPE_SPINNING_ARC);
+	lv_spinner_set_dir(ui->screen2_WIFI_ssid_list_spinner,LV_SPINNER_DIR_FORWARD);
+
+	//Write style LV_SPINNER_PART_BG for screen2_WIFI_ssid_list_spinner
+	static lv_style_t style_screen2_WIFI_ssid_list_spinner_bg;
+	lv_style_init(&style_screen2_WIFI_ssid_list_spinner_bg);
+
+	//Write style state: LV_STATE_DEFAULT for style_screen2_WIFI_ssid_list_spinner_bg
+	lv_style_set_bg_color(&style_screen2_WIFI_ssid_list_spinner_bg, LV_STATE_DEFAULT, lv_color_make(0xee, 0xee, 0xf6));
+	lv_style_set_bg_grad_color(&style_screen2_WIFI_ssid_list_spinner_bg, LV_STATE_DEFAULT, lv_color_make(0xee, 0xee, 0xf6));
+	lv_style_set_bg_grad_dir(&style_screen2_WIFI_ssid_list_spinner_bg, LV_STATE_DEFAULT, LV_GRAD_DIR_NONE);
+	lv_style_set_bg_opa(&style_screen2_WIFI_ssid_list_spinner_bg, LV_STATE_DEFAULT, 255);
+	lv_style_set_pad_left(&style_screen2_WIFI_ssid_list_spinner_bg, LV_STATE_DEFAULT, 5);
+	lv_style_set_pad_right(&style_screen2_WIFI_ssid_list_spinner_bg, LV_STATE_DEFAULT, 5);
+	lv_style_set_pad_top(&style_screen2_WIFI_ssid_list_spinner_bg, LV_STATE_DEFAULT, 5);
+	lv_style_set_pad_bottom(&style_screen2_WIFI_ssid_list_spinner_bg, LV_STATE_DEFAULT, 5);
+	lv_style_set_line_color(&style_screen2_WIFI_ssid_list_spinner_bg, LV_STATE_DEFAULT, lv_color_make(0xd5, 0xd6, 0xde));
+	lv_style_set_line_width(&style_screen2_WIFI_ssid_list_spinner_bg, LV_STATE_DEFAULT, 16);
+	lv_obj_add_style(ui->screen2_WIFI_ssid_list_spinner, LV_SPINNER_PART_BG, &style_screen2_WIFI_ssid_list_spinner_bg);
+
+	//Write style LV_SPINNER_PART_INDIC for screen2_WIFI_ssid_list_spinner
+	static lv_style_t style_screen2_WIFI_ssid_list_spinner_indic;
+	lv_style_init(&style_screen2_WIFI_ssid_list_spinner_indic);
+
+	//Write style state: LV_STATE_DEFAULT for style_screen2_WIFI_ssid_list_spinner_indic
+	lv_style_set_line_color(&style_screen2_WIFI_ssid_list_spinner_indic, LV_STATE_DEFAULT, lv_color_make(0x41, 0xc3, 0x63));
+	lv_style_set_line_width(&style_screen2_WIFI_ssid_list_spinner_indic, LV_STATE_DEFAULT, 16);
+	lv_obj_add_style(ui->screen2_WIFI_ssid_list_spinner, LV_SPINNER_PART_INDIC, &style_screen2_WIFI_ssid_list_spinner_indic);
+	lv_obj_set_pos(ui->screen2_WIFI_ssid_list_spinner, 310, 460);
+	lv_obj_set_size(ui->screen2_WIFI_ssid_list_spinner, 100, 100);
+
 	//Init events for screen
 	events_init_screen2_WIFI(ui);
 }
