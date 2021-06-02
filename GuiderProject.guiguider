@@ -2736,11 +2736,11 @@
 					"width": 160,
 					"height": 50,
 					"text": "Refresh",
-					"toggle": true,
+					"toggle": false,
 					"src_released": "button.png",
 					"src_pressed": "button_on.png",
-					"src_checked_released": "button_on.png",
-					"src_checked_pressed": "button.png",
+					"src_checked_released": "",
+					"src_checked_pressed": "",
 					"color_format": "true-color-alpha",
 					"part": "LV_IMGBTN_PART_MAIN",
 					"state": "LV_STATE_DEFAULT",
@@ -2795,6 +2795,78 @@
 							"value": "#ffffff"
 						}
 					]
+				},
+				{
+					"name": "ssid_scan_label",
+					"type": "label",
+					"left": 210,
+					"top": 490,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 300,
+					"height": 0,
+					"text": "Scanning...",
+					"text_align": "center",
+					"long_mode": "LV_LABEL_LONG_BREAK",
+					"part": "LV_LABEL_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"bg_color": "#ffffff",
+					"bg_grad_color": "#ffffff",
+					"bg_grad_dir": "LV_GRAD_DIR_VER",
+					"bg_opa": 255,
+					"text_color": "#000000",
+					"font": "40",
+					"font_family": "OpenSans_Regular",
+					"letter_space": 2,
+					"radius": 0,
+					"paddingTop": 0,
+					"paddingRight": 0,
+					"paddingBottom": 0,
+					"paddingLeft": 0,
+					"style": [
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": "40",
+							"font_family": "OpenSans_Regular",
+							"letter_space": 2,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 0,
+							"paddingRight": 0,
+							"paddingBottom": 0,
+							"paddingLeft": 0
+						},
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DISABLED",
+							"disable": true,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": 12,
+							"font_family": "simsun",
+							"letter_space": 2,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 0,
+							"paddingRight": 0,
+							"paddingBottom": 0,
+							"paddingLeft": 0
+						}
+					],
+					"id": "t0faz3bt",
+					"default_style": false
 				}
 			]
 		},
@@ -9527,13 +9599,11 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"toggle": true,
+						"toggle": false,
 						"text": "Refresh",
 						"color_format": "true-color-alpha",
 						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
 						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
-						"src_checked_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
-						"src_checked_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -9565,6 +9635,69 @@
 								"text_color": "#FF33FF",
 								"font_family": "simsun",
 								"font": 16
+							}
+						]
+					},
+					{
+						"name": "screen2_WIFI_ssid_scan_label",
+						"type": "label",
+						"pos": [
+							210,
+							490
+						],
+						"size": [
+							300,
+							0
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"text": "Scanning...",
+						"long_mode": "LV_LABEL_LONG_BREAK",
+						"text_align": "center",
+						"style": [
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": "40",
+								"font_family": "OpenSans_Regular",
+								"letter_space": 2,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 0,
+								"paddingRight": 0,
+								"paddingBottom": 0,
+								"paddingLeft": 0
+							},
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DISABLED",
+								"disable": true,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": 12,
+								"font_family": "simsun",
+								"letter_space": 2,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 0,
+								"paddingRight": 0,
+								"paddingBottom": 0,
+								"paddingLeft": 0
 							}
 						]
 					}
