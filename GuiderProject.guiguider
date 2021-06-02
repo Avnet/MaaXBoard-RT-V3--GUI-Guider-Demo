@@ -161,7 +161,7 @@
 					"duration": 100,
 					"width": 500,
 					"height": 0,
-					"text": "MaaxBoard i.MX8RT",
+					"text": "MaaxBoard RT",
 					"text_align": "left",
 					"long_mode": "LV_LABEL_LONG_BREAK",
 					"part": "LV_LABEL_PART_MAIN",
@@ -233,7 +233,7 @@
 					"duration": 100,
 					"width": 500,
 					"height": 0,
-					"text": "Quickstart application",
+					"text": "GUI demo application",
 					"text_align": "left",
 					"long_mode": "LV_LABEL_LONG_BREAK",
 					"part": "LV_LABEL_PART_MAIN",
@@ -530,7 +530,7 @@
 					"duration": 100,
 					"width": 320,
 					"height": 106,
-					"text": "System",
+					"text": "Custom",
 					"toggle": true,
 					"src_released": "button.png",
 					"src_pressed": "button_on.png",
@@ -856,7 +856,7 @@
 				{
 					"width": 180,
 					"height": 0,
-					"text": "QSG",
+					"text": "MENU",
 					"text_align": "center",
 					"long_mode": "LV_LABEL_LONG_BREAK",
 					"part": "LV_LABEL_PART_MAIN",
@@ -1721,6 +1721,78 @@
 						}
 					],
 					"id": "mfqj2bls",
+					"default_style": false
+				},
+				{
+					"name": "label_1",
+					"type": "label",
+					"left": 16,
+					"top": 1018,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 232,
+					"height": 0,
+					"text": "TODO: Make buttons look more like buttons",
+					"text_align": "center",
+					"long_mode": "LV_LABEL_LONG_BREAK",
+					"part": "LV_LABEL_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"bg_color": "#ffffff",
+					"bg_grad_color": "#ffffff",
+					"bg_grad_dir": "LV_GRAD_DIR_VER",
+					"bg_opa": 255,
+					"text_color": "#000000",
+					"font": 12,
+					"font_family": "simsun",
+					"letter_space": 2,
+					"radius": 0,
+					"paddingTop": 0,
+					"paddingRight": 0,
+					"paddingBottom": 0,
+					"paddingLeft": 0,
+					"style": [
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": 12,
+							"font_family": "simsun",
+							"letter_space": 2,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 0,
+							"paddingRight": 0,
+							"paddingBottom": 0,
+							"paddingLeft": 0
+						},
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DISABLED",
+							"disable": true,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": 12,
+							"font_family": "simsun",
+							"letter_space": 2,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 0,
+							"paddingRight": 0,
+							"paddingBottom": 0,
+							"paddingLeft": 0
+						}
+					],
+					"id": "x7pzqfsj",
 					"default_style": false
 				}
 			]
@@ -2706,6 +2778,71 @@
 					],
 					"id": "lj3ylp16",
 					"default_style": false
+				},
+				{
+					"name": "imgbtn_1",
+					"type": "imgbtn",
+					"left": 411,
+					"top": 172,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 266,
+					"height": 50,
+					"text": "TODO: Add Refresh Button",
+					"toggle": true,
+					"src_released": "",
+					"src_pressed": "",
+					"src_checked_released": "",
+					"src_checked_pressed": "",
+					"color_format": "true-color-alpha",
+					"part": "LV_IMGBTN_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"image_recolor": "#ffffff",
+					"image_recolor_opa": 0,
+					"image_opa": 255,
+					"font_family": "simsun",
+					"text_color": "#000000",
+					"font": 12,
+					"style": [
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255,
+							"font_family": "simsun",
+							"text_color": "#000000",
+							"font": 12
+						},
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_PRESSED",
+							"disable": true,
+							"image_recolor": "#000000",
+							"image_recolor_opa": 0,
+							"text_color": "#FF33FF",
+							"font_family": "simsun",
+							"font": 16
+						},
+						{
+							"part": "LV_IMGBTN_PART_MAIN",
+							"state": "LV_STATE_CHECKED",
+							"disable": true,
+							"image_recolor": "#000000",
+							"image_recolor_opa": 0,
+							"text_color": "#FF33FF",
+							"font_family": "simsun",
+							"font": 16
+						}
+					],
+					"id": "4e38tv1w",
+					"default_style": false,
+					"event": []
 				}
 			]
 		},
@@ -4088,6 +4225,78 @@
 					],
 					"id": "ywgvtocl",
 					"default_style": false
+				},
+				{
+					"name": "label_1",
+					"type": "label",
+					"left": 27,
+					"top": 770,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 321,
+					"height": 0,
+					"text": "TODO: Move this down",
+					"text_align": "center",
+					"long_mode": "LV_LABEL_LONG_BREAK",
+					"part": "LV_LABEL_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"bg_color": "#ffffff",
+					"bg_grad_color": "#ffffff",
+					"bg_grad_dir": "LV_GRAD_DIR_VER",
+					"bg_opa": 255,
+					"text_color": "#000000",
+					"font": 12,
+					"font_family": "simsun",
+					"letter_space": 2,
+					"radius": 0,
+					"paddingTop": 0,
+					"paddingRight": 0,
+					"paddingBottom": 0,
+					"paddingLeft": 0,
+					"style": [
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": 12,
+							"font_family": "simsun",
+							"letter_space": 2,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 0,
+							"paddingRight": 0,
+							"paddingBottom": 0,
+							"paddingLeft": 0
+						},
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DISABLED",
+							"disable": true,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": 12,
+							"font_family": "simsun",
+							"letter_space": 2,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 0,
+							"paddingRight": 0,
+							"paddingBottom": 0,
+							"paddingLeft": 0
+						}
+					],
+					"id": "4wn441r7",
+					"default_style": false
 				}
 			]
 		},
@@ -4385,7 +4594,7 @@
 				{
 					"width": 180,
 					"height": 0,
-					"text": "SYSTEM",
+					"text": "CUSTOM",
 					"text_align": "center",
 					"long_mode": "LV_LABEL_LONG_BREAK",
 					"part": "LV_LABEL_PART_MAIN",
@@ -4674,78 +4883,6 @@
 					"default_style": false
 				},
 				{
-					"name": "mic_label",
-					"type": "label",
-					"left": 30,
-					"top": 320,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
-					"width": 600,
-					"height": 0,
-					"text": "Microphone State:",
-					"text_align": "left",
-					"long_mode": "LV_LABEL_LONG_BREAK",
-					"part": "LV_LABEL_PART_MAIN",
-					"state": "LV_STATE_DEFAULT",
-					"disable": false,
-					"bg_color": "#ffffff",
-					"bg_grad_color": "#ffffff",
-					"bg_grad_dir": "LV_GRAD_DIR_VER",
-					"bg_opa": 255,
-					"text_color": "#000000",
-					"font": "40",
-					"font_family": "OpenSans_Regular",
-					"letter_space": 2,
-					"radius": 0,
-					"paddingTop": 0,
-					"paddingRight": 0,
-					"paddingBottom": 0,
-					"paddingLeft": 0,
-					"style": [
-						{
-							"part": "LV_LABEL_PART_MAIN",
-							"state": "LV_STATE_DEFAULT",
-							"disable": false,
-							"radius": 0,
-							"text_color": "#000000",
-							"font": "40",
-							"font_family": "OpenSans_Regular",
-							"letter_space": 2,
-							"bg_color": "#ffffff",
-							"bg_grad_color": "#ffffff",
-							"bg_opa": 255,
-							"bg_grad_dir": "LV_GRAD_DIR_VER",
-							"paddingTop": 0,
-							"paddingRight": 0,
-							"paddingBottom": 0,
-							"paddingLeft": 0
-						},
-						{
-							"part": "LV_LABEL_PART_MAIN",
-							"state": "LV_STATE_DISABLED",
-							"disable": true,
-							"radius": 0,
-							"text_color": "#000000",
-							"font": 12,
-							"font_family": "simsun",
-							"letter_space": 2,
-							"bg_color": "#ffffff",
-							"bg_grad_color": "#ffffff",
-							"bg_opa": 255,
-							"bg_grad_dir": "LV_GRAD_DIR_VER",
-							"paddingTop": 0,
-							"paddingRight": 0,
-							"paddingBottom": 0,
-							"paddingLeft": 0
-						}
-					],
-					"id": "bounwvq0",
-					"default_style": false
-				},
-				{
 					"name": "camera_state_label",
 					"type": "label",
 					"left": 30,
@@ -4815,78 +4952,6 @@
 						}
 					],
 					"id": "lirxx3rx",
-					"default_style": false
-				},
-				{
-					"name": "mic_state_label",
-					"type": "label",
-					"left": 30,
-					"top": 375,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
-					"width": 600,
-					"height": 0,
-					"text": "Not Enabled",
-					"text_align": "left",
-					"long_mode": "LV_LABEL_LONG_BREAK",
-					"part": "LV_LABEL_PART_MAIN",
-					"state": "LV_STATE_DEFAULT",
-					"disable": false,
-					"bg_color": "#ffffff",
-					"bg_grad_color": "#ffffff",
-					"bg_grad_dir": "LV_GRAD_DIR_VER",
-					"bg_opa": 255,
-					"text_color": "#000000",
-					"font": "40",
-					"font_family": "OpenSans_SemiBold",
-					"letter_space": 2,
-					"radius": 0,
-					"paddingTop": 0,
-					"paddingRight": 0,
-					"paddingBottom": 0,
-					"paddingLeft": 0,
-					"style": [
-						{
-							"part": "LV_LABEL_PART_MAIN",
-							"state": "LV_STATE_DEFAULT",
-							"disable": false,
-							"radius": 0,
-							"text_color": "#000000",
-							"font": "40",
-							"font_family": "OpenSans_SemiBold",
-							"letter_space": 2,
-							"bg_color": "#ffffff",
-							"bg_grad_color": "#ffffff",
-							"bg_opa": 255,
-							"bg_grad_dir": "LV_GRAD_DIR_VER",
-							"paddingTop": 0,
-							"paddingRight": 0,
-							"paddingBottom": 0,
-							"paddingLeft": 0
-						},
-						{
-							"part": "LV_LABEL_PART_MAIN",
-							"state": "LV_STATE_DISABLED",
-							"disable": true,
-							"radius": 0,
-							"text_color": "#000000",
-							"font": 12,
-							"font_family": "simsun",
-							"letter_space": 2,
-							"bg_color": "#ffffff",
-							"bg_grad_color": "#ffffff",
-							"bg_opa": 255,
-							"bg_grad_dir": "LV_GRAD_DIR_VER",
-							"paddingTop": 0,
-							"paddingRight": 0,
-							"paddingBottom": 0,
-							"paddingLeft": 0
-						}
-					],
-					"id": "q93lgdzz",
 					"default_style": false
 				},
 				{
@@ -5023,6 +5088,78 @@
 						}
 					],
 					"id": "yhsg3ub4",
+					"default_style": false
+				},
+				{
+					"name": "label_1",
+					"type": "label",
+					"left": 146,
+					"top": 617,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 100,
+					"height": 0,
+					"text": "TODO: add input graph for the 4 microphones",
+					"text_align": "center",
+					"long_mode": "LV_LABEL_LONG_BREAK",
+					"part": "LV_LABEL_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"bg_color": "#ffffff",
+					"bg_grad_color": "#ffffff",
+					"bg_grad_dir": "LV_GRAD_DIR_VER",
+					"bg_opa": 255,
+					"text_color": "#000000",
+					"font": 12,
+					"font_family": "simsun",
+					"letter_space": 2,
+					"radius": 0,
+					"paddingTop": 0,
+					"paddingRight": 0,
+					"paddingBottom": 0,
+					"paddingLeft": 0,
+					"style": [
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": 12,
+							"font_family": "simsun",
+							"letter_space": 2,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 0,
+							"paddingRight": 0,
+							"paddingBottom": 0,
+							"paddingLeft": 0
+						},
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DISABLED",
+							"disable": true,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": 12,
+							"font_family": "simsun",
+							"letter_space": 2,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 0,
+							"paddingRight": 0,
+							"paddingBottom": 0,
+							"paddingLeft": 0
+						}
+					],
+					"id": "gs7kznlu",
 					"default_style": false
 				}
 			]
@@ -5535,6 +5672,78 @@
 						}
 					],
 					"id": "cuzcqxt9",
+					"default_style": false
+				},
+				{
+					"name": "label_1",
+					"type": "label",
+					"left": 205,
+					"top": 331,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 100,
+					"height": 0,
+					"text": "TODO: add graphs",
+					"text_align": "center",
+					"long_mode": "LV_LABEL_LONG_BREAK",
+					"part": "LV_LABEL_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"bg_color": "#ffffff",
+					"bg_grad_color": "#ffffff",
+					"bg_grad_dir": "LV_GRAD_DIR_VER",
+					"bg_opa": 255,
+					"text_color": "#000000",
+					"font": 12,
+					"font_family": "simsun",
+					"letter_space": 2,
+					"radius": 0,
+					"paddingTop": 0,
+					"paddingRight": 0,
+					"paddingBottom": 0,
+					"paddingLeft": 0,
+					"style": [
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": 12,
+							"font_family": "simsun",
+							"letter_space": 2,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 0,
+							"paddingRight": 0,
+							"paddingBottom": 0,
+							"paddingLeft": 0
+						},
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DISABLED",
+							"disable": true,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": 12,
+							"font_family": "simsun",
+							"letter_space": 2,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 0,
+							"paddingRight": 0,
+							"paddingBottom": 0,
+							"paddingLeft": 0
+						}
+					],
+					"id": "ayz56vb4",
 					"default_style": false
 				}
 			]
@@ -7122,7 +7331,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"text": "MaaxBoard i.MX8RT",
+						"text": "MaaxBoard RT",
 						"long_mode": "LV_LABEL_LONG_BREAK",
 						"text_align": "left",
 						"style": [
@@ -7185,7 +7394,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"text": "Quickstart application",
+						"text": "GUI demo application",
 						"long_mode": "LV_LABEL_LONG_BREAK",
 						"text_align": "left",
 						"style": [
@@ -7429,7 +7638,7 @@
 						},
 						"default_style": false,
 						"toggle": true,
-						"text": "System",
+						"text": "Custom",
 						"color_format": "true-color-alpha",
 						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
 						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
@@ -7705,7 +7914,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"text": "QSG",
+						"text": "MENU",
 						"long_mode": "LV_LABEL_LONG_BREAK",
 						"text_align": "center",
 						"style": [
@@ -8464,6 +8673,69 @@
 								"image_recolor": "#ffffff",
 								"image_recolor_opa": 0,
 								"image_opa": 255
+							}
+						]
+					},
+					{
+						"name": "screen1_LEDs_label_1",
+						"type": "label",
+						"pos": [
+							16,
+							1018
+						],
+						"size": [
+							232,
+							0
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"text": "TODO: Make buttons look more like buttons",
+						"long_mode": "LV_LABEL_LONG_BREAK",
+						"text_align": "center",
+						"style": [
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": 12,
+								"font_family": "simsun",
+								"letter_space": 2,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 0,
+								"paddingRight": 0,
+								"paddingBottom": 0,
+								"paddingLeft": 0
+							},
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DISABLED",
+								"disable": true,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": 12,
+								"font_family": "simsun",
+								"letter_space": 2,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 0,
+								"paddingRight": 0,
+								"paddingBottom": 0,
+								"paddingLeft": 0
 							}
 						]
 					}
@@ -9331,6 +9603,64 @@
 								"disable": false,
 								"line_color": "#41c363",
 								"line_width": 16
+							}
+						]
+					},
+					{
+						"name": "screen2_WIFI_imgbtn_1",
+						"type": "imgbtn",
+						"pos": [
+							411,
+							172
+						],
+						"size": [
+							266,
+							50
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"toggle": true,
+						"text": "TODO: Add Refresh Button",
+						"color_format": "true-color-alpha",
+						"style": [
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255,
+								"font_family": "simsun",
+								"text_color": "#000000",
+								"font": 12
+							},
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_PRESSED",
+								"disable": true,
+								"image_recolor": "#000000",
+								"image_recolor_opa": 0,
+								"text_color": "#FF33FF",
+								"font_family": "simsun",
+								"font": 16
+							},
+							{
+								"part": "LV_IMGBTN_PART_MAIN",
+								"state": "LV_STATE_CHECKED",
+								"disable": true,
+								"image_recolor": "#000000",
+								"image_recolor_opa": 0,
+								"text_color": "#FF33FF",
+								"font_family": "simsun",
+								"font": 16
 							}
 						]
 					}
@@ -10570,6 +10900,69 @@
 								"paddingLeft": 0
 							}
 						]
+					},
+					{
+						"name": "screen3_USB_label_1",
+						"type": "label",
+						"pos": [
+							27,
+							770
+						],
+						"size": [
+							321,
+							0
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"text": "TODO: Move this down",
+						"long_mode": "LV_LABEL_LONG_BREAK",
+						"text_align": "center",
+						"style": [
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": 12,
+								"font_family": "simsun",
+								"letter_space": 2,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 0,
+								"paddingRight": 0,
+								"paddingBottom": 0,
+								"paddingLeft": 0
+							},
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DISABLED",
+								"disable": true,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": 12,
+								"font_family": "simsun",
+								"letter_space": 2,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 0,
+								"paddingRight": 0,
+								"paddingBottom": 0,
+								"paddingLeft": 0
+							}
+						]
 					}
 				]
 			},
@@ -10848,7 +11241,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"text": "SYSTEM",
+						"text": "CUSTOM",
 						"long_mode": "LV_LABEL_LONG_BREAK",
 						"text_align": "center",
 						"style": [
@@ -11077,69 +11470,6 @@
 						]
 					},
 					{
-						"name": "screen4_AV_mic_label",
-						"type": "label",
-						"pos": [
-							30,
-							320
-						],
-						"size": [
-							600,
-							0
-						],
-						"is_move_animation": false,
-						"path_type": "linear",
-						"move_animation": {
-							"des_pos": [
-								0,
-								0
-							],
-							"duration": 100
-						},
-						"default_style": false,
-						"text": "Microphone State:",
-						"long_mode": "LV_LABEL_LONG_BREAK",
-						"text_align": "left",
-						"style": [
-							{
-								"part": "LV_LABEL_PART_MAIN",
-								"state": "LV_STATE_DEFAULT",
-								"disable": false,
-								"radius": 0,
-								"text_color": "#000000",
-								"font": "40",
-								"font_family": "OpenSans_Regular",
-								"letter_space": 2,
-								"bg_color": "#ffffff",
-								"bg_grad_color": "#ffffff",
-								"bg_opa": 255,
-								"bg_grad_dir": "LV_GRAD_DIR_VER",
-								"paddingTop": 0,
-								"paddingRight": 0,
-								"paddingBottom": 0,
-								"paddingLeft": 0
-							},
-							{
-								"part": "LV_LABEL_PART_MAIN",
-								"state": "LV_STATE_DISABLED",
-								"disable": true,
-								"radius": 0,
-								"text_color": "#000000",
-								"font": 12,
-								"font_family": "simsun",
-								"letter_space": 2,
-								"bg_color": "#ffffff",
-								"bg_grad_color": "#ffffff",
-								"bg_opa": 255,
-								"bg_grad_dir": "LV_GRAD_DIR_VER",
-								"paddingTop": 0,
-								"paddingRight": 0,
-								"paddingBottom": 0,
-								"paddingLeft": 0
-							}
-						]
-					},
-					{
 						"name": "screen4_AV_camera_state_label",
 						"type": "label",
 						"pos": [
@@ -11161,69 +11491,6 @@
 						},
 						"default_style": false,
 						"text": "Not Connected",
-						"long_mode": "LV_LABEL_LONG_BREAK",
-						"text_align": "left",
-						"style": [
-							{
-								"part": "LV_LABEL_PART_MAIN",
-								"state": "LV_STATE_DEFAULT",
-								"disable": false,
-								"radius": 0,
-								"text_color": "#000000",
-								"font": "40",
-								"font_family": "OpenSans_SemiBold",
-								"letter_space": 2,
-								"bg_color": "#ffffff",
-								"bg_grad_color": "#ffffff",
-								"bg_opa": 255,
-								"bg_grad_dir": "LV_GRAD_DIR_VER",
-								"paddingTop": 0,
-								"paddingRight": 0,
-								"paddingBottom": 0,
-								"paddingLeft": 0
-							},
-							{
-								"part": "LV_LABEL_PART_MAIN",
-								"state": "LV_STATE_DISABLED",
-								"disable": true,
-								"radius": 0,
-								"text_color": "#000000",
-								"font": 12,
-								"font_family": "simsun",
-								"letter_space": 2,
-								"bg_color": "#ffffff",
-								"bg_grad_color": "#ffffff",
-								"bg_opa": 255,
-								"bg_grad_dir": "LV_GRAD_DIR_VER",
-								"paddingTop": 0,
-								"paddingRight": 0,
-								"paddingBottom": 0,
-								"paddingLeft": 0
-							}
-						]
-					},
-					{
-						"name": "screen4_AV_mic_state_label",
-						"type": "label",
-						"pos": [
-							30,
-							375
-						],
-						"size": [
-							600,
-							0
-						],
-						"is_move_animation": false,
-						"path_type": "linear",
-						"move_animation": {
-							"des_pos": [
-								0,
-								0
-							],
-							"duration": 100
-						},
-						"default_style": false,
-						"text": "Not Enabled",
 						"long_mode": "LV_LABEL_LONG_BREAK",
 						"text_align": "left",
 						"style": [
@@ -11387,6 +11654,69 @@
 								"text_color": "#FF33FF",
 								"font_family": "simsun",
 								"font": 16
+							}
+						]
+					},
+					{
+						"name": "screen4_AV_label_1",
+						"type": "label",
+						"pos": [
+							146,
+							617
+						],
+						"size": [
+							100,
+							0
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"text": "TODO: add input graph for the 4 microphones",
+						"long_mode": "LV_LABEL_LONG_BREAK",
+						"text_align": "center",
+						"style": [
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": 12,
+								"font_family": "simsun",
+								"letter_space": 2,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 0,
+								"paddingRight": 0,
+								"paddingBottom": 0,
+								"paddingLeft": 0
+							},
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DISABLED",
+								"disable": true,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": 12,
+								"font_family": "simsun",
+								"letter_space": 2,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 0,
+								"paddingRight": 0,
+								"paddingBottom": 0,
+								"paddingLeft": 0
 							}
 						]
 					}
@@ -11802,6 +12132,69 @@
 								"text_color": "#138036",
 								"font": "48",
 								"font_family": "OpenSans_Regular",
+								"letter_space": 2,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 0,
+								"paddingRight": 0,
+								"paddingBottom": 0,
+								"paddingLeft": 0
+							},
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DISABLED",
+								"disable": true,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": 12,
+								"font_family": "simsun",
+								"letter_space": 2,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 0,
+								"paddingRight": 0,
+								"paddingBottom": 0,
+								"paddingLeft": 0
+							}
+						]
+					},
+					{
+						"name": "screen5_SYSTEM_label_1",
+						"type": "label",
+						"pos": [
+							205,
+							331
+						],
+						"size": [
+							100,
+							0
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"text": "TODO: add graphs",
+						"long_mode": "LV_LABEL_LONG_BREAK",
+						"text_align": "center",
+						"style": [
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": 12,
+								"font_family": "simsun",
 								"letter_space": 2,
 								"bg_color": "#ffffff",
 								"bg_grad_color": "#ffffff",
