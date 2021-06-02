@@ -2724,79 +2724,23 @@
 					"default_style": false
 				},
 				{
-					"name": "ssid_list_spinner",
-					"type": "spinner",
-					"left": 310,
-					"top": 460,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
-					"width": 100,
-					"height": 100,
-					"arc_length": 60,
-					"spin_time": 1000,
-					"preload_set_type": "LV_SPINNER_TYPE_SPINNING_ARC",
-					"preload_set_dir": "LV_SPINNER_DIR_FORWARD",
-					"part": "LV_SPINNER_PART_INDIC",
-					"state": "LV_STATE_DEFAULT",
-					"disable": false,
-					"padding_top": 5,
-					"padding_bottom": 5,
-					"padding_left": 5,
-					"padding_right": 5,
-					"bg_color": "#eeeef6",
-					"bg_grad_color": "#eeeef6",
-					"bg_opa": 255,
-					"bg_grad_dir": "LV_GRAD_DIR_NONE",
-					"line_color": "#41c363",
-					"line_width": 16,
-					"style": [
-						{
-							"part": "LV_SPINNER_PART_BG",
-							"state": "LV_STATE_DEFAULT",
-							"disable": false,
-							"padding_top": 5,
-							"padding_bottom": 5,
-							"padding_left": 5,
-							"padding_right": 5,
-							"bg_color": "#eeeef6",
-							"bg_grad_color": "#eeeef6",
-							"bg_opa": 255,
-							"bg_grad_dir": "LV_GRAD_DIR_NONE",
-							"line_color": "#d5d6de",
-							"line_width": 16
-						},
-						{
-							"part": "LV_SPINNER_PART_INDIC",
-							"state": "LV_STATE_DEFAULT",
-							"disable": false,
-							"line_color": "#41c363",
-							"line_width": 16
-						}
-					],
-					"id": "lj3ylp16",
-					"default_style": false
-				},
-				{
-					"name": "imgbtn_1",
+					"name": "ssid_refresh_imgbtn",
 					"type": "imgbtn",
-					"left": 411,
-					"top": 172,
+					"left": 530,
+					"top": 176,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
-					"width": 266,
+					"width": 160,
 					"height": 50,
-					"text": "TODO: Add Refresh Button",
+					"text": "Refresh",
 					"toggle": true,
-					"src_released": "",
-					"src_pressed": "",
-					"src_checked_released": "",
-					"src_checked_pressed": "",
+					"src_released": "button.png",
+					"src_pressed": "button_on.png",
+					"src_checked_released": "button_on.png",
+					"src_checked_pressed": "button.png",
 					"color_format": "true-color-alpha",
 					"part": "LV_IMGBTN_PART_MAIN",
 					"state": "LV_STATE_DEFAULT",
@@ -2804,9 +2748,9 @@
 					"image_recolor": "#ffffff",
 					"image_recolor_opa": 0,
 					"image_opa": 255,
-					"font_family": "simsun",
+					"font_family": "OpenSans_Regular",
 					"text_color": "#000000",
-					"font": 12,
+					"font": "24",
 					"style": [
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
@@ -2815,9 +2759,9 @@
 							"image_recolor": "#ffffff",
 							"image_recolor_opa": 0,
 							"image_opa": 255,
-							"font_family": "simsun",
+							"font_family": "OpenSans_Regular",
 							"text_color": "#000000",
-							"font": 12
+							"font": "24"
 						},
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
@@ -2842,7 +2786,15 @@
 					],
 					"id": "4e38tv1w",
 					"default_style": false,
-					"event": []
+					"event": [
+						{
+							"src": "ssid_refresh_imgbtn",
+							"trigger": "released",
+							"dst": "4e38tv1w",
+							"action": "bg_color",
+							"value": "#ffffff"
+						}
+					]
 				}
 			]
 		},
@@ -9555,66 +9507,14 @@
 						]
 					},
 					{
-						"name": "screen2_WIFI_ssid_list_spinner",
-						"type": "spinner",
-						"pos": [
-							310,
-							460
-						],
-						"size": [
-							100,
-							100
-						],
-						"is_move_animation": false,
-						"path_type": "linear",
-						"move_animation": {
-							"des_pos": [
-								0,
-								0
-							],
-							"duration": 100
-						},
-						"default_style": false,
-						"width": 100,
-						"height": 100,
-						"arc_length": 60,
-						"spin_time": 1000,
-						"preload_set_type": "LV_SPINNER_TYPE_SPINNING_ARC",
-						"preload_set_dir": "LV_SPINNER_DIR_FORWARD",
-						"style": [
-							{
-								"part": "LV_SPINNER_PART_BG",
-								"state": "LV_STATE_DEFAULT",
-								"disable": false,
-								"padding_top": 5,
-								"padding_bottom": 5,
-								"padding_left": 5,
-								"padding_right": 5,
-								"bg_color": "#eeeef6",
-								"bg_grad_color": "#eeeef6",
-								"bg_opa": 255,
-								"bg_grad_dir": "LV_GRAD_DIR_NONE",
-								"line_color": "#d5d6de",
-								"line_width": 16
-							},
-							{
-								"part": "LV_SPINNER_PART_INDIC",
-								"state": "LV_STATE_DEFAULT",
-								"disable": false,
-								"line_color": "#41c363",
-								"line_width": 16
-							}
-						]
-					},
-					{
-						"name": "screen2_WIFI_imgbtn_1",
+						"name": "screen2_WIFI_ssid_refresh_imgbtn",
 						"type": "imgbtn",
 						"pos": [
-							411,
-							172
+							530,
+							176
 						],
 						"size": [
-							266,
+							160,
 							50
 						],
 						"is_move_animation": false,
@@ -9628,8 +9528,12 @@
 						},
 						"default_style": false,
 						"toggle": true,
-						"text": "TODO: Add Refresh Button",
+						"text": "Refresh",
 						"color_format": "true-color-alpha",
+						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
+						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
+						"src_checked_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
+						"src_checked_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -9638,9 +9542,9 @@
 								"image_recolor": "#ffffff",
 								"image_recolor_opa": 0,
 								"image_opa": 255,
-								"font_family": "simsun",
+								"font_family": "OpenSans_Regular",
 								"text_color": "#000000",
-								"font": 12
+								"font": "24"
 							},
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -13615,6 +13519,13 @@
 				"anim_type": "LV_SCR_LOAD_ANIM_NONE",
 				"delay": 0,
 				"duration": 0
+			},
+			{
+				"src": "screen2_WIFI_ssid_refresh_imgbtn",
+				"trigger": "released",
+				"dst": "screen2_WIFI_ssid_refresh_imgbtn",
+				"action": "bg_color",
+				"value": "#ffffff"
 			},
 			{
 				"src": "screen3_USB_left_btn",

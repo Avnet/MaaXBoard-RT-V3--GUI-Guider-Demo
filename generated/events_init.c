@@ -253,11 +253,26 @@ static void screen2_WIFI_home_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 	}
 }
 
+static void screen2_WIFI_ssid_refresh_imgbtnevent_handler(lv_obj_t * obj, lv_event_t event)
+{
+	switch (event)
+	{
+	case LV_EVENT_RELEASED:
+	{
+		lv_obj_set_style_local_bg_color(guider_ui.screen2_WIFI_ssid_refresh_imgbtn, LV_OBJ_PART_MAIN, LV_STATE_DEFAULT, lv_color_make(0xff, 0xff, 0xff));
+	}
+		break;
+	default:
+		break;
+	}
+}
+
 void events_init_screen2_WIFI(lv_ui *ui)
 {
 	lv_obj_set_event_cb(ui->screen2_WIFI_left_btn, screen2_WIFI_left_btnevent_handler);
 	lv_obj_set_event_cb(ui->screen2_WIFI_right_btn, screen2_WIFI_right_btnevent_handler);
 	lv_obj_set_event_cb(ui->screen2_WIFI_home_btn, screen2_WIFI_home_btnevent_handler);
+	lv_obj_set_event_cb(ui->screen2_WIFI_ssid_refresh_imgbtn, screen2_WIFI_ssid_refresh_imgbtnevent_handler);
 }
 
 static void screen3_USB_left_btnevent_handler(lv_obj_t * obj, lv_event_t event)

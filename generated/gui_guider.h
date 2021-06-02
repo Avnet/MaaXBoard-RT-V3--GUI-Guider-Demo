@@ -57,6 +57,7 @@ typedef struct
 	lv_obj_t *screen1_LEDs_led_green_off;
 	lv_obj_t *screen1_LEDs_led_blue_on;
 	lv_obj_t *screen1_LEDs_led_blue_off;
+	lv_obj_t *screen1_LEDs_label_1;
 	lv_obj_t *screen2_WIFI;
 	lv_obj_t *screen2_WIFI_canvas_white;
 	lv_obj_t *screen2_WIFI_left_btn;
@@ -74,7 +75,8 @@ typedef struct
 	lv_obj_t *screen2_WIFI_ip_addr_label;
 	lv_obj_t *screen2_WIFI_font_label;
 	lv_obj_t *screen2_WIFI_ip_addr_edit_label;
-	lv_obj_t *screen2_WIFI_ssid_list_spinner;
+	lv_obj_t *screen2_WIFI_ssid_refresh_imgbtn;
+	lv_obj_t *screen2_WIFI_ssid_refresh_imgbtn_label;
 	lv_obj_t *screen3_USB;
 	lv_obj_t *screen3_USB_canvas_white;
 	lv_obj_t *screen3_USB_left_btn;
@@ -100,6 +102,7 @@ typedef struct
 	lv_obj_t *screen3_USB_i2c_scan_imgbtn;
 	lv_obj_t *screen3_USB_i2c_scan_imgbtn_label;
 	lv_obj_t *screen3_USB_font_label;
+	lv_obj_t *screen3_USB_label_1;
 	lv_obj_t *screen4_AV;
 	lv_obj_t *screen4_AV_canvas_white;
 	lv_obj_t *screen4_AV_left_btn;
@@ -113,12 +116,11 @@ typedef struct
 	lv_obj_t *screen4_AV_home_btn_label;
 	lv_obj_t *screen4_AV_page_label;
 	lv_obj_t *screen4_AV_camera_label;
-	lv_obj_t *screen4_AV_mic_label;
 	lv_obj_t *screen4_AV_camera_state_label;
-	lv_obj_t *screen4_AV_mic_state_label;
 	lv_obj_t *screen4_AV_playback_label;
 	lv_obj_t *screen4_AV_audio_test_imgbtn;
 	lv_obj_t *screen4_AV_audio_test_imgbtn_label;
+	lv_obj_t *screen4_AV_label_1;
 	lv_obj_t *screen5_SYSTEM;
 	lv_obj_t *screen5_SYSTEM_canvas_white;
 	lv_obj_t *screen5_SYSTEM_left_btn;
@@ -131,6 +133,7 @@ typedef struct
 	lv_obj_t *screen5_SYSTEM_home_btn;
 	lv_obj_t *screen5_SYSTEM_home_btn_label;
 	lv_obj_t *screen5_SYSTEM_page_label;
+	lv_obj_t *screen5_SYSTEM_label_1;
 	lv_obj_t *screen6_HELP;
 	lv_obj_t *screen6_HELP_canvas_white;
 	lv_obj_t *screen6_HELP_left_btn;
