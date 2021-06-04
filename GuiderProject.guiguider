@@ -5205,7 +5205,7 @@
 					"font": "16",
 					"font_family": "OpenSans_Regular",
 					"letter_space": 0,
-					"text_color": "#0D3055",
+					"text_color": "#000000",
 					"paddingTop": 0,
 					"paddingRight": 0,
 					"paddingBottom": 0,
@@ -5229,7 +5229,7 @@
 							"paddingRight": 0,
 							"paddingBottom": 0,
 							"paddingLeft": 0,
-							"text_color": "#0D3055",
+							"text_color": "#000000",
 							"font": "16",
 							"font_family": "OpenSans_Regular",
 							"letter_space": 0,
@@ -5346,7 +5346,16 @@
 						}
 					],
 					"id": "05rc448b",
-					"default_style": false
+					"default_style": false,
+					"event": [
+						{
+							"src": "mic1_cb",
+							"trigger": "value_changed",
+							"dst": "05rc448b",
+							"action": "bg_color",
+							"value": "#ffffff"
+						}
+					]
 				},
 				{
 					"name": "mic2_cb",
@@ -5367,7 +5376,7 @@
 					"font": "16",
 					"font_family": "OpenSans_Regular",
 					"letter_space": 0,
-					"text_color": "#0D3055",
+					"text_color": "#000000",
 					"paddingTop": 0,
 					"paddingRight": 0,
 					"paddingBottom": 0,
@@ -5391,7 +5400,7 @@
 							"paddingRight": 0,
 							"paddingBottom": 0,
 							"paddingLeft": 0,
-							"text_color": "#0D3055",
+							"text_color": "#000000",
 							"font": "16",
 							"font_family": "OpenSans_Regular",
 							"letter_space": 0,
@@ -5508,7 +5517,16 @@
 						}
 					],
 					"id": "6cycnbkx",
-					"default_style": false
+					"default_style": false,
+					"event": [
+						{
+							"src": "mic2_cb",
+							"trigger": "value_changed",
+							"dst": "6cycnbkx",
+							"action": "bg_color",
+							"value": "#ffffff"
+						}
+					]
 				},
 				{
 					"name": "mic3_cb",
@@ -5529,7 +5547,7 @@
 					"font": "16",
 					"font_family": "OpenSans_Regular",
 					"letter_space": 0,
-					"text_color": "#0D3055",
+					"text_color": "#000000",
 					"paddingTop": 0,
 					"paddingRight": 0,
 					"paddingBottom": 0,
@@ -5553,7 +5571,7 @@
 							"paddingRight": 0,
 							"paddingBottom": 0,
 							"paddingLeft": 0,
-							"text_color": "#0D3055",
+							"text_color": "#000000",
 							"font": "16",
 							"font_family": "OpenSans_Regular",
 							"letter_space": 0,
@@ -5670,7 +5688,16 @@
 						}
 					],
 					"id": "cgp8ryyv",
-					"default_style": false
+					"default_style": false,
+					"event": [
+						{
+							"src": "mic3_cb",
+							"trigger": "value_changed",
+							"dst": "cgp8ryyv",
+							"action": "bg_color",
+							"value": "#ffffff"
+						}
+					]
 				},
 				{
 					"name": "mic4_cb",
@@ -5691,7 +5718,7 @@
 					"font": "16",
 					"font_family": "OpenSans_Regular",
 					"letter_space": 0,
-					"text_color": "#0D3055",
+					"text_color": "#000000",
 					"paddingTop": 0,
 					"paddingRight": 0,
 					"paddingBottom": 0,
@@ -5715,7 +5742,7 @@
 							"paddingRight": 0,
 							"paddingBottom": 0,
 							"paddingLeft": 0,
-							"text_color": "#0D3055",
+							"text_color": "#000000",
 							"font": "16",
 							"font_family": "OpenSans_Regular",
 							"letter_space": 0,
@@ -5832,7 +5859,16 @@
 						}
 					],
 					"id": "n7ezbso5",
-					"default_style": false
+					"default_style": false,
+					"event": [
+						{
+							"src": "mic4_cb",
+							"trigger": "value_changed",
+							"dst": "n7ezbso5",
+							"action": "bg_color",
+							"value": "#ffffff"
+						}
+					]
 				},
 				{
 					"name": "mic_chart",
@@ -12505,7 +12541,7 @@
 								"paddingRight": null,
 								"paddingBottom": null,
 								"paddingLeft": null,
-								"text_color": "#0D3055",
+								"text_color": "#000000",
 								"font": "16",
 								"font_family": "OpenSans_Regular",
 								"letter_space": 0,
@@ -12656,7 +12692,7 @@
 								"paddingRight": null,
 								"paddingBottom": null,
 								"paddingLeft": null,
-								"text_color": "#0D3055",
+								"text_color": "#000000",
 								"font": "16",
 								"font_family": "OpenSans_Regular",
 								"letter_space": 0,
@@ -12807,7 +12843,7 @@
 								"paddingRight": null,
 								"paddingBottom": null,
 								"paddingLeft": null,
-								"text_color": "#0D3055",
+								"text_color": "#000000",
 								"font": "16",
 								"font_family": "OpenSans_Regular",
 								"letter_space": 0,
@@ -12958,7 +12994,7 @@
 								"paddingRight": null,
 								"paddingBottom": null,
 								"paddingLeft": null,
-								"text_color": "#0D3055",
+								"text_color": "#000000",
 								"font": "16",
 								"font_family": "OpenSans_Regular",
 								"letter_space": 0,
@@ -15112,6 +15148,34 @@
 				"anim_type": "LV_SCR_LOAD_ANIM_NONE",
 				"delay": 0,
 				"duration": 0
+			},
+			{
+				"src": "screen4_AV_mic1_cb",
+				"trigger": "value_changed",
+				"dst": "screen4_AV_mic1_cb",
+				"action": "bg_color",
+				"value": "#ffffff"
+			},
+			{
+				"src": "screen4_AV_mic2_cb",
+				"trigger": "value_changed",
+				"dst": "screen4_AV_mic2_cb",
+				"action": "bg_color",
+				"value": "#ffffff"
+			},
+			{
+				"src": "screen4_AV_mic3_cb",
+				"trigger": "value_changed",
+				"dst": "screen4_AV_mic3_cb",
+				"action": "bg_color",
+				"value": "#ffffff"
+			},
+			{
+				"src": "screen4_AV_mic4_cb",
+				"trigger": "value_changed",
+				"dst": "screen4_AV_mic4_cb",
+				"action": "bg_color",
+				"value": "#ffffff"
 			},
 			{
 				"src": "screen5_SYSTEM_left_btn",
