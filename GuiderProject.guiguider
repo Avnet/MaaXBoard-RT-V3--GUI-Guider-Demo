@@ -3392,17 +3392,7 @@
 					"duration": 100,
 					"width": 720,
 					"height": 160,
-					"items": [
-						{
-							"img_symbol": "LV_SYMBOL_OK;fas fa-check",
-							"img_path": "",
-							"img_size": [
-								20,
-								20
-							],
-							"text": "entry"
-						}
-					],
+					"items": [],
 					"anim_time": 255,
 					"edge_flash": true,
 					"part": "LV_LIST_PART_BG",
@@ -3584,7 +3574,7 @@
 					"name": "input_label",
 					"type": "label",
 					"left": 30,
-					"top": 800,
+					"top": 430,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -3656,15 +3646,15 @@
 					"name": "i2c_nodes_label",
 					"type": "label",
 					"left": 30,
-					"top": 430,
+					"top": 730,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
-					"width": 600,
+					"width": 250,
 					"height": 0,
-					"text": "Discovered I2C Nodes",
+					"text": "I2C Nodes",
 					"text_align": "left",
 					"long_mode": "LV_LABEL_LONG_BREAK",
 					"part": "LV_LABEL_PART_MAIN",
@@ -3728,7 +3718,7 @@
 					"name": "i2c_table",
 					"type": "table",
 					"left": 24,
-					"top": 485,
+					"top": 785,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -3863,7 +3853,7 @@
 					"name": "input_area",
 					"type": "ta",
 					"left": 20,
-					"top": 855,
+					"top": 485,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -3963,7 +3953,7 @@
 					"name": "kbd_imgbtn",
 					"type": "imgbtn",
 					"left": 360,
-					"top": 796,
+					"top": 426,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -4036,7 +4026,7 @@
 					"name": "mouse_imgbtn",
 					"type": "imgbtn",
 					"left": 530,
-					"top": 796,
+					"top": 426,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -4109,7 +4099,7 @@
 					"name": "i2c_scan_imgbtn",
 					"type": "imgbtn",
 					"left": 530,
-					"top": 426,
+					"top": 726,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -4251,75 +4241,133 @@
 					"default_style": false
 				},
 				{
-					"name": "label_1",
-					"type": "label",
-					"left": 27,
-					"top": 770,
+					"name": "i2c_ddlist",
+					"type": "ddlist",
+					"left": 400,
+					"top": 739,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
-					"width": 321,
+					"width": 100,
 					"height": 0,
-					"text": "TODO: Move this down",
-					"text_align": "center",
-					"long_mode": "LV_LABEL_LONG_BREAK",
-					"part": "LV_LABEL_PART_MAIN",
+					"list": [
+						{
+							"text": "I2C"
+						},
+						{
+							"text": "I3C"
+						},
+						{
+							"text": "I4C"
+						},
+						{
+							"text": "I5C"
+						},
+						{
+							"text": "I6C"
+						}
+					],
+					"draw_arrow": true,
+					"max_height": 90,
+					"sb_mode": "LV_SB_MODE_AUTO",
+					"part": "LV_DROPDOWN_PART_MAIN",
 					"state": "LV_STATE_DEFAULT",
 					"disable": false,
+					"font": "20",
+					"font_family": "OpenSans_Regular",
 					"bg_color": "#ffffff",
 					"bg_grad_color": "#ffffff",
 					"bg_grad_dir": "LV_GRAD_DIR_VER",
-					"bg_opa": 255,
 					"text_color": "#000000",
-					"font": 12,
-					"font_family": "simsun",
-					"letter_space": 2,
-					"radius": 0,
-					"paddingTop": 0,
-					"paddingRight": 0,
-					"paddingBottom": 0,
-					"paddingLeft": 0,
+					"border_color": "#41c363",
+					"border_width": 1,
+					"letter_space": 0,
+					"line_space": 20,
+					"radius": 3,
+					"bg_opa": 255,
 					"style": [
 						{
-							"part": "LV_LABEL_PART_MAIN",
+							"part": "LV_DROPDOWN_PART_MAIN",
 							"state": "LV_STATE_DEFAULT",
 							"disable": false,
-							"radius": 0,
-							"text_color": "#000000",
-							"font": 12,
-							"font_family": "simsun",
-							"letter_space": 2,
 							"bg_color": "#ffffff",
 							"bg_grad_color": "#ffffff",
-							"bg_opa": 255,
 							"bg_grad_dir": "LV_GRAD_DIR_VER",
-							"paddingTop": 0,
-							"paddingRight": 0,
-							"paddingBottom": 0,
-							"paddingLeft": 0
+							"text_color": "#000000",
+							"font": "20",
+							"font_family": "OpenSans_Regular",
+							"border_color": "#41c363",
+							"border_width": 1,
+							"line_space": 20,
+							"radius": 3,
+							"bg_opa": 255
 						},
 						{
-							"part": "LV_LABEL_PART_MAIN",
-							"state": "LV_STATE_DISABLED",
+							"part": "LV_DROPDOWN_PART_MAIN",
+							"state": "LV_STATE_FOCUSED",
 							"disable": true,
-							"radius": 0,
-							"text_color": "#000000",
-							"font": 12,
-							"font_family": "simsun",
-							"letter_space": 2,
 							"bg_color": "#ffffff",
 							"bg_grad_color": "#ffffff",
-							"bg_opa": 255,
 							"bg_grad_dir": "LV_GRAD_DIR_VER",
-							"paddingTop": 0,
-							"paddingRight": 0,
-							"paddingBottom": 0,
-							"paddingLeft": 0
+							"text_color": "#0D3055",
+							"font": 12,
+							"font_family": "simsun",
+							"border_color": "#e1e6ee",
+							"border_width": 1,
+							"line_space": 20,
+							"radius": 3,
+							"bg_opa": 255
+						},
+						{
+							"part": "LV_DROPDOWN_PART_MAIN",
+							"state": "LV_STATE_DISABLED",
+							"disable": true,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"text_color": "#0D3055",
+							"font": 12,
+							"font_family": "simsun",
+							"border_color": "#e1e6ee",
+							"border_width": 1,
+							"line_space": 20,
+							"radius": 3,
+							"bg_opa": 255
+						},
+						{
+							"part": "LV_DROPDOWN_PART_SELECTED",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"bg_color": "#00a1b5",
+							"bg_grad_color": "#00a1b5",
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"text_color": "#ffffff",
+							"font": 12,
+							"font_family": "simsun",
+							"border_color": "#e1e6ee",
+							"border_width": 1,
+							"radius": 3,
+							"bg_opa": 255
+						},
+						{
+							"part": "LV_DROPDOWN_PART_LIST",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"text_color": "#0D3055",
+							"font": 12,
+							"font_family": "simsun",
+							"border_color": "#e1e6ee",
+							"border_width": 1,
+							"radius": 3,
+							"bg_opa": 255
 						}
 					],
-					"id": "4wn441r7",
+					"id": "n8kf2m65",
 					"default_style": false
 				}
 			]
@@ -5189,8 +5237,8 @@
 				{
 					"name": "mic1_cb",
 					"type": "cb",
-					"left": 620,
-					"top": 460,
+					"left": 50,
+					"top": 830,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -5202,7 +5250,7 @@
 					"part": "LV_CHECKBOX_PART_BG",
 					"state": "LV_STATE_DEFAULT",
 					"disable": false,
-					"font": "16",
+					"font": "36",
 					"font_family": "OpenSans_Regular",
 					"letter_space": 0,
 					"text_color": "#000000",
@@ -5230,7 +5278,7 @@
 							"paddingBottom": 0,
 							"paddingLeft": 0,
 							"text_color": "#000000",
-							"font": "16",
+							"font": "36",
 							"font_family": "OpenSans_Regular",
 							"letter_space": 0,
 							"radius": 6,
@@ -5360,8 +5408,8 @@
 				{
 					"name": "mic2_cb",
 					"type": "cb",
-					"left": 620,
-					"top": 495,
+					"left": 210,
+					"top": 830,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -5373,7 +5421,7 @@
 					"part": "LV_CHECKBOX_PART_BG",
 					"state": "LV_STATE_DEFAULT",
 					"disable": false,
-					"font": "16",
+					"font": "36",
 					"font_family": "OpenSans_Regular",
 					"letter_space": 0,
 					"text_color": "#000000",
@@ -5401,7 +5449,7 @@
 							"paddingBottom": 0,
 							"paddingLeft": 0,
 							"text_color": "#000000",
-							"font": "16",
+							"font": "36",
 							"font_family": "OpenSans_Regular",
 							"letter_space": 0,
 							"radius": 6,
@@ -5531,8 +5579,8 @@
 				{
 					"name": "mic3_cb",
 					"type": "cb",
-					"left": 620,
-					"top": 530,
+					"left": 370,
+					"top": 830,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -5544,7 +5592,7 @@
 					"part": "LV_CHECKBOX_PART_BG",
 					"state": "LV_STATE_DEFAULT",
 					"disable": false,
-					"font": "16",
+					"font": "36",
 					"font_family": "OpenSans_Regular",
 					"letter_space": 0,
 					"text_color": "#000000",
@@ -5572,7 +5620,7 @@
 							"paddingBottom": 0,
 							"paddingLeft": 0,
 							"text_color": "#000000",
-							"font": "16",
+							"font": "36",
 							"font_family": "OpenSans_Regular",
 							"letter_space": 0,
 							"radius": 6,
@@ -5702,8 +5750,8 @@
 				{
 					"name": "mic4_cb",
 					"type": "cb",
-					"left": 620,
-					"top": 565,
+					"left": 530,
+					"top": 830,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -5715,7 +5763,7 @@
 					"part": "LV_CHECKBOX_PART_BG",
 					"state": "LV_STATE_DEFAULT",
 					"disable": false,
-					"font": "16",
+					"font": "36",
 					"font_family": "OpenSans_Regular",
 					"letter_space": 0,
 					"text_color": "#000000",
@@ -5743,7 +5791,7 @@
 							"paddingBottom": 0,
 							"paddingLeft": 0,
 							"text_color": "#000000",
-							"font": "16",
+							"font": "36",
 							"font_family": "OpenSans_Regular",
 							"letter_space": 0,
 							"radius": 6,
@@ -5880,8 +5928,8 @@
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
-					"width": 560,
-					"height": 250,
+					"width": 660,
+					"height": 350,
 					"range": 100,
 					"row": 3,
 					"col": 5,
@@ -7117,7 +7165,7 @@
 					"duration": 100,
 					"width": 600,
 					"height": 0,
-					"text": "This application provides a subset of board tests that can be excersized:",
+					"text": "This application provides a subset of board tests that can be exercised:",
 					"text_align": "left",
 					"long_mode": "LV_LABEL_LONG_BREAK",
 					"part": "LV_LABEL_PART_MAIN",
@@ -10915,17 +10963,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"items": [
-							{
-								"img_symbol": "LV_SYMBOL_OK",
-								"img_path": "",
-								"img_size": [
-									20,
-									20
-								],
-								"text": "entry"
-							}
-						],
+						"items": [],
 						"anim_time": 255,
 						"style": [
 							{
@@ -11083,7 +11121,7 @@
 						"type": "label",
 						"pos": [
 							30,
-							800
+							430
 						],
 						"size": [
 							300,
@@ -11146,10 +11184,10 @@
 						"type": "label",
 						"pos": [
 							30,
-							430
+							730
 						],
 						"size": [
-							600,
+							250,
 							0
 						],
 						"is_move_animation": false,
@@ -11162,7 +11200,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"text": "Discovered I2C Nodes",
+						"text": "I2C Nodes",
 						"long_mode": "LV_LABEL_LONG_BREAK",
 						"text_align": "left",
 						"style": [
@@ -11209,7 +11247,7 @@
 						"type": "table",
 						"pos": [
 							24,
-							485
+							785
 						],
 						"size": [
 							null,
@@ -11358,7 +11396,7 @@
 						"type": "ta",
 						"pos": [
 							20,
-							855
+							485
 						],
 						"size": [
 							680,
@@ -11447,7 +11485,7 @@
 						"type": "imgbtn",
 						"pos": [
 							360,
-							796
+							426
 						],
 						"size": [
 							160,
@@ -11509,7 +11547,7 @@
 						"type": "imgbtn",
 						"pos": [
 							530,
-							796
+							426
 						],
 						"size": [
 							160,
@@ -11571,7 +11609,7 @@
 						"type": "imgbtn",
 						"pos": [
 							530,
-							426
+							726
 						],
 						"size": [
 							160,
@@ -11690,15 +11728,15 @@
 						]
 					},
 					{
-						"name": "screen3_USB_label_1",
-						"type": "label",
+						"name": "screen3_USB_i2c_ddlist",
+						"type": "ddlist",
 						"pos": [
-							27,
-							770
+							400,
+							739
 						],
 						"size": [
-							321,
-							0
+							100,
+							null
 						],
 						"is_move_animation": false,
 						"path_type": "linear",
@@ -11710,47 +11748,90 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"text": "TODO: Move this down",
-						"long_mode": "LV_LABEL_LONG_BREAK",
-						"text_align": "center",
 						"style": [
 							{
-								"part": "LV_LABEL_PART_MAIN",
+								"part": "LV_DROPDOWN_PART_MAIN",
 								"state": "LV_STATE_DEFAULT",
 								"disable": false,
-								"radius": 0,
-								"text_color": "#000000",
-								"font": 12,
-								"font_family": "simsun",
-								"letter_space": 2,
 								"bg_color": "#ffffff",
 								"bg_grad_color": "#ffffff",
-								"bg_opa": 255,
 								"bg_grad_dir": "LV_GRAD_DIR_VER",
-								"paddingTop": 0,
-								"paddingRight": 0,
-								"paddingBottom": 0,
-								"paddingLeft": 0
+								"text_color": "#000000",
+								"font": "20",
+								"font_family": "OpenSans_Regular",
+								"border_color": "#41c363",
+								"border_width": 1,
+								"line_space": 20,
+								"radius": 3,
+								"bg_opa": 255
 							},
 							{
-								"part": "LV_LABEL_PART_MAIN",
-								"state": "LV_STATE_DISABLED",
+								"part": "LV_DROPDOWN_PART_MAIN",
+								"state": "LV_STATE_FOCUSED",
 								"disable": true,
-								"radius": 0,
-								"text_color": "#000000",
-								"font": 12,
-								"font_family": "simsun",
-								"letter_space": 2,
 								"bg_color": "#ffffff",
 								"bg_grad_color": "#ffffff",
-								"bg_opa": 255,
 								"bg_grad_dir": "LV_GRAD_DIR_VER",
-								"paddingTop": 0,
-								"paddingRight": 0,
-								"paddingBottom": 0,
-								"paddingLeft": 0
+								"text_color": "#0D3055",
+								"font": 12,
+								"font_family": "simsun",
+								"border_color": "#e1e6ee",
+								"border_width": 1,
+								"line_space": 20,
+								"radius": 3,
+								"bg_opa": 255
+							},
+							{
+								"part": "LV_DROPDOWN_PART_MAIN",
+								"state": "LV_STATE_DISABLED",
+								"disable": true,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"text_color": "#0D3055",
+								"font": 12,
+								"font_family": "simsun",
+								"border_color": "#e1e6ee",
+								"border_width": 1,
+								"line_space": 20,
+								"radius": 3,
+								"bg_opa": 255
+							},
+							{
+								"part": "LV_DROPDOWN_PART_SELECTED",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"bg_color": "#00a1b5",
+								"bg_grad_color": "#00a1b5",
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"text_color": "#ffffff",
+								"font": 12,
+								"font_family": "simsun",
+								"border_color": "#e1e6ee",
+								"border_width": 1,
+								"radius": 3,
+								"bg_opa": 255
+							},
+							{
+								"part": "LV_DROPDOWN_PART_LIST",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"text_color": "#0D3055",
+								"font": 12,
+								"font_family": "simsun",
+								"border_color": "#e1e6ee",
+								"border_width": 1,
+								"radius": 3,
+								"bg_opa": 255
 							}
-						]
+						],
+						"text": "I2C\\nI3C\\nI4C\\nI5C\\nI6C",
+						"draw_arrow": true,
+						"max_height": 90,
+						"sb_mode": "LV_SB_MODE_AUTO"
 					}
 				]
 			},
@@ -12512,8 +12593,8 @@
 						"name": "screen4_AV_mic1_cb",
 						"type": "cb",
 						"pos": [
-							620,
-							460
+							50,
+							830
 						],
 						"size": [
 							null,
@@ -12542,7 +12623,7 @@
 								"paddingBottom": null,
 								"paddingLeft": null,
 								"text_color": "#000000",
-								"font": "16",
+								"font": "36",
 								"font_family": "OpenSans_Regular",
 								"letter_space": 0,
 								"radius": 6,
@@ -12663,8 +12744,8 @@
 						"name": "screen4_AV_mic2_cb",
 						"type": "cb",
 						"pos": [
-							620,
-							495
+							210,
+							830
 						],
 						"size": [
 							null,
@@ -12693,7 +12774,7 @@
 								"paddingBottom": null,
 								"paddingLeft": null,
 								"text_color": "#000000",
-								"font": "16",
+								"font": "36",
 								"font_family": "OpenSans_Regular",
 								"letter_space": 0,
 								"radius": 6,
@@ -12814,8 +12895,8 @@
 						"name": "screen4_AV_mic3_cb",
 						"type": "cb",
 						"pos": [
-							620,
-							530
+							370,
+							830
 						],
 						"size": [
 							null,
@@ -12844,7 +12925,7 @@
 								"paddingBottom": null,
 								"paddingLeft": null,
 								"text_color": "#000000",
-								"font": "16",
+								"font": "36",
 								"font_family": "OpenSans_Regular",
 								"letter_space": 0,
 								"radius": 6,
@@ -12965,8 +13046,8 @@
 						"name": "screen4_AV_mic4_cb",
 						"type": "cb",
 						"pos": [
-							620,
-							565
+							530,
+							830
 						],
 						"size": [
 							null,
@@ -12995,7 +13076,7 @@
 								"paddingBottom": null,
 								"paddingLeft": null,
 								"text_color": "#000000",
-								"font": "16",
+								"font": "36",
 								"font_family": "OpenSans_Regular",
 								"letter_space": 0,
 								"radius": 6,
@@ -13120,8 +13201,8 @@
 							454
 						],
 						"size": [
-							560,
-							250
+							660,
+							350
 						],
 						"is_move_animation": false,
 						"path_type": "linear",
@@ -14202,7 +14283,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"text": "This application provides a subset of board tests that can be excersized:",
+						"text": "This application provides a subset of board tests that can be exercised:",
 						"long_mode": "LV_LABEL_LONG_BREAK",
 						"text_align": "left",
 						"style": [
