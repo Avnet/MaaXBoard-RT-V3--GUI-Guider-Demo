@@ -3861,7 +3861,7 @@
 					"duration": 100,
 					"width": 680,
 					"height": 200,
-					"text": "Test",
+					"text": "Press 'keyboard' or 'mouse' to capture HID input...",
 					"display_kb": true,
 					"text_align": "left",
 					"part": "LV_PAGE_PART_BG",
@@ -4243,8 +4243,8 @@
 				{
 					"name": "i2c_ddlist",
 					"type": "ddlist",
-					"left": 400,
-					"top": 739,
+					"left": 380,
+					"top": 730,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -4254,28 +4254,25 @@
 					"height": 0,
 					"list": [
 						{
-							"text": "I2C"
+							"text": "I2C2"
 						},
 						{
-							"text": "I3C"
+							"text": "I2C3"
 						},
 						{
-							"text": "I4C"
+							"text": "I2C5"
 						},
 						{
-							"text": "I5C"
-						},
-						{
-							"text": "I6C"
+							"text": "I2C6"
 						}
 					],
 					"draw_arrow": true,
-					"max_height": 90,
+					"max_height": 270,
 					"sb_mode": "LV_SB_MODE_AUTO",
 					"part": "LV_DROPDOWN_PART_MAIN",
 					"state": "LV_STATE_DEFAULT",
 					"disable": false,
-					"font": "20",
+					"font": "24",
 					"font_family": "OpenSans_Regular",
 					"bg_color": "#ffffff",
 					"bg_grad_color": "#ffffff",
@@ -4296,7 +4293,7 @@
 							"bg_grad_color": "#ffffff",
 							"bg_grad_dir": "LV_GRAD_DIR_VER",
 							"text_color": "#000000",
-							"font": "20",
+							"font": "24",
 							"font_family": "OpenSans_Regular",
 							"border_color": "#41c363",
 							"border_width": 1,
@@ -4368,7 +4365,16 @@
 						}
 					],
 					"id": "n8kf2m65",
-					"default_style": false
+					"default_style": false,
+					"event": [
+						{
+							"src": "i2c_ddlist",
+							"trigger": "value_changed",
+							"dst": "n8kf2m65",
+							"action": "bg_color",
+							"value": "#ffffff"
+						}
+					]
 				}
 			]
 		},
@@ -11412,7 +11418,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"text": "Test",
+						"text": "Press 'keyboard' or 'mouse' to capture HID input...",
 						"text_align": "left",
 						"display_kb": true,
 						"style": [
@@ -11731,8 +11737,8 @@
 						"name": "screen3_USB_i2c_ddlist",
 						"type": "ddlist",
 						"pos": [
-							400,
-							739
+							380,
+							730
 						],
 						"size": [
 							100,
@@ -11757,7 +11763,7 @@
 								"bg_grad_color": "#ffffff",
 								"bg_grad_dir": "LV_GRAD_DIR_VER",
 								"text_color": "#000000",
-								"font": "20",
+								"font": "24",
 								"font_family": "OpenSans_Regular",
 								"border_color": "#41c363",
 								"border_width": 1,
@@ -11828,9 +11834,9 @@
 								"bg_opa": 255
 							}
 						],
-						"text": "I2C\\nI3C\\nI4C\\nI5C\\nI6C",
+						"text": "I2C2\\nI2C3\\nI2C5\\nI2C6",
 						"draw_arrow": true,
-						"max_height": 90,
+						"max_height": 270,
 						"sb_mode": "LV_SB_MODE_AUTO"
 					}
 				]
@@ -15200,6 +15206,13 @@
 				"src": "screen3_USB_i2c_scan_imgbtn",
 				"trigger": "released",
 				"dst": "screen3_USB_i2c_scan_imgbtn",
+				"action": "bg_color",
+				"value": "#ffffff"
+			},
+			{
+				"src": "screen3_USB_i2c_ddlist",
+				"trigger": "value_changed",
+				"dst": "screen3_USB_i2c_ddlist",
 				"action": "bg_color",
 				"value": "#ffffff"
 			},

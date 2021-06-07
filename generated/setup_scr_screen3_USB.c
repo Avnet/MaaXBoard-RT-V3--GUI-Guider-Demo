@@ -463,7 +463,7 @@ void setup_scr_screen3_USB(lv_ui *ui){
 	lv_obj_add_style(ui->screen3_USB_input_area, LV_PAGE_PART_EDGE_FLASH, &style_screen3_USB_input_area_edge_flash);
 	lv_obj_set_pos(ui->screen3_USB_input_area, 20, 485);
 	lv_obj_set_size(ui->screen3_USB_input_area, 680, 200);
-	lv_textarea_set_text(ui->screen3_USB_input_area,"Test");
+	lv_textarea_set_text(ui->screen3_USB_input_area,"Press 'keyboard' or 'mouse' to capture HID input...");
 	lv_obj_set_event_cb(ui->screen3_USB_input_area, text_area_event_cb);
 	lv_textarea_set_text_align(ui->screen3_USB_input_area, LV_LABEL_ALIGN_LEFT);
 
@@ -564,8 +564,8 @@ void setup_scr_screen3_USB(lv_ui *ui){
 
 	//Write codes screen3_USB_i2c_ddlist
 	ui->screen3_USB_i2c_ddlist = lv_dropdown_create(ui->screen3_USB, NULL);
-	lv_dropdown_set_options(ui->screen3_USB_i2c_ddlist, "I2C\nI3C\nI4C\nI5C\nI6C");
-	lv_dropdown_set_max_height(ui->screen3_USB_i2c_ddlist, 90);
+	lv_dropdown_set_options(ui->screen3_USB_i2c_ddlist, "I2C2\nI2C3\nI2C5\nI2C6");
+	lv_dropdown_set_max_height(ui->screen3_USB_i2c_ddlist, 270);
 
 	//Write style LV_DROPDOWN_PART_MAIN for screen3_USB_i2c_ddlist
 	static lv_style_t style_screen3_USB_i2c_ddlist_main;
@@ -580,7 +580,7 @@ void setup_scr_screen3_USB(lv_ui *ui){
 	lv_style_set_border_color(&style_screen3_USB_i2c_ddlist_main, LV_STATE_DEFAULT, lv_color_make(0x41, 0xc3, 0x63));
 	lv_style_set_border_width(&style_screen3_USB_i2c_ddlist_main, LV_STATE_DEFAULT, 1);
 	lv_style_set_text_color(&style_screen3_USB_i2c_ddlist_main, LV_STATE_DEFAULT, lv_color_make(0x00, 0x00, 0x00));
-	lv_style_set_text_font(&style_screen3_USB_i2c_ddlist_main, LV_STATE_DEFAULT, &lv_font_OpenSans_Regular_20);
+	lv_style_set_text_font(&style_screen3_USB_i2c_ddlist_main, LV_STATE_DEFAULT, &lv_font_OpenSans_Regular_24);
 	lv_style_set_text_line_space(&style_screen3_USB_i2c_ddlist_main, LV_STATE_DEFAULT, 20);
 	lv_obj_add_style(ui->screen3_USB_i2c_ddlist, LV_DROPDOWN_PART_MAIN, &style_screen3_USB_i2c_ddlist_main);
 
@@ -615,7 +615,7 @@ void setup_scr_screen3_USB(lv_ui *ui){
 	lv_style_set_text_color(&style_screen3_USB_i2c_ddlist_list, LV_STATE_DEFAULT, lv_color_make(0x0D, 0x30, 0x55));
 	lv_style_set_text_font(&style_screen3_USB_i2c_ddlist_list, LV_STATE_DEFAULT, &lv_font_simsun_12);
 	lv_obj_add_style(ui->screen3_USB_i2c_ddlist, LV_DROPDOWN_PART_LIST, &style_screen3_USB_i2c_ddlist_list);
-	lv_obj_set_pos(ui->screen3_USB_i2c_ddlist, 400, 739);
+	lv_obj_set_pos(ui->screen3_USB_i2c_ddlist, 380, 730);
 	lv_obj_set_width(ui->screen3_USB_i2c_ddlist, 100);
 
 	//Init events for screen
