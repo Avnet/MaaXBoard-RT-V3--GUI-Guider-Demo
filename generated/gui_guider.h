@@ -57,7 +57,6 @@ typedef struct
 	lv_obj_t *screen1_LEDs_led_green_off;
 	lv_obj_t *screen1_LEDs_led_blue_on;
 	lv_obj_t *screen1_LEDs_led_blue_off;
-	lv_obj_t *screen1_LEDs_label_1;
 	lv_obj_t *screen2_WIFI;
 	lv_obj_t *screen2_WIFI_canvas_white;
 	lv_obj_t *screen2_WIFI_left_btn;
