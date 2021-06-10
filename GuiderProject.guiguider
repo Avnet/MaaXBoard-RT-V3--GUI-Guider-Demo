@@ -5053,7 +5053,7 @@
 					"color_format": "true-color-alpha",
 					"part": "LV_IMGBTN_PART_MAIN",
 					"state": "LV_STATE_DEFAULT",
-					"disable": true,
+					"disable": false,
 					"image_recolor": "#ffffff",
 					"image_recolor_opa": 0,
 					"image_opa": 255,
@@ -5064,7 +5064,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_DEFAULT",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#ffffff",
 							"image_recolor_opa": 0,
 							"image_opa": 255,
@@ -6573,8 +6573,8 @@
 				{
 					"name": "custom_imgbtn",
 					"type": "imgbtn",
-					"left": 505,
-					"top": 158,
+					"left": 29,
+					"top": 610,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -6583,7 +6583,7 @@
 					"width": 190,
 					"height": 80,
 					"text": "connect",
-					"toggle": true,
+					"toggle": false,
 					"src_released": "button.png",
 					"src_pressed": "button_on.png",
 					"src_checked_released": "button_on.png",
@@ -6591,7 +6591,7 @@
 					"color_format": "true-color-alpha",
 					"part": "LV_IMGBTN_PART_MAIN",
 					"state": "LV_STATE_DEFAULT",
-					"disable": true,
+					"disable": false,
 					"image_recolor": "#ffffff",
 					"image_recolor_opa": 0,
 					"image_opa": 255,
@@ -6602,7 +6602,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_DEFAULT",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#ffffff",
 							"image_recolor_opa": 0,
 							"image_opa": 255,
@@ -6632,6 +6632,87 @@
 						}
 					],
 					"id": "1fa2jsh5",
+					"default_style": false,
+					"event": [
+						{
+							"src": "custom_imgbtn",
+							"trigger": "released",
+							"dst": "1fa2jsh5",
+							"action": "bg_color",
+							"value": "#ffffff"
+						}
+					]
+				},
+				{
+					"name": "instructions_label",
+					"type": "label",
+					"left": 237,
+					"top": 622,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 446,
+					"height": 0,
+					"text": "Click 'connect' to connect to '*' and measure it's RSSI",
+					"text_align": "left",
+					"long_mode": "LV_LABEL_LONG_BREAK",
+					"part": "LV_LABEL_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"bg_color": "#ffffff",
+					"bg_grad_color": "#ffffff",
+					"bg_grad_dir": "LV_GRAD_DIR_VER",
+					"bg_opa": 255,
+					"text_color": "#000000",
+					"font": "28",
+					"font_family": "OpenSans_Regular",
+					"letter_space": 2,
+					"radius": 0,
+					"paddingTop": 0,
+					"paddingRight": 0,
+					"paddingBottom": 0,
+					"paddingLeft": 0,
+					"style": [
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": "28",
+							"font_family": "OpenSans_Regular",
+							"letter_space": 2,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 0,
+							"paddingRight": 0,
+							"paddingBottom": 0,
+							"paddingLeft": 0
+						},
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DISABLED",
+							"disable": true,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": 12,
+							"font_family": "simsun",
+							"letter_space": 2,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 0,
+							"paddingRight": 0,
+							"paddingBottom": 0,
+							"paddingLeft": 0
+						}
+					],
+					"id": "0hqads4e",
 					"default_style": false
 				}
 			]
@@ -12498,7 +12579,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_DEFAULT",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#ffffff",
 								"image_recolor_opa": 0,
 								"image_opa": 255,
@@ -13822,8 +13903,8 @@
 						"name": "screen5_SYSTEM_custom_imgbtn",
 						"type": "imgbtn",
 						"pos": [
-							505,
-							158
+							29,
+							610
 						],
 						"size": [
 							190,
@@ -13839,7 +13920,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"toggle": true,
+						"toggle": false,
 						"text": "connect",
 						"color_format": "true-color-alpha",
 						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
@@ -13850,7 +13931,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_DEFAULT",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#ffffff",
 								"image_recolor_opa": 0,
 								"image_opa": 255,
@@ -13877,6 +13958,69 @@
 								"text_color": "#FF33FF",
 								"font_family": "simsun",
 								"font": 16
+							}
+						]
+					},
+					{
+						"name": "screen5_SYSTEM_instructions_label",
+						"type": "label",
+						"pos": [
+							237,
+							622
+						],
+						"size": [
+							446,
+							0
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"text": "Click 'connect' to connect to '*' and measure it's RSSI",
+						"long_mode": "LV_LABEL_LONG_BREAK",
+						"text_align": "left",
+						"style": [
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": "28",
+								"font_family": "OpenSans_Regular",
+								"letter_space": 2,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 0,
+								"paddingRight": 0,
+								"paddingBottom": 0,
+								"paddingLeft": 0
+							},
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DISABLED",
+								"disable": true,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": 12,
+								"font_family": "simsun",
+								"letter_space": 2,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 0,
+								"paddingRight": 0,
+								"paddingBottom": 0,
+								"paddingLeft": 0
 							}
 						]
 					}
@@ -15414,6 +15558,13 @@
 				"anim_type": "LV_SCR_LOAD_ANIM_NONE",
 				"delay": 0,
 				"duration": 0
+			},
+			{
+				"src": "screen5_SYSTEM_custom_imgbtn",
+				"trigger": "released",
+				"dst": "screen5_SYSTEM_custom_imgbtn",
+				"action": "bg_color",
+				"value": "#ffffff"
 			},
 			{
 				"src": "screen6_HELP_left_btn",

@@ -17,6 +17,7 @@ LV_FONT_DECLARE(lv_font_OpenSans_SemiBold_40)
 LV_FONT_DECLARE(lv_font_OpenSans_Regular_24)
 LV_FONT_DECLARE(lv_font_inconsolata_light_28)
 LV_FONT_DECLARE(lv_font_simsun_20)
+LV_FONT_DECLARE(lv_font_OpenSans_Regular_28)
 
     
     #ifdef __cplusplus
