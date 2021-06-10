@@ -265,6 +265,7 @@ void setup_scr_screen5_SYSTEM(lv_ui *ui){
 	lv_imgbtn_set_src(ui->screen5_SYSTEM_custom_imgbtn,LV_BTN_STATE_PRESSED,&_button_on_alpha_190x80);
 	lv_imgbtn_set_src(ui->screen5_SYSTEM_custom_imgbtn,LV_BTN_STATE_CHECKED_RELEASED,&_button_on_alpha_190x80);
 	lv_imgbtn_set_src(ui->screen5_SYSTEM_custom_imgbtn,LV_BTN_STATE_CHECKED_PRESSED,&_button_alpha_190x80);
+	lv_imgbtn_set_checkable(ui->screen5_SYSTEM_custom_imgbtn, true);
 	ui->screen5_SYSTEM_custom_imgbtn_label = lv_label_create(ui->screen5_SYSTEM_custom_imgbtn, NULL);
 	lv_label_set_text(ui->screen5_SYSTEM_custom_imgbtn_label, "connect");
 

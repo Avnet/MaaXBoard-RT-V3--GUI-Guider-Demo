@@ -6583,7 +6583,7 @@
 					"width": 190,
 					"height": 80,
 					"text": "connect",
-					"toggle": false,
+					"toggle": true,
 					"src_released": "button.png",
 					"src_pressed": "button_on.png",
 					"src_checked_released": "button_on.png",
@@ -13920,7 +13920,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"toggle": false,
+						"toggle": true,
 						"text": "connect",
 						"color_format": "true-color-alpha",
 						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
