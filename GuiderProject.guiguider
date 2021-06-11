@@ -6510,7 +6510,7 @@
 					"duration": 100,
 					"width": 450,
 					"height": 0,
-					"text": "Wi-Fi Signal Strength",
+					"text": "Wi-Fi Signal Strength:",
 					"text_align": "left",
 					"long_mode": "LV_LABEL_LONG_BREAK",
 					"part": "LV_LABEL_PART_MAIN",
@@ -6580,7 +6580,7 @@
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
-					"width": 190,
+					"width": 220,
 					"height": 80,
 					"text": "connect",
 					"toggle": true,
@@ -6646,14 +6646,14 @@
 				{
 					"name": "instructions_label",
 					"type": "label",
-					"left": 237,
+					"left": 267,
 					"top": 622,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
-					"width": 446,
+					"width": 416,
 					"height": 0,
 					"text": "Click 'connect' to connect to '*' and measure it's RSSI",
 					"text_align": "left",
@@ -6713,6 +6713,78 @@
 						}
 					],
 					"id": "0hqads4e",
+					"default_style": false
+				},
+				{
+					"name": "custom_value_label",
+					"type": "label",
+					"left": 486,
+					"top": 175,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 200,
+					"height": 0,
+					"text": "-100dBm",
+					"text_align": "left",
+					"long_mode": "LV_LABEL_LONG_BREAK",
+					"part": "LV_LABEL_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"bg_color": "#ff0000",
+					"bg_grad_color": "#ff0000",
+					"bg_grad_dir": "LV_GRAD_DIR_VER",
+					"bg_opa": 255,
+					"text_color": "#000000",
+					"font": "40",
+					"font_family": "OpenSans_Regular",
+					"letter_space": 2,
+					"radius": 0,
+					"paddingTop": 5,
+					"paddingRight": 5,
+					"paddingBottom": 5,
+					"paddingLeft": 5,
+					"style": [
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": "40",
+							"font_family": "OpenSans_Regular",
+							"letter_space": 2,
+							"bg_color": "#ff0000",
+							"bg_grad_color": "#ff0000",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 5,
+							"paddingRight": 5,
+							"paddingBottom": 5,
+							"paddingLeft": 5
+						},
+						{
+							"part": "LV_LABEL_PART_MAIN",
+							"state": "LV_STATE_DISABLED",
+							"disable": true,
+							"radius": 0,
+							"text_color": "#000000",
+							"font": 12,
+							"font_family": "simsun",
+							"letter_space": 2,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_opa": 255,
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"paddingTop": 0,
+							"paddingRight": 0,
+							"paddingBottom": 0,
+							"paddingLeft": 0
+						}
+					],
+					"id": "8tkzpekm",
 					"default_style": false
 				}
 			]
@@ -13857,7 +13929,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"text": "Wi-Fi Signal Strength",
+						"text": "Wi-Fi Signal Strength:",
 						"long_mode": "LV_LABEL_LONG_BREAK",
 						"text_align": "left",
 						"style": [
@@ -13907,7 +13979,7 @@
 							610
 						],
 						"size": [
-							190,
+							220,
 							80
 						],
 						"is_move_animation": false,
@@ -13965,11 +14037,11 @@
 						"name": "screen5_SYSTEM_instructions_label",
 						"type": "label",
 						"pos": [
-							237,
+							267,
 							622
 						],
 						"size": [
-							446,
+							416,
 							0
 						],
 						"is_move_animation": false,
@@ -14003,6 +14075,69 @@
 								"paddingRight": 0,
 								"paddingBottom": 0,
 								"paddingLeft": 0
+							},
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DISABLED",
+								"disable": true,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": 12,
+								"font_family": "simsun",
+								"letter_space": 2,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 0,
+								"paddingRight": 0,
+								"paddingBottom": 0,
+								"paddingLeft": 0
+							}
+						]
+					},
+					{
+						"name": "screen5_SYSTEM_custom_value_label",
+						"type": "label",
+						"pos": [
+							486,
+							175
+						],
+						"size": [
+							200,
+							0
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"text": "-100dBm",
+						"long_mode": "LV_LABEL_LONG_BREAK",
+						"text_align": "left",
+						"style": [
+							{
+								"part": "LV_LABEL_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"radius": 0,
+								"text_color": "#000000",
+								"font": "40",
+								"font_family": "OpenSans_Regular",
+								"letter_space": 2,
+								"bg_color": "#ff0000",
+								"bg_grad_color": "#ff0000",
+								"bg_opa": 255,
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"paddingTop": 5,
+								"paddingRight": 5,
+								"paddingBottom": 5,
+								"paddingLeft": 5
 							},
 							{
 								"part": "LV_LABEL_PART_MAIN",
