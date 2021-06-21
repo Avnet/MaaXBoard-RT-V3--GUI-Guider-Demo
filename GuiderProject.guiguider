@@ -49,6 +49,42 @@
 			"id": "screen",
 			"list": [
 				{
+					"name": "cursor_img",
+					"type": "img",
+					"left": 177,
+					"top": 205,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 45,
+					"height": 45,
+					"img_path": "mouse.png",
+					"rotate": 0,
+					"x": 0,
+					"y": 0,
+					"color_format": "true-color-alpha",
+					"part": "LV_IMG_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"image_recolor": "#ffffff",
+					"image_recolor_opa": 0,
+					"image_opa": 255,
+					"style": [
+						{
+							"part": "LV_IMG_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"image_recolor": "#ffffff",
+							"image_recolor_opa": 0,
+							"image_opa": 255
+						}
+					],
+					"id": "oc8m3iym",
+					"default_style": false
+				},
+				{
 					"name": "canvas_white",
 					"type": "canvas",
 					"left": 0,
@@ -2260,7 +2296,7 @@
 					],
 					"anim_time": 255,
 					"edge_flash": true,
-					"part": "LV_LIST_PART_BG",
+					"part": "LV_BTN_PART_MAIN",
 					"state": "LV_STATE_DEFAULT",
 					"disable": false,
 					"padding_top": 5,
@@ -2447,7 +2483,7 @@
 					"duration": 100,
 					"width": 500,
 					"height": 0,
-					"text": "Ethernet IP Address:",
+					"text": "Ethernet Interfaces:",
 					"text_align": "left",
 					"long_mode": "LV_LABEL_LONG_BREAK",
 					"part": "LV_LABEL_PART_MAIN",
@@ -2580,78 +2616,6 @@
 					"default_style": false
 				},
 				{
-					"name": "ip_addr_edit_label",
-					"type": "label",
-					"left": 30,
-					"top": 895,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
-					"width": 500,
-					"height": 0,
-					"text": "No Connection",
-					"text_align": "left",
-					"long_mode": "LV_LABEL_LONG_BREAK",
-					"part": "LV_LABEL_PART_MAIN",
-					"state": "LV_STATE_DEFAULT",
-					"disable": false,
-					"bg_color": "#ffffff",
-					"bg_grad_color": "#ffffff",
-					"bg_grad_dir": "LV_GRAD_DIR_VER",
-					"bg_opa": 255,
-					"text_color": "#000000",
-					"font": "40",
-					"font_family": "OpenSans_SemiBold",
-					"letter_space": 2,
-					"radius": 0,
-					"paddingTop": 0,
-					"paddingRight": 0,
-					"paddingBottom": 0,
-					"paddingLeft": 0,
-					"style": [
-						{
-							"part": "LV_LABEL_PART_MAIN",
-							"state": "LV_STATE_DEFAULT",
-							"disable": false,
-							"radius": 0,
-							"text_color": "#000000",
-							"font": "40",
-							"font_family": "OpenSans_SemiBold",
-							"letter_space": 2,
-							"bg_color": "#ffffff",
-							"bg_grad_color": "#ffffff",
-							"bg_opa": 255,
-							"bg_grad_dir": "LV_GRAD_DIR_VER",
-							"paddingTop": 0,
-							"paddingRight": 0,
-							"paddingBottom": 0,
-							"paddingLeft": 0
-						},
-						{
-							"part": "LV_LABEL_PART_MAIN",
-							"state": "LV_STATE_DISABLED",
-							"disable": true,
-							"radius": 0,
-							"text_color": "#000000",
-							"font": 12,
-							"font_family": "simsun",
-							"letter_space": 2,
-							"bg_color": "#ffffff",
-							"bg_grad_color": "#ffffff",
-							"bg_opa": 255,
-							"bg_grad_dir": "LV_GRAD_DIR_VER",
-							"paddingTop": 0,
-							"paddingRight": 0,
-							"paddingBottom": 0,
-							"paddingLeft": 0
-						}
-					],
-					"id": "talf7wlm",
-					"default_style": false
-				},
-				{
 					"name": "ssid_refresh_imgbtn",
 					"type": "imgbtn",
 					"left": 530,
@@ -2663,7 +2627,7 @@
 					"duration": 100,
 					"width": 160,
 					"height": 50,
-					"text": "Refresh",
+					"text": "Wi-Fi Scan",
 					"toggle": false,
 					"src_released": "button.png",
 					"src_pressed": "button_on.png",
@@ -2794,6 +2758,143 @@
 						}
 					],
 					"id": "t0faz3bt",
+					"default_style": false
+				},
+				{
+					"name": "eth_list",
+					"type": "list",
+					"left": 0,
+					"top": 903,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
+					"width": 720,
+					"height": 180,
+					"items": [
+						{
+							"img_symbol": "LV_SYMBOL_CLOSE;fas fa-times",
+							"img_path": "eth_connect.png",
+							"img_size": [
+								40,
+								40
+							],
+							"text": "Eth 100Mb : Connected, ip:192.168.5.100 sub:255.255.255.0 gw:192.168.5.1"
+						},
+						{
+							"img_symbol": "LV_SYMBOL_CLOSE;fas fa-times",
+							"img_path": "eth_disconnect.png",
+							"img_size": [
+								40,
+								40
+							],
+							"text": "Eth 1Gb : Disconnected"
+						}
+					],
+					"anim_time": 255,
+					"edge_flash": true,
+					"part": "LV_BTN_PART_MAIN",
+					"state": "LV_STATE_DEFAULT",
+					"disable": false,
+					"padding_top": 5,
+					"padding_left": 5,
+					"padding_right": 5,
+					"font": "12",
+					"font_family": "simsun",
+					"bg_color": "#ffffff",
+					"bg_grad_color": "#ffffff",
+					"bg_grad_dir": "LV_GRAD_DIR_VER",
+					"text_color": "#0d3055",
+					"border_color": "#e1e6ee",
+					"border_width": 1,
+					"radius": 3,
+					"bg_opa": 255,
+					"style": [
+						{
+							"part": "LV_LIST_PART_BG",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"padding_top": 5,
+							"padding_left": 5,
+							"padding_right": 5,
+							"border_color": "#e1e6ee",
+							"border_width": 1,
+							"radius": 3
+						},
+						{
+							"part": "LV_LIST_PART_BG",
+							"state": "LV_STATE_FOCUSED",
+							"disable": true,
+							"padding_top": 5,
+							"padding_left": 5,
+							"padding_right": 5,
+							"border_color": "#e1e6ee",
+							"border_width": 1,
+							"radius": 3
+						},
+						{
+							"part": "LV_LIST_PART_BG",
+							"state": "LV_STATE_DISABLED",
+							"disable": true,
+							"padding_top": 5,
+							"padding_left": 5,
+							"padding_right": 5,
+							"border_color": "#e1e6ee",
+							"border_width": 1,
+							"radius": 3
+						},
+						{
+							"part": "LV_LIST_PART_SCROLLABLE",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"radius": 3,
+							"bg_opa": 255
+						},
+						{
+							"part": "LV_BTN_PART_MAIN",
+							"state": "LV_STATE_DEFAULT",
+							"disable": false,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"text_color": "#0d3055",
+							"font": "12",
+							"font_family": "simsun",
+							"radius": 3,
+							"bg_opa": 255
+						},
+						{
+							"part": "LV_BTN_PART_MAIN",
+							"state": "LV_STATE_PRESSED",
+							"disable": true,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"text_color": "#0D3055",
+							"radius": 3,
+							"font": 12,
+							"font_family": "simsun",
+							"bg_opa": 255
+						},
+						{
+							"part": "LV_BTN_PART_MAIN",
+							"state": "LV_STATE_FOCUSED",
+							"disable": true,
+							"bg_color": "#ffffff",
+							"bg_grad_color": "#ffffff",
+							"bg_grad_dir": "LV_GRAD_DIR_VER",
+							"text_color": "#0D3055",
+							"radius": 3,
+							"font": 12,
+							"font_family": "simsun",
+							"bg_opa": 255
+						}
+					],
+					"id": "lsugr3da",
 					"default_style": false
 				}
 			]
@@ -3323,7 +3424,7 @@
 					"items": [],
 					"anim_time": 255,
 					"edge_flash": true,
-					"part": "LV_LIST_PART_BG",
+					"part": "LV_BTN_PART_MAIN",
 					"state": "LV_STATE_DEFAULT",
 					"disable": false,
 					"padding_top": 5,
@@ -4178,7 +4279,7 @@
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
-					"width": 100,
+					"width": 120,
 					"height": 0,
 					"list": [
 						{
@@ -4269,8 +4370,8 @@
 							"bg_grad_color": "#00a1b5",
 							"bg_grad_dir": "LV_GRAD_DIR_VER",
 							"text_color": "#ffffff",
-							"font": 12,
-							"font_family": "simsun",
+							"font": "24",
+							"font_family": "OpenSans_Regular",
 							"border_color": "#e1e6ee",
 							"border_width": 1,
 							"radius": 3,
@@ -4284,8 +4385,8 @@
 							"bg_grad_color": "#ffffff",
 							"bg_grad_dir": "LV_GRAD_DIR_VER",
 							"text_color": "#0D3055",
-							"font": 12,
-							"font_family": "simsun",
+							"font": "24",
+							"font_family": "OpenSans_Regular",
 							"border_color": "#e1e6ee",
 							"border_width": 1,
 							"radius": 3,
@@ -4963,8 +5064,8 @@
 				{
 					"name": "playback_label",
 					"type": "label",
-					"left": 32,
-					"top": 300,
+					"left": 51,
+					"top": 888,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -4972,7 +5073,7 @@
 					"duration": 100,
 					"width": 600,
 					"height": 0,
-					"text": "Audio Output:",
+					"text": "Note: Up to 2 selected mic will be sent to audio jack.",
 					"text_align": "left",
 					"long_mode": "LV_LABEL_LONG_BREAK",
 					"part": "LV_LABEL_PART_MAIN",
@@ -4982,8 +5083,8 @@
 					"bg_grad_color": "#ffffff",
 					"bg_grad_dir": "LV_GRAD_DIR_VER",
 					"bg_opa": 255,
-					"text_color": "#a8a8a8",
-					"font": "40",
+					"text_color": "#000000",
+					"font": "16",
 					"font_family": "OpenSans_Regular",
 					"letter_space": 2,
 					"radius": 0,
@@ -4997,8 +5098,8 @@
 							"state": "LV_STATE_DEFAULT",
 							"disable": false,
 							"radius": 0,
-							"text_color": "#a8a8a8",
-							"font": "40",
+							"text_color": "#000000",
+							"font": "16",
 							"font_family": "OpenSans_Regular",
 							"letter_space": 2,
 							"bg_color": "#ffffff",
@@ -5033,74 +5134,10 @@
 					"default_style": false
 				},
 				{
-					"name": "audio_test_imgbtn",
-					"type": "imgbtn",
-					"left": 505,
-					"top": 278,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
-					"width": 190,
-					"height": 80,
-					"text": "test",
-					"toggle": true,
-					"src_released": "button.png",
-					"src_pressed": "button_on.png",
-					"src_checked_released": "button_on.png",
-					"src_checked_pressed": "button.png",
-					"color_format": "true-color-alpha",
-					"part": "LV_IMGBTN_PART_MAIN",
-					"state": "LV_STATE_DEFAULT",
-					"disable": false,
-					"image_recolor": "#ffffff",
-					"image_recolor_opa": 0,
-					"image_opa": 255,
-					"font_family": "OpenSans_Regular",
-					"text_color": "#a8a8a8",
-					"font": "36",
-					"style": [
-						{
-							"part": "LV_IMGBTN_PART_MAIN",
-							"state": "LV_STATE_DEFAULT",
-							"disable": false,
-							"image_recolor": "#ffffff",
-							"image_recolor_opa": 0,
-							"image_opa": 255,
-							"font_family": "OpenSans_Regular",
-							"text_color": "#a8a8a8",
-							"font": "36"
-						},
-						{
-							"part": "LV_IMGBTN_PART_MAIN",
-							"state": "LV_STATE_PRESSED",
-							"disable": true,
-							"image_recolor": "#000000",
-							"image_recolor_opa": 0,
-							"text_color": "#FF33FF",
-							"font_family": "simsun",
-							"font": 16
-						},
-						{
-							"part": "LV_IMGBTN_PART_MAIN",
-							"state": "LV_STATE_CHECKED",
-							"disable": true,
-							"image_recolor": "#000000",
-							"image_recolor_opa": 0,
-							"text_color": "#FF33FF",
-							"font_family": "simsun",
-							"font": 16
-						}
-					],
-					"id": "yhsg3ub4",
-					"default_style": false
-				},
-				{
 					"name": "mic_label",
 					"type": "label",
 					"left": 32,
-					"top": 390,
+					"top": 320,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -5856,14 +5893,14 @@
 					"name": "mic_chart",
 					"type": "chart",
 					"left": 30,
-					"top": 454,
+					"top": 390,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
 					"width": 660,
-					"height": 350,
+					"height": 420,
 					"range": 100,
 					"row": 3,
 					"col": 5,
@@ -6371,7 +6408,7 @@
 					"duration": 100,
 					"width": 500,
 					"height": 0,
-					"text": "Custom Examples",
+					"text": "Custom Functions",
 					"text_align": "center",
 					"long_mode": "LV_LABEL_LONG_BREAK",
 					"part": "LV_LABEL_PART_MAIN",
@@ -8249,6 +8286,42 @@
 				"type": "scr",
 				"widgets": [
 					{
+						"name": "screen0_MENU_cursor_img",
+						"type": "img",
+						"pos": [
+							177,
+							205
+						],
+						"size": [
+							45,
+							45
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"img_path": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\mouse.png",
+						"color_format": "true-color-alpha",
+						"rotate": 0,
+						"pivot": "0,0",
+						"style": [
+							{
+								"part": "LV_IMG_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"image_recolor": "#ffffff",
+								"image_recolor_opa": 0,
+								"image_opa": 255
+							}
+						]
+					},
+					{
 						"name": "screen0_MENU_canvas_white",
 						"type": "canvas",
 						"pos": [
@@ -8300,7 +8373,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/avnet_logo2.png",
+						"img_path": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\avnet_logo2.png",
 						"color_format": "true-color-alpha",
 						"rotate": 0,
 						"pivot": "0,0",
@@ -8336,7 +8409,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/SBC_Help_Image.png",
+						"img_path": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\SBC_Help_Image.png",
 						"color_format": "true-color-alpha",
 						"rotate": 0,
 						"pivot": "0,0",
@@ -8501,8 +8574,8 @@
 						"toggle": true,
 						"text": "LED Control",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button_on.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -8561,8 +8634,8 @@
 						"toggle": true,
 						"text": "Audio & Video",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button_on.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -8621,8 +8694,8 @@
 						"toggle": true,
 						"text": "Wi-Fi & Network",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button_on.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -8681,8 +8754,8 @@
 						"toggle": true,
 						"text": "Custom",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button_on.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -8741,8 +8814,8 @@
 						"toggle": true,
 						"text": "USB & Expansion",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button_on.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -8801,8 +8874,8 @@
 						"toggle": true,
 						"text": "Help & Info",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button_on.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -8898,8 +8971,8 @@
 						"toggle": false,
 						"text": "",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/left_icon.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/left_icon.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\left_icon.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\left_icon.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -9018,7 +9091,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/avnet_logo2.png",
+						"img_path": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\avnet_logo2.png",
 						"color_format": "true-color-alpha",
 						"rotate": 0,
 						"pivot": "0,0",
@@ -9057,8 +9130,8 @@
 						"toggle": false,
 						"text": "",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/right_icon.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/right_icon.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\right_icon.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\right_icon.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -9177,7 +9250,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/IoT_Smart_Asset_Monitoring_G_600ppi.png",
+						"img_path": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\IoT_Smart_Asset_Monitoring_G_600ppi.png",
 						"color_format": "true-color-alpha",
 						"rotate": 0,
 						"pivot": "0,0",
@@ -9216,10 +9289,10 @@
 						"toggle": true,
 						"text": "LED 1",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
-						"src_checked_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
-						"src_checked_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button_on.png",
+						"src_checked_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button_on.png",
+						"src_checked_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -9278,10 +9351,10 @@
 						"toggle": true,
 						"text": "LED 2",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
-						"src_checked_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
-						"src_checked_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button_on.png",
+						"src_checked_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button_on.png",
+						"src_checked_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -9340,10 +9413,10 @@
 						"toggle": true,
 						"text": "LED 3",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
-						"src_checked_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
-						"src_checked_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button_on.png",
+						"src_checked_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button_on.png",
+						"src_checked_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -9399,7 +9472,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/led_red_on.png",
+						"img_path": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\led_red_on.png",
 						"color_format": "true-color-alpha",
 						"rotate": 0,
 						"pivot": "0,0",
@@ -9435,7 +9508,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/led_red_off.png",
+						"img_path": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\led_red_off.png",
 						"color_format": "true-color-alpha",
 						"rotate": 0,
 						"pivot": "0,0",
@@ -9474,8 +9547,8 @@
 						"toggle": false,
 						"text": "",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/home_icon.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/home_icon.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\home_icon.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\home_icon.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -9594,7 +9667,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/led_green_on.png",
+						"img_path": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\led_green_on.png",
 						"color_format": "true-color-alpha",
 						"rotate": 0,
 						"pivot": "0,0",
@@ -9630,7 +9703,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/led_green_off.png",
+						"img_path": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\led_green_off.png",
 						"color_format": "true-color-alpha",
 						"rotate": 0,
 						"pivot": "0,0",
@@ -9666,7 +9739,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/led_blue_on.png",
+						"img_path": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\led_blue_on.png",
 						"color_format": "true-color-alpha",
 						"rotate": 0,
 						"pivot": "0,0",
@@ -9702,7 +9775,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/led_blue_off.png",
+						"img_path": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\led_blue_off.png",
 						"color_format": "true-color-alpha",
 						"rotate": 0,
 						"pivot": "0,0",
@@ -9778,8 +9851,8 @@
 						"toggle": false,
 						"text": "",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/left_icon.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/left_icon.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\left_icon.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\left_icon.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -9898,7 +9971,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/avnet_logo2.png",
+						"img_path": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\avnet_logo2.png",
 						"color_format": "true-color-alpha",
 						"rotate": 0,
 						"pivot": "0,0",
@@ -9937,8 +10010,8 @@
 						"toggle": false,
 						"text": "",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/right_icon.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/right_icon.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\right_icon.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\right_icon.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -10060,8 +10133,8 @@
 						"toggle": false,
 						"text": "",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/home_icon.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/home_icon.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\home_icon.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\home_icon.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -10364,7 +10437,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"text": "Ethernet IP Address:",
+						"text": "Ethernet Interfaces:",
 						"long_mode": "LV_LABEL_LONG_BREAK",
 						"text_align": "left",
 						"style": [
@@ -10470,69 +10543,6 @@
 						]
 					},
 					{
-						"name": "screen2_WIFI_ip_addr_edit_label",
-						"type": "label",
-						"pos": [
-							30,
-							895
-						],
-						"size": [
-							500,
-							0
-						],
-						"is_move_animation": false,
-						"path_type": "linear",
-						"move_animation": {
-							"des_pos": [
-								0,
-								0
-							],
-							"duration": 100
-						},
-						"default_style": false,
-						"text": "No Connection",
-						"long_mode": "LV_LABEL_LONG_BREAK",
-						"text_align": "left",
-						"style": [
-							{
-								"part": "LV_LABEL_PART_MAIN",
-								"state": "LV_STATE_DEFAULT",
-								"disable": false,
-								"radius": 0,
-								"text_color": "#000000",
-								"font": "40",
-								"font_family": "OpenSans_SemiBold",
-								"letter_space": 2,
-								"bg_color": "#ffffff",
-								"bg_grad_color": "#ffffff",
-								"bg_opa": 255,
-								"bg_grad_dir": "LV_GRAD_DIR_VER",
-								"paddingTop": 0,
-								"paddingRight": 0,
-								"paddingBottom": 0,
-								"paddingLeft": 0
-							},
-							{
-								"part": "LV_LABEL_PART_MAIN",
-								"state": "LV_STATE_DISABLED",
-								"disable": true,
-								"radius": 0,
-								"text_color": "#000000",
-								"font": 12,
-								"font_family": "simsun",
-								"letter_space": 2,
-								"bg_color": "#ffffff",
-								"bg_grad_color": "#ffffff",
-								"bg_opa": 255,
-								"bg_grad_dir": "LV_GRAD_DIR_VER",
-								"paddingTop": 0,
-								"paddingRight": 0,
-								"paddingBottom": 0,
-								"paddingLeft": 0
-							}
-						]
-					},
-					{
 						"name": "screen2_WIFI_ssid_refresh_imgbtn",
 						"type": "imgbtn",
 						"pos": [
@@ -10554,10 +10564,10 @@
 						},
 						"default_style": false,
 						"toggle": false,
-						"text": "Refresh",
+						"text": "Wi-Fi Scan",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button_on.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -10654,6 +10664,136 @@
 								"paddingLeft": 0
 							}
 						]
+					},
+					{
+						"name": "screen2_WIFI_eth_list",
+						"type": "list",
+						"pos": [
+							0,
+							903
+						],
+						"size": [
+							720,
+							180
+						],
+						"is_move_animation": false,
+						"path_type": "linear",
+						"move_animation": {
+							"des_pos": [
+								0,
+								0
+							],
+							"duration": 100
+						},
+						"default_style": false,
+						"items": [
+							{
+								"img_symbol": "LV_SYMBOL_CLOSE;fas fa-times",
+								"img_path": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\eth_connect.png",
+								"img_size": [
+									40,
+									40
+								],
+								"text": "Eth 100Mb : Connected, ip:192.168.5.100 sub:255.255.255.0 gw:192.168.5.1"
+							},
+							{
+								"img_symbol": "LV_SYMBOL_CLOSE;fas fa-times",
+								"img_path": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\eth_disconnect.png",
+								"img_size": [
+									40,
+									40
+								],
+								"text": "Eth 1Gb : Disconnected"
+							}
+						],
+						"anim_time": 255,
+						"style": [
+							{
+								"part": "LV_LIST_PART_BG",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"padding_top": 5,
+								"padding_left": 5,
+								"padding_right": 5,
+								"border_color": "#e1e6ee",
+								"border_width": 1,
+								"radius": 3
+							},
+							{
+								"part": "LV_LIST_PART_BG",
+								"state": "LV_STATE_FOCUSED",
+								"disable": true,
+								"padding_top": 5,
+								"padding_left": 5,
+								"padding_right": 5,
+								"border_color": "#e1e6ee",
+								"border_width": 1,
+								"radius": 3
+							},
+							{
+								"part": "LV_LIST_PART_BG",
+								"state": "LV_STATE_DISABLED",
+								"disable": true,
+								"padding_top": 5,
+								"padding_left": 5,
+								"padding_right": 5,
+								"border_color": "#e1e6ee",
+								"border_width": 1,
+								"radius": 3
+							},
+							{
+								"part": "LV_LIST_PART_SCROLLABLE",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"radius": 3,
+								"bg_opa": 255
+							}
+						],
+						"child_style": [
+							{
+								"part": "LV_BTN_PART_MAIN",
+								"state": "LV_STATE_DEFAULT",
+								"disable": false,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"text_color": "#0d3055",
+								"font": "12",
+								"font_family": "simsun",
+								"radius": 3,
+								"bg_opa": 255
+							},
+							{
+								"part": "LV_BTN_PART_MAIN",
+								"state": "LV_STATE_PRESSED",
+								"disable": true,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"text_color": "#0D3055",
+								"radius": 3,
+								"font": 12,
+								"font_family": "simsun",
+								"bg_opa": 255
+							},
+							{
+								"part": "LV_BTN_PART_MAIN",
+								"state": "LV_STATE_FOCUSED",
+								"disable": true,
+								"bg_color": "#ffffff",
+								"bg_grad_color": "#ffffff",
+								"bg_grad_dir": "LV_GRAD_DIR_VER",
+								"text_color": "#0D3055",
+								"radius": 3,
+								"font": 12,
+								"font_family": "simsun",
+								"bg_opa": 255
+							}
+						],
+						"edge_flash": true
 					}
 				]
 			},
@@ -10716,8 +10856,8 @@
 						"toggle": false,
 						"text": "",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/left_icon.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/left_icon.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\left_icon.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\left_icon.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -10836,7 +10976,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/avnet_logo2.png",
+						"img_path": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\avnet_logo2.png",
 						"color_format": "true-color-alpha",
 						"rotate": 0,
 						"pivot": "0,0",
@@ -10875,8 +11015,8 @@
 						"toggle": false,
 						"text": "",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/right_icon.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/right_icon.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\right_icon.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\right_icon.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -10998,8 +11138,8 @@
 						"toggle": false,
 						"text": "",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/home_icon.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/home_icon.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\home_icon.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\home_icon.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -11659,10 +11799,10 @@
 						"toggle": true,
 						"text": "keyboard",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
-						"src_checked_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
-						"src_checked_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button_on.png",
+						"src_checked_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button_on.png",
+						"src_checked_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -11721,10 +11861,10 @@
 						"toggle": true,
 						"text": "mouse",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
-						"src_checked_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
-						"src_checked_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button_on.png",
+						"src_checked_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button_on.png",
+						"src_checked_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -11783,8 +11923,8 @@
 						"toggle": false,
 						"text": "scan",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button_on.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -11890,7 +12030,7 @@
 							730
 						],
 						"size": [
-							100,
+							120,
 							null
 						],
 						"is_move_animation": false,
@@ -11960,8 +12100,8 @@
 								"bg_grad_color": "#00a1b5",
 								"bg_grad_dir": "LV_GRAD_DIR_VER",
 								"text_color": "#ffffff",
-								"font": 12,
-								"font_family": "simsun",
+								"font": "24",
+								"font_family": "OpenSans_Regular",
 								"border_color": "#e1e6ee",
 								"border_width": 1,
 								"radius": 3,
@@ -11975,8 +12115,8 @@
 								"bg_grad_color": "#ffffff",
 								"bg_grad_dir": "LV_GRAD_DIR_VER",
 								"text_color": "#0D3055",
-								"font": 12,
-								"font_family": "simsun",
+								"font": "24",
+								"font_family": "OpenSans_Regular",
 								"border_color": "#e1e6ee",
 								"border_width": 1,
 								"radius": 3,
@@ -12049,8 +12189,8 @@
 						"toggle": false,
 						"text": "",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/left_icon.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/left_icon.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\left_icon.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\left_icon.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -12169,7 +12309,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/avnet_logo2.png",
+						"img_path": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\avnet_logo2.png",
 						"color_format": "true-color-alpha",
 						"rotate": 0,
 						"pivot": "0,0",
@@ -12208,8 +12348,8 @@
 						"toggle": false,
 						"text": "",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/right_icon.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/right_icon.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\right_icon.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\right_icon.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -12331,8 +12471,8 @@
 						"toggle": false,
 						"text": "",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/home_icon.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/home_icon.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\home_icon.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\home_icon.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -12560,8 +12700,8 @@
 						"name": "screen4_AV_playback_label",
 						"type": "label",
 						"pos": [
-							32,
-							300
+							51,
+							888
 						],
 						"size": [
 							600,
@@ -12577,7 +12717,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"text": "Audio Output:",
+						"text": "Note: Up to 2 selected mic will be sent to audio jack.",
 						"long_mode": "LV_LABEL_LONG_BREAK",
 						"text_align": "left",
 						"style": [
@@ -12586,8 +12726,8 @@
 								"state": "LV_STATE_DEFAULT",
 								"disable": false,
 								"radius": 0,
-								"text_color": "#a8a8a8",
-								"font": "40",
+								"text_color": "#000000",
+								"font": "16",
 								"font_family": "OpenSans_Regular",
 								"letter_space": 2,
 								"bg_color": "#ffffff",
@@ -12620,73 +12760,11 @@
 						]
 					},
 					{
-						"name": "screen4_AV_audio_test_imgbtn",
-						"type": "imgbtn",
-						"pos": [
-							505,
-							278
-						],
-						"size": [
-							190,
-							80
-						],
-						"is_move_animation": false,
-						"path_type": "linear",
-						"move_animation": {
-							"des_pos": [
-								0,
-								0
-							],
-							"duration": 100
-						},
-						"default_style": false,
-						"toggle": true,
-						"text": "test",
-						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
-						"src_checked_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
-						"src_checked_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
-						"style": [
-							{
-								"part": "LV_IMGBTN_PART_MAIN",
-								"state": "LV_STATE_DEFAULT",
-								"disable": false,
-								"image_recolor": "#ffffff",
-								"image_recolor_opa": 0,
-								"image_opa": 255,
-								"font_family": "OpenSans_Regular",
-								"text_color": "#a8a8a8",
-								"font": "36"
-							},
-							{
-								"part": "LV_IMGBTN_PART_MAIN",
-								"state": "LV_STATE_PRESSED",
-								"disable": true,
-								"image_recolor": "#000000",
-								"image_recolor_opa": 0,
-								"text_color": "#FF33FF",
-								"font_family": "simsun",
-								"font": 16
-							},
-							{
-								"part": "LV_IMGBTN_PART_MAIN",
-								"state": "LV_STATE_CHECKED",
-								"disable": true,
-								"image_recolor": "#000000",
-								"image_recolor_opa": 0,
-								"text_color": "#FF33FF",
-								"font_family": "simsun",
-								"font": 16
-							}
-						]
-					},
-					{
 						"name": "screen4_AV_mic_label",
 						"type": "label",
 						"pos": [
 							32,
-							390
+							320
 						],
 						"size": [
 							600,
@@ -13353,11 +13431,11 @@
 						"type": "chart",
 						"pos": [
 							30,
-							454
+							390
 						],
 						"size": [
 							660,
-							350
+							420
 						],
 						"is_move_animation": false,
 						"path_type": "linear",
@@ -13468,8 +13546,8 @@
 						"toggle": false,
 						"text": "",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/left_icon.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/left_icon.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\left_icon.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\left_icon.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -13588,7 +13666,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/avnet_logo2.png",
+						"img_path": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\avnet_logo2.png",
 						"color_format": "true-color-alpha",
 						"rotate": 0,
 						"pivot": "0,0",
@@ -13627,8 +13705,8 @@
 						"toggle": false,
 						"text": "",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/right_icon.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/right_icon.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\right_icon.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\right_icon.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -13750,8 +13828,8 @@
 						"toggle": false,
 						"text": "",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/home_icon.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/home_icon.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\home_icon.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\home_icon.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -13807,7 +13885,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"text": "Custom Examples",
+						"text": "Custom Functions",
 						"long_mode": "LV_LABEL_LONG_BREAK",
 						"text_align": "center",
 						"style": [
@@ -13995,10 +14073,10 @@
 						"toggle": true,
 						"text": "connect",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
-						"src_checked_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button_on.png",
-						"src_checked_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/button.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button_on.png",
+						"src_checked_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button_on.png",
+						"src_checked_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\button.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -14220,8 +14298,8 @@
 						"toggle": false,
 						"text": "",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/left_icon.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/left_icon.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\left_icon.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\left_icon.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -14340,7 +14418,7 @@
 							"duration": 100
 						},
 						"default_style": false,
-						"img_path": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/avnet_logo2.png",
+						"img_path": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\avnet_logo2.png",
 						"color_format": "true-color-alpha",
 						"rotate": 0,
 						"pivot": "0,0",
@@ -14379,8 +14457,8 @@
 						"toggle": false,
 						"text": "",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/right_icon.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/right_icon.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\right_icon.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\right_icon.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -14502,8 +14580,8 @@
 						"toggle": false,
 						"text": "",
 						"color_format": "true-color-alpha",
-						"src_released": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/home_icon.png",
-						"src_pressed": "/home/jbtamezpena/Documents/MaaxBoard/c2052-avnet-maaxboard-rt-gui-guider/import/home_icon.png",
+						"src_released": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\home_icon.png",
+						"src_pressed": "C:\\Users\\gulziibayar\\git\\c2052-avnet-maaxboard-rt-gui-guider\\import\\home_icon.png",
 						"style": [
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
