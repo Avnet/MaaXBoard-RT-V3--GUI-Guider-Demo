@@ -5064,8 +5064,8 @@
 				{
 					"name": "playback_label",
 					"type": "label",
-					"left": 51,
-					"top": 888,
+					"left": 60,
+					"top": 950,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -12700,8 +12700,8 @@
 						"name": "screen4_AV_playback_label",
 						"type": "label",
 						"pos": [
-							51,
-							888
+							60,
+							950
 						],
 						"size": [
 							600,

@@ -263,7 +263,7 @@ void setup_scr_screen4_AV(lv_ui *ui){
 	lv_style_set_pad_top(&style_screen4_AV_playback_label_main, LV_STATE_DEFAULT, 0);
 	lv_style_set_pad_bottom(&style_screen4_AV_playback_label_main, LV_STATE_DEFAULT, 0);
 	lv_obj_add_style(ui->screen4_AV_playback_label, LV_LABEL_PART_MAIN, &style_screen4_AV_playback_label_main);
-	lv_obj_set_pos(ui->screen4_AV_playback_label, 51, 888);
+	lv_obj_set_pos(ui->screen4_AV_playback_label, 60, 950);
 	lv_obj_set_size(ui->screen4_AV_playback_label, 600, 0);
 
 	//Write codes screen4_AV_mic_label
