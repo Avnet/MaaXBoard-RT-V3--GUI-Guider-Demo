@@ -3420,7 +3420,7 @@
 					"path_type": "linear",
 					"duration": 100,
 					"width": 720,
-					"height": 160,
+					"height": 190,
 					"items": [],
 					"anim_time": 255,
 					"edge_flash": true,
@@ -3603,7 +3603,7 @@
 					"name": "input_label",
 					"type": "label",
 					"left": 30,
-					"top": 430,
+					"top": 455,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -3675,7 +3675,7 @@
 					"name": "i2c_nodes_label",
 					"type": "label",
 					"left": 30,
-					"top": 730,
+					"top": 755,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -3747,7 +3747,7 @@
 					"name": "i2c_table",
 					"type": "table",
 					"left": 24,
-					"top": 785,
+					"top": 810,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -3882,7 +3882,7 @@
 					"name": "input_area",
 					"type": "ta",
 					"left": 20,
-					"top": 485,
+					"top": 510,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -3982,7 +3982,7 @@
 					"name": "kbd_imgbtn",
 					"type": "imgbtn",
 					"left": 360,
-					"top": 426,
+					"top": 451,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -4055,7 +4055,7 @@
 					"name": "mouse_imgbtn",
 					"type": "imgbtn",
 					"left": 530,
-					"top": 426,
+					"top": 451,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -4128,7 +4128,7 @@
 					"name": "i2c_scan_imgbtn",
 					"type": "imgbtn",
 					"left": 530,
-					"top": 726,
+					"top": 751,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -4273,7 +4273,7 @@
 					"name": "i2c_ddlist",
 					"type": "ddlist",
 					"left": 380,
-					"top": 730,
+					"top": 755,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -11318,7 +11318,7 @@
 						],
 						"size": [
 							720,
-							160
+							190
 						],
 						"is_move_animation": false,
 						"path_type": "linear",
@@ -11488,7 +11488,7 @@
 						"type": "label",
 						"pos": [
 							30,
-							430
+							455
 						],
 						"size": [
 							300,
@@ -11551,7 +11551,7 @@
 						"type": "label",
 						"pos": [
 							30,
-							730
+							755
 						],
 						"size": [
 							250,
@@ -11614,7 +11614,7 @@
 						"type": "table",
 						"pos": [
 							24,
-							785
+							810
 						],
 						"size": [
 							null,
@@ -11763,7 +11763,7 @@
 						"type": "ta",
 						"pos": [
 							20,
-							485
+							510
 						],
 						"size": [
 							680,
@@ -11852,7 +11852,7 @@
 						"type": "imgbtn",
 						"pos": [
 							360,
-							426
+							451
 						],
 						"size": [
 							160,
@@ -11914,7 +11914,7 @@
 						"type": "imgbtn",
 						"pos": [
 							530,
-							426
+							451
 						],
 						"size": [
 							160,
@@ -11976,7 +11976,7 @@
 						"type": "imgbtn",
 						"pos": [
 							530,
-							726
+							751
 						],
 						"size": [
 							160,
@@ -12099,7 +12099,7 @@
 						"type": "ddlist",
 						"pos": [
 							380,
-							730
+							755
 						],
 						"size": [
 							120,
