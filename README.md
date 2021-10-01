@@ -1,8 +1,13 @@
-# Sample GitLab Project
+# MaaXBoard-RT out-of-box demo-1 application
 
-This sample project shows how a project in GitLab looks for demonstration purposes. It contains issues, merge requests and Markdown files in many branches,
-named and filled with lorem ipsum.
+This is the GUI Guider project for MaaXBoard-RT out-of-box demo application
 
-You can look around to get an idea how to structure your project and, when done, you can safely delete this project.
+Seven GUI pages are defined:
+1. Navigation Menu
+2. Led Control
+3. Wi-fi & Network
+4. USB & Expansion
+5. Audio & Video
+6. Custom
+7. Help & Info
 
-[Learn more about creating GitLab projects.](https://docs.gitlab.com/ee/gitlab-basics/create-project.html)
