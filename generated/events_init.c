@@ -17,7 +17,8 @@ static void screen0_MENU_imgbtn_1event_handler(lv_obj_t * obj, lv_event_t event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen1_LEDs(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen1_LEDs))
+			setup_scr_screen1_LEDs(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen1_LEDs, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -32,7 +33,8 @@ static void screen0_MENU_imgbtn_2event_handler(lv_obj_t * obj, lv_event_t event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen4_AV(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen4_AV))
+			setup_scr_screen4_AV(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen4_AV, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -47,7 +49,8 @@ static void screen0_MENU_imgbtn_3event_handler(lv_obj_t * obj, lv_event_t event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen2_WIFI(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen2_WIFI))
+			setup_scr_screen2_WIFI(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen2_WIFI, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -62,7 +65,8 @@ static void screen0_MENU_imgbtn_4event_handler(lv_obj_t * obj, lv_event_t event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen5_SYSTEM(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen5_SYSTEM))
+			setup_scr_screen5_SYSTEM(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen5_SYSTEM, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -77,7 +81,8 @@ static void screen0_MENU_imgbtn_5event_handler(lv_obj_t * obj, lv_event_t event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen3_USB(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen3_USB))
+			setup_scr_screen3_USB(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen3_USB, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -92,7 +97,8 @@ static void screen0_MENU_imgbtn_6event_handler(lv_obj_t * obj, lv_event_t event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen6_HELP(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen6_HELP))
+			setup_scr_screen6_HELP(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen6_HELP, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -117,7 +123,8 @@ static void screen1_LEDs_left_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen0_MENU(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen0_MENU))
+			setup_scr_screen0_MENU(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen0_MENU, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -132,7 +139,8 @@ static void screen1_LEDs_right_btnevent_handler(lv_obj_t * obj, lv_event_t event
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen2_WIFI(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen2_WIFI))
+			setup_scr_screen2_WIFI(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen2_WIFI, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -189,7 +197,8 @@ static void screen1_LEDs_home_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen0_MENU(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen0_MENU))
+			setup_scr_screen0_MENU(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen0_MENU, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -214,7 +223,8 @@ static void screen2_WIFI_left_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen1_LEDs(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen1_LEDs))
+			setup_scr_screen1_LEDs(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen1_LEDs, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -229,7 +239,8 @@ static void screen2_WIFI_right_btnevent_handler(lv_obj_t * obj, lv_event_t event
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen3_USB(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen3_USB))
+			setup_scr_screen3_USB(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen3_USB, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -244,7 +255,8 @@ static void screen2_WIFI_home_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen0_MENU(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen0_MENU))
+			setup_scr_screen0_MENU(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen0_MENU, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -281,7 +293,8 @@ static void screen3_USB_left_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen2_WIFI(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen2_WIFI))
+			setup_scr_screen2_WIFI(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen2_WIFI, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -296,7 +309,8 @@ static void screen3_USB_right_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen4_AV(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen4_AV))
+			setup_scr_screen4_AV(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen4_AV, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -311,7 +325,8 @@ static void screen3_USB_home_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen0_MENU(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen0_MENU))
+			setup_scr_screen0_MENU(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen0_MENU, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -393,7 +408,8 @@ static void screen4_AV_left_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen3_USB(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen3_USB))
+			setup_scr_screen3_USB(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen3_USB, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -408,7 +424,8 @@ static void screen4_AV_right_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen5_SYSTEM(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen5_SYSTEM))
+			setup_scr_screen5_SYSTEM(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen5_SYSTEM, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -423,7 +440,8 @@ static void screen4_AV_home_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen0_MENU(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen0_MENU))
+			setup_scr_screen0_MENU(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen0_MENU, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -505,7 +523,8 @@ static void screen5_SYSTEM_left_btnevent_handler(lv_obj_t * obj, lv_event_t even
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen4_AV(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen4_AV))
+			setup_scr_screen4_AV(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen4_AV, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -520,7 +539,8 @@ static void screen5_SYSTEM_right_btnevent_handler(lv_obj_t * obj, lv_event_t eve
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen6_HELP(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen6_HELP))
+			setup_scr_screen6_HELP(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen6_HELP, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -535,7 +555,8 @@ static void screen5_SYSTEM_home_btnevent_handler(lv_obj_t * obj, lv_event_t even
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen0_MENU(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen0_MENU))
+			setup_scr_screen0_MENU(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen0_MENU, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -572,7 +593,8 @@ static void screen6_HELP_left_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen5_SYSTEM(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen5_SYSTEM))
+			setup_scr_screen5_SYSTEM(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen5_SYSTEM, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -587,7 +609,8 @@ static void screen6_HELP_right_btnevent_handler(lv_obj_t * obj, lv_event_t event
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen0_MENU(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen0_MENU))
+			setup_scr_screen0_MENU(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen0_MENU, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;
@@ -602,7 +625,8 @@ static void screen6_HELP_home_btnevent_handler(lv_obj_t * obj, lv_event_t event)
 	{
 	case LV_EVENT_RELEASED:
 	{
-		setup_scr_screen0_MENU(&guider_ui);
+		if (!lv_debug_check_obj_valid(guider_ui.screen0_MENU))
+			setup_scr_screen0_MENU(&guider_ui);
 		lv_scr_load_anim(guider_ui.screen0_MENU, LV_SCR_LOAD_ANIM_NONE, 0, 0, true);
 	}
 		break;

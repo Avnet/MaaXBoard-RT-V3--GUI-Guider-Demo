@@ -27,8 +27,12 @@
  *********************/
 #define SDL_REFR_PERIOD     50  /*ms*/
 
-#ifndef MONITOR_ZOOM
-#define MONITOR_ZOOM        1
+#ifndef MONITOR_ZOOM_X
+#define MONITOR_ZOOM_X        1
+#endif
+
+#ifndef MONITOR_ZOOM_Y
+#define MONITOR_ZOOM_Y        1
 #endif
 
 #ifndef MONITOR_HOR_RES
@@ -372,8 +376,8 @@ static void window_create(monitor_t * m)
 {
     SDL_Surface* iconSurface = NULL;
     m->window = SDL_CreateWindow(PRJ_NAME,
-                              SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
-                              MONITOR_HOR_RES * MONITOR_ZOOM, MONITOR_VER_RES * MONITOR_ZOOM, 0);       /*last param. SDL_WINDOW_BORDERLESS to hide borders*/
+                              384, 540,
+                              MONITOR_HOR_RES * MONITOR_ZOOM_X, MONITOR_VER_RES * MONITOR_ZOOM_Y, 0);       /*last param. SDL_WINDOW_BORDERLESS to hide borders*/
 
 #if MONITOR_VIRTUAL_MACHINE || defined(MONITOR_EMSCRIPTEN)
     m->renderer = SDL_CreateRenderer(m->window, -1, SDL_RENDERER_SOFTWARE);

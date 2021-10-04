@@ -17,15 +17,17 @@
 #include "../lv_misc/lv_gc.h"
 #include "../lv_draw/lv_draw.h"
 #include "../lv_font/lv_font_fmt_txt.h"
-#include "../lv_gpu/lv_gpu_stm32_dma2d.h"
+#if LV_USE_GPU_NXP_PXP
+    #include "../lv_gpu/lv_gpu_nxp_pxp.h"
+#elif LV_USE_GPU_NXP_VG_LITE
+    #include "../lv_gpu/lv_gpu_nxp_vglite.h"
+#elif LV_USE_GPU_STM32_DMA2D
+    #include "../lv_gpu/lv_gpu_stm32_dma2d.h"
+#endif
 
 #if LV_USE_PERF_MONITOR
     #include "../lv_widgets/lv_label.h"
 #endif
-
-#if defined(LV_GC_INCLUDE)
-    #include LV_GC_INCLUDE
-#endif /* LV_ENABLE_GC */
 
 /*********************
  *      DEFINES
@@ -54,6 +56,10 @@ static void lv_refr_vdb_flush(void);
  **********************/
 static uint32_t px_num;
 static lv_disp_t * disp_refr; /*Display being refreshed*/
+#if LV_USE_PERF_MONITOR
+    static uint32_t fps_sum_cnt;
+    static uint32_t fps_sum_all;
+#endif
 
 /**********************
  *      MACROS
@@ -74,7 +80,7 @@ void _lv_refr_init(void)
 /**
  * Redraw the invalidated areas now.
  * Normally the redrawing is periodically executed in `lv_task_handler` but a long blocking process
- * can prevent the call of `lv_task_handler`. In this case if the the GUI is updated in the process
+ * can prevent the call of `lv_task_handler`. In this case if the GUI is updated in the process
  * (e.g. progress bar) this function can be called when the screen should be updated.
  * @param disp pointer to display to refresh. NULL to refresh all displays.
  */
@@ -240,6 +246,44 @@ void _lv_disp_refr_task(lv_task_t * task)
                                                 lv_area_get_height(&disp_refr->inv_areas[a]));
 #else
 
+#if LV_USE_GPU_NXP_PXP
+                        if(lv_area_get_size(&(disp_refr->inv_areas[a])) >= LV_GPU_NXP_PXP_BUFF_SYNC_BLIT_SIZE_LIMIT) {
+                            lv_gpu_nxp_pxp_blit((lv_color_t *)(buf_act + start_offs), disp_refr->driver.hor_res,
+                                                (lv_color_t *)(buf_ina + start_offs), disp_refr->driver.hor_res,
+                                                lv_area_get_width(&disp_refr->inv_areas[a]),
+                                                lv_area_get_height(&disp_refr->inv_areas[a]),
+                                                LV_OPA_COVER);
+                            continue ; /* to next area */
+                        }
+                        /* Fall down to SW copy for small areas */
+#elif LV_USE_GPU_NXP_VG_LITE
+                        if(lv_area_get_size(&(disp_refr->inv_areas[a])) >= LV_GPU_NXP_VG_LITE_BUFF_SYNC_BLIT_SIZE_LIMIT) {
+                            lv_gpu_nxp_vglite_blit_info_t blit;
+
+                            blit.src = (const lv_color_t *) buf_ina;
+                            blit.src_width = disp_refr->driver.hor_res;
+                            blit.src_height = disp_refr->driver.ver_res;
+                            blit.src_stride = disp_refr->driver.hor_res * sizeof(lv_color_t);
+                            blit.src_area.x1 = disp_refr->inv_areas[a].x1;
+                            blit.src_area.y1 = disp_refr->inv_areas[a].y1;
+                            blit.src_area.x2 = disp_refr->inv_areas[a].x2;
+                            blit.src_area.y2 = disp_refr->inv_areas[a].y2;
+
+
+                            blit.dst = (const lv_color_t *) buf_act;
+                            blit.dst_width = disp_refr->driver.hor_res;
+                            blit.dst_height = disp_refr->driver.ver_res;
+                            blit.dst_stride = disp_refr->driver.hor_res * sizeof(lv_color_t);
+                            blit.dst_area = blit.src_area;
+
+                            blit.opa = LV_OPA_COVER;
+
+                            if(lv_gpu_nxp_vglite_blit(&blit) == LV_RES_OK) {
+                                continue; /* to next area */
+                            }
+                            /* Fall down to SW render in case of error, or for small areas */
+                        }
+#endif
                         lv_coord_t y;
                         uint32_t line_length = lv_area_get_width(&disp_refr->inv_areas[a]) * sizeof(lv_color_t);
 
@@ -290,17 +334,28 @@ void _lv_disp_refr_task(lv_task_t * task)
     }
 
     static uint32_t perf_last_time = 0;
-    static uint32_t elaps_max = 1;
+    static uint32_t elaps_sum = 0;
+    static uint32_t frame_cnt = 0;
     if(lv_tick_elaps(perf_last_time) < 300) {
-        elaps_max = LV_MATH_MAX(elaps, elaps_max);
+        if(px_num > 5000) {
+            elaps_sum += elaps;
+            frame_cnt ++;
+        }
     }
     else {
         perf_last_time = lv_tick_get();
-        uint32_t fps = 1000 / (elaps_max == 0 ? 1 : elaps_max);
-        elaps_max = 1;
         uint32_t fps_limit = 1000 / disp_refr->refr_task->period;
+        uint32_t fps;
+
+        if(elaps_sum == 0) elaps_sum = 1;
+        if(frame_cnt == 0) fps = fps_limit;
+        else fps = (1000 * frame_cnt) / elaps_sum;
+        elaps_sum = 0;
+        frame_cnt = 0;
         if(fps > fps_limit) fps = fps_limit;
 
+        fps_sum_all += fps;
+        fps_sum_cnt ++;
         uint32_t cpu = 100 - lv_task_get_idle();
         lv_label_set_text_fmt(perf_label, "%d FPS\n%d%% CPU", fps, cpu);
         lv_obj_align(perf_label, NULL, LV_ALIGN_IN_BOTTOM_RIGHT, 0, 0);
@@ -309,6 +364,13 @@ void _lv_disp_refr_task(lv_task_t * task)
 
     LV_LOG_TRACE("lv_refr_task: ready");
 }
+
+#if LV_USE_PERF_MONITOR
+uint32_t lv_refr_get_fps_avg(void)
+{
+    return fps_sum_all / fps_sum_cnt;
+}
+#endif
 
 /**********************
  *   STATIC FUNCTIONS
@@ -381,14 +443,14 @@ static void lv_refr_areas(void)
             disp_refr->driver.buffer->last_part = 0;
             lv_refr_area(&disp_refr->inv_areas[i]);
 
-            if(disp_refr->driver.monitor_cb) px_num += lv_area_get_size(&disp_refr->inv_areas[i]);
+            px_num += lv_area_get_size(&disp_refr->inv_areas[i]);
         }
     }
 }
 
 /**
  * Refresh an area if there is Virtual Display Buffer
- * @param area_p  pointer to an area to refresh
+ * @param area_p pointer to an area to refresh
  */
 static void lv_refr_area(const lv_area_t * area_p)
 {
@@ -541,7 +603,6 @@ static void lv_refr_area_part(const lv_area_t * area_p)
         lv_refr_obj_and_children(top_prev_scr, &start_mask);
 
     }
-
 
     if(top_act_scr == NULL) {
         top_act_scr = disp_refr->act_scr;
@@ -746,6 +807,8 @@ static void lv_refr_vdb_flush(void)
 
     /*Flush the rendered content to the display*/
     lv_disp_t * disp = _lv_refr_get_disp_refreshing();
+    if(disp->driver.gpu_wait_cb) disp->driver.gpu_wait_cb(&disp->driver);
+
     if(disp->driver.flush_cb) disp->driver.flush_cb(&disp->driver, &vdb->area, vdb->buf_act);
 
     if(vdb->buf1 && vdb->buf2) {

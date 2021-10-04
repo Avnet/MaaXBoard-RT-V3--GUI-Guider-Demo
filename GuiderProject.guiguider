@@ -11,17 +11,21 @@
 		"mcu": "MIMXRT1062DVL6A",
 		"mcuxpresso_config": {
 			"CMAKE_BUILD_TYPE": "flexspi_nor_sdram_release"
-		}
+		},
+		"display_part_number": [
+			"RK043FN02H-CT"
+		]
 	},
 	"BuildStatus": {
 		"supportPXP": true,
 		"enable_pxp": false
 	},
-	"version": "1.1.0-GA",
+	"version": "1.2.1-GA",
 	"lvConf": {
 		"LV_HOR_RES_MAX": "(720)",
 		"LV_VER_RES_MAX": "(1280)",
 		"LV_COLOR_DEPTH": 16,
+		"LV_COLOR_16_SWAP": false,
 		"LV_MEM_CUSTOM": false,
 		"LV_MEM_SIZE": "320",
 		"LV_MEM_ADR": false,
@@ -33,6 +37,8 @@
 		"LV_USE_GPU_NXP_PXP": false,
 		"LV_USE_GPU_NXP_PXP_AUTO_INIT": false,
 		"LV_USE_GPU_NXP_VG_LITE": true,
+		"LV_ATTRIBUTE_MEM_ALIGN_SIZE": "64",
+		"LV_ATTRIBUTE_MEM_ALIGN": "__attribute__((aligned(LV_ATTRIBUTE_MEM_ALIGN_SIZE)))",
 		"LV_DISP_DEF_REFR_PERIOD": "30"
 	},
 	"ImportFonts": {
@@ -49,15 +55,6 @@
 			"id": "screen",
 			"list": [
 				{
-					"name": "cursor_img",
-					"type": "img",
-					"left": 177,
-					"top": 205,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 45,
 					"height": 45,
 					"img_path": "mouse.png",
@@ -81,19 +78,19 @@
 							"image_opa": 255
 						}
 					],
-					"id": "oc8m3iym",
-					"default_style": false
-				},
-				{
-					"name": "canvas_white",
-					"type": "canvas",
-					"left": 0,
-					"top": 0,
+					"name": "cursor_img",
+					"type": "img",
+					"left": 177,
+					"top": 205,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "oc8m3iym",
+					"default_style": false
+				},
+				{
 					"width": 720,
 					"height": 1280,
 					"part": "LV_CANVAS_PART_MAIN",
@@ -110,12 +107,8 @@
 							"image_recolor_opa": 255
 						}
 					],
-					"id": "0ekcxh8z",
-					"default_style": false
-				},
-				{
-					"name": "avlogoimg0",
-					"type": "img",
+					"name": "canvas_white",
+					"type": "canvas",
 					"left": 0,
 					"top": 0,
 					"is_move_animation": false,
@@ -123,6 +116,10 @@
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "0ekcxh8z",
+					"default_style": false
+				},
+				{
 					"width": 130,
 					"height": 130,
 					"img_path": "avnet_logo2.png",
@@ -146,6 +143,15 @@
 							"image_opa": 255
 						}
 					],
+					"name": "avlogoimg0",
+					"type": "img",
+					"left": 0,
+					"top": 0,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "d58crell",
 					"default_style": false
 				},
@@ -186,15 +192,6 @@
 					"default_style": false
 				},
 				{
-					"name": "page_label",
-					"type": "label",
-					"left": 180,
-					"top": 45,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 500,
 					"height": 0,
 					"text": "MaaxBoard RT",
@@ -254,19 +251,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "yafrlf6i",
-					"default_style": false
-				},
-				{
-					"name": "label_1",
+					"name": "page_label",
 					"type": "label",
 					"left": 180,
-					"top": 100,
+					"top": 45,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "yafrlf6i",
+					"default_style": false
+				},
+				{
 					"width": 500,
 					"height": 0,
 					"text": "GUI demo application",
@@ -326,19 +323,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "1ozpykyn",
-					"default_style": false
-				},
-				{
-					"name": "imgbtn_1",
-					"type": "imgbtn",
-					"left": 30,
-					"top": 890,
+					"name": "label_1",
+					"type": "label",
+					"left": 180,
+					"top": 100,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "1ozpykyn",
+					"default_style": false
+				},
+				{
 					"width": 320,
 					"height": 106,
 					"text": "LED Control",
@@ -382,7 +379,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -390,6 +387,15 @@
 							"font": 16
 						}
 					],
+					"name": "imgbtn_1",
+					"type": "imgbtn",
+					"left": 30,
+					"top": 890,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "ta1cq39l",
 					"default_style": false,
 					"event": [
@@ -405,15 +411,6 @@
 					]
 				},
 				{
-					"name": "imgbtn_2",
-					"type": "imgbtn",
-					"left": 370,
-					"top": 890,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 320,
 					"height": 106,
 					"text": "Audio & Video",
@@ -457,7 +454,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -465,6 +462,15 @@
 							"font": 16
 						}
 					],
+					"name": "imgbtn_2",
+					"type": "imgbtn",
+					"left": 370,
+					"top": 890,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "2ns6yeaa",
 					"default_style": false,
 					"event": [
@@ -480,15 +486,6 @@
 					]
 				},
 				{
-					"name": "imgbtn_3",
-					"type": "imgbtn",
-					"left": 30,
-					"top": 1015,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 320,
 					"height": 106,
 					"text": "Wi-Fi & Network",
@@ -532,7 +529,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -540,6 +537,15 @@
 							"font": 16
 						}
 					],
+					"name": "imgbtn_3",
+					"type": "imgbtn",
+					"left": 30,
+					"top": 1015,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "5cyqdayk",
 					"default_style": false,
 					"event": [
@@ -555,15 +561,6 @@
 					]
 				},
 				{
-					"name": "imgbtn_4",
-					"type": "imgbtn",
-					"left": 370,
-					"top": 1015,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 320,
 					"height": 106,
 					"text": "Custom",
@@ -607,7 +604,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -615,6 +612,15 @@
 							"font": 16
 						}
 					],
+					"name": "imgbtn_4",
+					"type": "imgbtn",
+					"left": 370,
+					"top": 1015,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "aegahoji",
 					"default_style": false,
 					"event": [
@@ -630,15 +636,6 @@
 					]
 				},
 				{
-					"name": "imgbtn_5",
-					"type": "imgbtn",
-					"left": 30,
-					"top": 1140,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 320,
 					"height": 106,
 					"text": "USB & Expansion",
@@ -682,7 +679,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -690,6 +687,15 @@
 							"font": 16
 						}
 					],
+					"name": "imgbtn_5",
+					"type": "imgbtn",
+					"left": 30,
+					"top": 1140,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "3x57yrgt",
 					"default_style": false,
 					"event": [
@@ -705,15 +711,6 @@
 					]
 				},
 				{
-					"name": "imgbtn_6",
-					"type": "imgbtn",
-					"left": 370,
-					"top": 1140,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 320,
 					"height": 106,
 					"text": "Help & Info",
@@ -757,7 +754,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -765,6 +762,15 @@
 							"font": 16
 						}
 					],
+					"name": "imgbtn_6",
+					"type": "imgbtn",
+					"left": 370,
+					"top": 1140,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "erthvo42",
 					"default_style": false,
 					"event": [
@@ -858,7 +864,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -1041,7 +1047,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -1198,7 +1204,7 @@
 					"image_opa": 255,
 					"font_family": "OpenSans_Regular",
 					"text_color": "#000000",
-					"font": "36",
+					"font": 32,
 					"style": [
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
@@ -1209,7 +1215,7 @@
 							"image_opa": 255,
 							"font_family": "OpenSans_Regular",
 							"text_color": "#000000",
-							"font": "36"
+							"font": 32
 						},
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
@@ -1217,9 +1223,9 @@
 							"disable": true,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
-							"text_color": "#FF33FF",
-							"font_family": "simsun",
-							"font": 16
+							"text_color": "#000000",
+							"font_family": "OpenSans_Regular",
+							"font": 32
 						},
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
@@ -1227,15 +1233,15 @@
 							"disable": true,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
-							"text_color": "#FF33FF",
-							"font_family": "simsun",
-							"font": 16
+							"text_color": "#000000",
+							"font_family": "OpenSans_Regular",
+							"font": 32
 						}
 					],
 					"name": "redbtn0",
 					"type": "imgbtn",
-					"left": 20,
-					"top": 900,
+					"left": 21,
+					"top": 899,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
@@ -1263,14 +1269,14 @@
 					"src_checked_pressed": "button.png",
 					"color_format": "true-color-alpha",
 					"part": "LV_IMGBTN_PART_MAIN",
-					"state": "LV_STATE_DEFAULT",
-					"disable": false,
-					"image_recolor": "#ffffff",
+					"state": "LV_STATE_PRESSED",
+					"disable": true,
+					"image_recolor": "#000000",
 					"image_recolor_opa": 0,
 					"image_opa": 255,
 					"font_family": "OpenSans_Regular",
 					"text_color": "#000000",
-					"font": "36",
+					"font": 32,
 					"style": [
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
@@ -1289,9 +1295,9 @@
 							"disable": true,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
-							"text_color": "#FF33FF",
-							"font_family": "simsun",
-							"font": 16
+							"text_color": "#000000",
+							"font_family": "OpenSans_Regular",
+							"font": 32
 						},
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
@@ -1299,9 +1305,9 @@
 							"disable": true,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
-							"text_color": "#FF33FF",
-							"font_family": "simsun",
-							"font": 16
+							"text_color": "#000000",
+							"font_family": "OpenSans_Regular",
+							"font": 32
 						}
 					],
 					"name": "greenbtn0",
@@ -1335,14 +1341,14 @@
 					"src_checked_pressed": "button.png",
 					"color_format": "true-color-alpha",
 					"part": "LV_IMGBTN_PART_MAIN",
-					"state": "LV_STATE_DEFAULT",
-					"disable": false,
-					"image_recolor": "#ffffff",
+					"state": "LV_STATE_CHECKED",
+					"disable": true,
+					"image_recolor": "#000000",
 					"image_recolor_opa": 0,
 					"image_opa": 255,
 					"font_family": "OpenSans_Regular",
 					"text_color": "#000000",
-					"font": "36",
+					"font": 32,
 					"style": [
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
@@ -1361,9 +1367,9 @@
 							"disable": true,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
-							"text_color": "#FF33FF",
-							"font_family": "simsun",
-							"font": 16
+							"text_color": "#000000",
+							"font_family": "OpenSans_Regular",
+							"font": 32
 						},
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
@@ -1371,9 +1377,9 @@
 							"disable": true,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
-							"text_color": "#FF33FF",
-							"font_family": "simsun",
-							"font": 16
+							"text_color": "#000000",
+							"font_family": "OpenSans_Regular",
+							"font": 32
 						}
 					],
 					"name": "bluebtn0",
@@ -1397,15 +1403,6 @@
 					]
 				},
 				{
-					"name": "led_red_on",
-					"type": "img",
-					"left": 60,
-					"top": 760,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 110,
 					"height": 110,
 					"img_path": "led_red_on.png",
@@ -1429,11 +1426,7 @@
 							"image_opa": 255
 						}
 					],
-					"id": "6zztumol",
-					"default_style": false
-				},
-				{
-					"name": "led_red_off",
+					"name": "led_red_on",
 					"type": "img",
 					"left": 60,
 					"top": 760,
@@ -1442,6 +1435,10 @@
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "6zztumol",
+					"default_style": false
+				},
+				{
 					"width": 110,
 					"height": 110,
 					"img_path": "led_red_off.png",
@@ -1465,6 +1462,15 @@
 							"image_opa": 255
 						}
 					],
+					"name": "led_red_off",
+					"type": "img",
+					"left": 60,
+					"top": 760,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "na40puhx",
 					"default_style": false
 				},
@@ -1512,7 +1518,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -1544,15 +1550,6 @@
 					]
 				},
 				{
-					"name": "page_label",
-					"type": "label",
-					"left": 180,
-					"top": 45,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 500,
 					"height": 0,
 					"text": "LED Control",
@@ -1612,19 +1609,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "cuzcqxt9",
-					"default_style": false
-				},
-				{
-					"name": "led_green_on",
-					"type": "img",
-					"left": 305,
-					"top": 760,
+					"name": "page_label",
+					"type": "label",
+					"left": 180,
+					"top": 45,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "cuzcqxt9",
+					"default_style": false
+				},
+				{
 					"width": 110,
 					"height": 110,
 					"img_path": "led_green_on.png",
@@ -1648,11 +1645,7 @@
 							"image_opa": 255
 						}
 					],
-					"id": "2xw2hv70",
-					"default_style": false
-				},
-				{
-					"name": "led_green_off",
+					"name": "led_green_on",
 					"type": "img",
 					"left": 305,
 					"top": 760,
@@ -1661,6 +1654,10 @@
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "2xw2hv70",
+					"default_style": false
+				},
+				{
 					"width": 110,
 					"height": 110,
 					"img_path": "led_green_off.png",
@@ -1684,19 +1681,19 @@
 							"image_opa": 255
 						}
 					],
-					"id": "j033habp",
-					"default_style": false
-				},
-				{
-					"name": "led_blue_on",
+					"name": "led_green_off",
 					"type": "img",
-					"left": 550,
+					"left": 305,
 					"top": 760,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "j033habp",
+					"default_style": false
+				},
+				{
 					"width": 110,
 					"height": 110,
 					"img_path": "led_blue_on.png",
@@ -1720,11 +1717,7 @@
 							"image_opa": 255
 						}
 					],
-					"id": "76zh3kw0",
-					"default_style": false
-				},
-				{
-					"name": "led_blue_off",
+					"name": "led_blue_on",
 					"type": "img",
 					"left": 550,
 					"top": 760,
@@ -1733,6 +1726,10 @@
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "76zh3kw0",
+					"default_style": false
+				},
+				{
 					"width": 110,
 					"height": 110,
 					"img_path": "led_blue_off.png",
@@ -1756,6 +1753,15 @@
 							"image_opa": 255
 						}
 					],
+					"name": "led_blue_off",
+					"type": "img",
+					"left": 550,
+					"top": 760,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "mfqj2bls",
 					"default_style": false
 				}
@@ -1838,7 +1844,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -2021,7 +2027,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -2168,7 +2174,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -2200,15 +2206,6 @@
 					]
 				},
 				{
-					"name": "page_label",
-					"type": "label",
-					"left": 180,
-					"top": 45,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 500,
 					"height": 0,
 					"text": "Wi-Fi & Ethernet",
@@ -2268,19 +2265,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "cuzcqxt9",
-					"default_style": false
-				},
-				{
-					"name": "ssid_list",
-					"type": "list",
-					"left": 0,
-					"top": 240,
+					"name": "page_label",
+					"type": "label",
+					"left": 180,
+					"top": 45,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "cuzcqxt9",
+					"default_style": false
+				},
+				{
 					"width": 720,
 					"height": 550,
 					"items": [
@@ -2396,19 +2393,19 @@
 							"bg_opa": 255
 						}
 					],
-					"id": "4r7tl0gl",
-					"default_style": false
-				},
-				{
-					"name": "ssid_label",
-					"type": "label",
-					"left": 30,
-					"top": 180,
+					"name": "ssid_list",
+					"type": "list",
+					"left": 0,
+					"top": 240,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "4r7tl0gl",
+					"default_style": false
+				},
+				{
 					"width": 400,
 					"height": 0,
 					"text": "Wi-Fi SSIDs:",
@@ -2468,19 +2465,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "aq1wjh2f",
-					"default_style": false
-				},
-				{
-					"name": "ip_addr_label",
+					"name": "ssid_label",
 					"type": "label",
 					"left": 30,
-					"top": 840,
+					"top": 180,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "aq1wjh2f",
+					"default_style": false
+				},
+				{
 					"width": 500,
 					"height": 0,
 					"text": "Ethernet Interfaces:",
@@ -2540,19 +2537,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "8j0yvaa8",
-					"default_style": false
-				},
-				{
-					"name": "font_label",
+					"name": "ip_addr_label",
 					"type": "label",
-					"left": 20,
-					"top": 140,
+					"left": 30,
+					"top": 840,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "8j0yvaa8",
+					"default_style": false
+				},
+				{
 					"width": 200,
 					"height": 0,
 					"text": "",
@@ -2612,19 +2609,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "xslhyoat",
-					"default_style": false
-				},
-				{
-					"name": "ssid_refresh_imgbtn",
-					"type": "imgbtn",
-					"left": 530,
-					"top": 176,
+					"name": "font_label",
+					"type": "label",
+					"left": 20,
+					"top": 140,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "xslhyoat",
+					"default_style": false
+				},
+				{
 					"width": 160,
 					"height": 50,
 					"text": "Wi-Fi Scan",
@@ -2668,7 +2665,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -2676,6 +2673,15 @@
 							"font": 16
 						}
 					],
+					"name": "ssid_refresh_imgbtn",
+					"type": "imgbtn",
+					"left": 530,
+					"top": 176,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "4e38tv1w",
 					"default_style": false,
 					"event": [
@@ -2689,15 +2695,6 @@
 					]
 				},
 				{
-					"name": "ssid_scan_label",
-					"type": "label",
-					"left": 210,
-					"top": 490,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 300,
 					"height": 0,
 					"text": "Scanning...",
@@ -2757,19 +2754,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "t0faz3bt",
-					"default_style": false
-				},
-				{
-					"name": "eth_list",
-					"type": "list",
-					"left": 0,
-					"top": 903,
+					"name": "ssid_scan_label",
+					"type": "label",
+					"left": 210,
+					"top": 490,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "t0faz3bt",
+					"default_style": false
+				},
+				{
 					"width": 720,
 					"height": 180,
 					"items": [
@@ -2894,6 +2891,15 @@
 							"bg_opa": 255
 						}
 					],
+					"name": "eth_list",
+					"type": "list",
+					"left": 0,
+					"top": 903,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "lsugr3da",
 					"default_style": false
 				}
@@ -2976,7 +2982,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -3159,7 +3165,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -3306,7 +3312,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -3338,15 +3344,6 @@
 					]
 				},
 				{
-					"name": "page_label",
-					"type": "label",
-					"left": 180,
-					"top": 45,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 500,
 					"height": 0,
 					"text": "USB & Expansion",
@@ -3406,19 +3403,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "cuzcqxt9",
-					"default_style": false
-				},
-				{
-					"name": "usb_list",
-					"type": "list",
-					"left": 0,
-					"top": 235,
+					"name": "page_label",
+					"type": "label",
+					"left": 180,
+					"top": 45,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "cuzcqxt9",
+					"default_style": false
+				},
+				{
 					"width": 720,
 					"height": 190,
 					"items": [],
@@ -3524,19 +3521,19 @@
 							"bg_opa": 255
 						}
 					],
-					"id": "4r7tl0gl",
-					"default_style": false
-				},
-				{
-					"name": "usb_devices_label",
-					"type": "label",
-					"left": 30,
-					"top": 180,
+					"name": "usb_list",
+					"type": "list",
+					"left": 0,
+					"top": 235,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "4r7tl0gl",
+					"default_style": false
+				},
+				{
 					"width": 600,
 					"height": 0,
 					"text": "Connected HID Devices",
@@ -3596,19 +3593,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "aq1wjh2f",
-					"default_style": false
-				},
-				{
-					"name": "input_label",
+					"name": "usb_devices_label",
 					"type": "label",
 					"left": 30,
-					"top": 455,
+					"top": 180,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "aq1wjh2f",
+					"default_style": false
+				},
+				{
 					"width": 300,
 					"height": 0,
 					"text": "Input Test",
@@ -3668,19 +3665,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "8j0yvaa8",
-					"default_style": false
-				},
-				{
-					"name": "i2c_nodes_label",
+					"name": "input_label",
 					"type": "label",
 					"left": 30,
-					"top": 755,
+					"top": 455,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "8j0yvaa8",
+					"default_style": false
+				},
+				{
 					"width": 250,
 					"height": 0,
 					"text": "I2C Nodes",
@@ -3740,19 +3737,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "bounwvq0",
-					"default_style": false
-				},
-				{
-					"name": "i2c_table",
-					"type": "table",
-					"left": 24,
-					"top": 810,
+					"name": "i2c_nodes_label",
+					"type": "label",
+					"left": 30,
+					"top": 755,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "bounwvq0",
+					"default_style": false
+				},
+				{
 					"width": 0,
 					"height": 0,
 					"columns": 5,
@@ -3875,19 +3872,19 @@
 							"border_color": "#d5dee6"
 						}
 					],
-					"id": "vp8lz0ig",
-					"default_style": false
-				},
-				{
-					"name": "input_area",
-					"type": "ta",
-					"left": 20,
-					"top": 510,
+					"name": "i2c_table",
+					"type": "table",
+					"left": 24,
+					"top": 810,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "vp8lz0ig",
+					"default_style": false
+				},
+				{
 					"width": 680,
 					"height": 200,
 					"text": "Press 'keyboard' or 'mouse' to capture HID input...",
@@ -3975,19 +3972,19 @@
 							"radius": 0
 						}
 					],
-					"id": "6o6cbzw1",
-					"default_style": false
-				},
-				{
-					"name": "kbd_imgbtn",
-					"type": "imgbtn",
-					"left": 360,
-					"top": 451,
+					"name": "input_area",
+					"type": "ta",
+					"left": 20,
+					"top": 510,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "6o6cbzw1",
+					"default_style": false
+				},
+				{
 					"width": 160,
 					"height": 50,
 					"text": "keyboard",
@@ -4031,7 +4028,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -4039,6 +4036,15 @@
 							"font": 16
 						}
 					],
+					"name": "kbd_imgbtn",
+					"type": "imgbtn",
+					"left": 360,
+					"top": 451,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "yhsg3ub4",
 					"default_style": false,
 					"event": [
@@ -4052,15 +4058,6 @@
 					]
 				},
 				{
-					"name": "mouse_imgbtn",
-					"type": "imgbtn",
-					"left": 530,
-					"top": 451,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 160,
 					"height": 50,
 					"text": "mouse",
@@ -4104,7 +4101,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -4112,6 +4109,15 @@
 							"font": 16
 						}
 					],
+					"name": "mouse_imgbtn",
+					"type": "imgbtn",
+					"left": 530,
+					"top": 451,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "rdntshoa",
 					"default_style": false,
 					"event": [
@@ -4125,15 +4131,6 @@
 					]
 				},
 				{
-					"name": "i2c_scan_imgbtn",
-					"type": "imgbtn",
-					"left": 530,
-					"top": 751,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 160,
 					"height": 50,
 					"text": "scan",
@@ -4177,7 +4174,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -4185,6 +4182,15 @@
 							"font": 16
 						}
 					],
+					"name": "i2c_scan_imgbtn",
+					"type": "imgbtn",
+					"left": 530,
+					"top": 751,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "ebxc93lh",
 					"default_style": false,
 					"event": [
@@ -4198,15 +4204,6 @@
 					]
 				},
 				{
-					"name": "font_label",
-					"type": "label",
-					"left": 570,
-					"top": 131,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 100,
 					"height": 0,
 					"text": "",
@@ -4266,19 +4263,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "ywgvtocl",
-					"default_style": false
-				},
-				{
-					"name": "i2c_ddlist",
-					"type": "ddlist",
-					"left": 380,
-					"top": 755,
+					"name": "font_label",
+					"type": "label",
+					"left": 570,
+					"top": 131,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "ywgvtocl",
+					"default_style": false
+				},
+				{
 					"width": 120,
 					"height": 0,
 					"list": [
@@ -4393,6 +4390,15 @@
 							"bg_opa": 255
 						}
 					],
+					"name": "i2c_ddlist",
+					"type": "ddlist",
+					"left": 380,
+					"top": 755,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "n8kf2m65",
 					"default_style": false,
 					"event": [
@@ -4484,7 +4490,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -4667,7 +4673,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -4814,7 +4820,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -4846,15 +4852,6 @@
 					]
 				},
 				{
-					"name": "page_label",
-					"type": "label",
-					"left": 180,
-					"top": 45,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 500,
 					"height": 0,
 					"text": "Audio & Video",
@@ -4914,19 +4911,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "cuzcqxt9",
-					"default_style": false
-				},
-				{
-					"name": "camera_label",
+					"name": "page_label",
 					"type": "label",
-					"left": 30,
-					"top": 180,
+					"left": 180,
+					"top": 45,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "cuzcqxt9",
+					"default_style": false
+				},
+				{
 					"width": 600,
 					"height": 0,
 					"text": "Camera State:",
@@ -4986,19 +4983,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "aq1wjh2f",
-					"default_style": false
-				},
-				{
-					"name": "camera_state_label",
+					"name": "camera_label",
 					"type": "label",
 					"left": 30,
-					"top": 233,
+					"top": 180,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "aq1wjh2f",
+					"default_style": false
+				},
+				{
 					"width": 600,
 					"height": 0,
 					"text": "Not Connected",
@@ -5058,19 +5055,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "lirxx3rx",
-					"default_style": false
-				},
-				{
-					"name": "playback_label",
+					"name": "camera_state_label",
 					"type": "label",
-					"left": 60,
-					"top": 950,
+					"left": 30,
+					"top": 233,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "lirxx3rx",
+					"default_style": false
+				},
+				{
 					"width": 600,
 					"height": 0,
 					"text": "Note: Up to 2 selected mic will be sent to audio jack.",
@@ -5130,19 +5127,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "ervx2h2g",
-					"default_style": false
-				},
-				{
-					"name": "mic_label",
+					"name": "playback_label",
 					"type": "label",
-					"left": 32,
-					"top": 320,
+					"left": 60,
+					"top": 950,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "ervx2h2g",
+					"default_style": false
+				},
+				{
 					"width": 600,
 					"height": 0,
 					"text": "Microphone Input:",
@@ -5202,19 +5199,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "z84i6msj",
-					"default_style": false
-				},
-				{
-					"name": "mic1_cb",
-					"type": "cb",
-					"left": 50,
-					"top": 830,
+					"name": "mic_label",
+					"type": "label",
+					"left": 32,
+					"top": 320,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "z84i6msj",
+					"default_style": false
+				},
+				{
 					"width": 0,
 					"height": 0,
 					"text": "mic 1",
@@ -5364,6 +5361,15 @@
 							"bg_opa": 255
 						}
 					],
+					"name": "mic1_cb",
+					"type": "cb",
+					"left": 50,
+					"top": 830,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "05rc448b",
 					"default_style": false,
 					"event": [
@@ -5377,15 +5383,6 @@
 					]
 				},
 				{
-					"name": "mic2_cb",
-					"type": "cb",
-					"left": 210,
-					"top": 830,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 0,
 					"height": 0,
 					"text": "mic 2",
@@ -5535,6 +5532,15 @@
 							"bg_opa": 255
 						}
 					],
+					"name": "mic2_cb",
+					"type": "cb",
+					"left": 210,
+					"top": 830,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "6cycnbkx",
 					"default_style": false,
 					"event": [
@@ -5548,15 +5554,6 @@
 					]
 				},
 				{
-					"name": "mic3_cb",
-					"type": "cb",
-					"left": 370,
-					"top": 830,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 0,
 					"height": 0,
 					"text": "mic 3",
@@ -5706,6 +5703,15 @@
 							"bg_opa": 255
 						}
 					],
+					"name": "mic3_cb",
+					"type": "cb",
+					"left": 370,
+					"top": 830,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "cgp8ryyv",
 					"default_style": false,
 					"event": [
@@ -5719,15 +5725,6 @@
 					]
 				},
 				{
-					"name": "mic4_cb",
-					"type": "cb",
-					"left": 530,
-					"top": 830,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 0,
 					"height": 0,
 					"text": "mic 4",
@@ -5877,6 +5874,15 @@
 							"bg_opa": 255
 						}
 					],
+					"name": "mic4_cb",
+					"type": "cb",
+					"left": 530,
+					"top": 830,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "n7ezbso5",
 					"default_style": false,
 					"event": [
@@ -5890,15 +5896,6 @@
 					]
 				},
 				{
-					"name": "mic_chart",
-					"type": "chart",
-					"left": 30,
-					"top": 390,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 660,
 					"height": 420,
 					"range": 100,
@@ -5953,6 +5950,15 @@
 							"border_color": "#ffffff"
 						}
 					],
+					"name": "mic_chart",
+					"type": "chart",
+					"left": 30,
+					"top": 390,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "zj3vy8of",
 					"default_style": false
 				}
@@ -6035,7 +6041,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -6218,7 +6224,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -6365,7 +6371,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -6397,15 +6403,6 @@
 					]
 				},
 				{
-					"name": "page_label",
-					"type": "label",
-					"left": 180,
-					"top": 45,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 500,
 					"height": 0,
 					"text": "Custom Functions",
@@ -6465,19 +6462,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "cuzcqxt9",
-					"default_style": false
-				},
-				{
-					"name": "custom_chart",
-					"type": "chart",
-					"left": 30,
-					"top": 244,
+					"name": "page_label",
+					"type": "label",
+					"left": 180,
+					"top": 45,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "cuzcqxt9",
+					"default_style": false
+				},
+				{
 					"width": 660,
 					"height": 350,
 					"range": 100,
@@ -6532,19 +6529,19 @@
 							"border_color": "#ffffff"
 						}
 					],
-					"id": "xk7o5lr",
-					"default_style": false
-				},
-				{
-					"name": "custom_label",
-					"type": "label",
-					"left": 32,
-					"top": 180,
+					"name": "custom_chart",
+					"type": "chart",
+					"left": 30,
+					"top": 244,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "xk7o5lr",
+					"default_style": false
+				},
+				{
 					"width": 450,
 					"height": 0,
 					"text": "Wi-Fi Signal Strength:",
@@ -6604,19 +6601,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "lyt1jrne",
-					"default_style": false
-				},
-				{
-					"name": "custom_imgbtn",
-					"type": "imgbtn",
-					"left": 29,
-					"top": 610,
+					"name": "custom_label",
+					"type": "label",
+					"left": 32,
+					"top": 180,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "lyt1jrne",
+					"default_style": false
+				},
+				{
 					"width": 220,
 					"height": 80,
 					"text": "connect",
@@ -6660,7 +6657,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -6668,6 +6665,15 @@
 							"font": 16
 						}
 					],
+					"name": "custom_imgbtn",
+					"type": "imgbtn",
+					"left": 29,
+					"top": 610,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "1fa2jsh5",
 					"default_style": false,
 					"event": [
@@ -6681,15 +6687,6 @@
 					]
 				},
 				{
-					"name": "instructions_label",
-					"type": "label",
-					"left": 267,
-					"top": 622,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 416,
 					"height": 0,
 					"text": "Click 'connect' to connect to '*' and measure it's RSSI",
@@ -6749,19 +6746,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "0hqads4e",
-					"default_style": false
-				},
-				{
-					"name": "custom_value_label",
+					"name": "instructions_label",
 					"type": "label",
-					"left": 486,
-					"top": 175,
+					"left": 267,
+					"top": 622,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "0hqads4e",
+					"default_style": false
+				},
+				{
 					"width": 200,
 					"height": 0,
 					"text": "-100dBm",
@@ -6821,6 +6818,15 @@
 							"paddingLeft": 0
 						}
 					],
+					"name": "custom_value_label",
+					"type": "label",
+					"left": 486,
+					"top": 175,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "8tkzpekm",
 					"default_style": false
 				}
@@ -6903,7 +6909,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -7086,7 +7092,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -7233,7 +7239,7 @@
 						{
 							"part": "LV_IMGBTN_PART_MAIN",
 							"state": "LV_STATE_CHECKED",
-							"disable": true,
+							"disable": false,
 							"image_recolor": "#000000",
 							"image_recolor_opa": 0,
 							"text_color": "#FF33FF",
@@ -7265,15 +7271,6 @@
 					]
 				},
 				{
-					"name": "page_label",
-					"type": "label",
-					"left": 180,
-					"top": 45,
-					"is_move_animation": false,
-					"desX": 0,
-					"desY": 0,
-					"path_type": "linear",
-					"duration": 100,
 					"width": 500,
 					"height": 0,
 					"text": "Help",
@@ -7333,19 +7330,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "cuzcqxt9",
-					"default_style": false
-				},
-				{
-					"name": "demo_label",
+					"name": "page_label",
 					"type": "label",
-					"left": 20,
-					"top": 170,
+					"left": 180,
+					"top": 45,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "cuzcqxt9",
+					"default_style": false
+				},
+				{
 					"width": 680,
 					"height": 0,
 					"text": "MaaxBoard RT: LVGL based demo",
@@ -7405,19 +7402,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "0br37oca",
-					"default_style": false
-				},
-				{
-					"name": "label_1",
+					"name": "demo_label",
 					"type": "label",
-					"left": 60,
-					"top": 230,
+					"left": 20,
+					"top": 170,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "0br37oca",
+					"default_style": false
+				},
+				{
 					"width": 600,
 					"height": 0,
 					"text": "This application provides a subset of board tests that can be exercised:",
@@ -7477,19 +7474,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "90gwfc4i",
-					"default_style": false
-				},
-				{
-					"name": "label_2",
+					"name": "label_1",
 					"type": "label",
 					"left": 60,
-					"top": 285,
+					"top": 230,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "90gwfc4i",
+					"default_style": false
+				},
+				{
 					"width": 600,
 					"height": 0,
 					"text": "    -  From touch panel setting ",
@@ -7549,19 +7546,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "nbt1i3yk",
-					"default_style": false
-				},
-				{
-					"name": "label_3",
+					"name": "label_2",
 					"type": "label",
 					"left": 60,
-					"top": 315,
+					"top": 285,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "nbt1i3yk",
+					"default_style": false
+				},
+				{
 					"width": 600,
 					"height": 0,
 					"text": "    -  Serial console and keyboard",
@@ -7621,19 +7618,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "sz06ib8y",
-					"default_style": false
-				},
-				{
-					"name": "label_4",
+					"name": "label_3",
 					"type": "label",
 					"left": 60,
-					"top": 380,
+					"top": 315,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "sz06ib8y",
+					"default_style": false
+				},
+				{
 					"width": 600,
 					"height": 0,
 					"text": "Multiple GUI screens can be accessed:",
@@ -7693,19 +7690,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "5xfbfq1m",
-					"default_style": false
-				},
-				{
-					"name": "label_5",
+					"name": "label_4",
 					"type": "label",
 					"left": 60,
-					"top": 415,
+					"top": 380,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "5xfbfq1m",
+					"default_style": false
+				},
+				{
 					"width": 600,
 					"height": 0,
 					"text": "    -  From MENU page",
@@ -7765,19 +7762,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "f5muy8gm",
-					"default_style": false
-				},
-				{
-					"name": "label_6",
+					"name": "label_5",
 					"type": "label",
 					"left": 60,
-					"top": 445,
+					"top": 415,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "f5muy8gm",
+					"default_style": false
+				},
+				{
 					"width": 600,
 					"height": 0,
 					"text": "    -  LEFT/RIGHT topic arrows",
@@ -7837,19 +7834,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "oraeb18r",
-					"default_style": false
-				},
-				{
-					"name": "label_7",
+					"name": "label_6",
 					"type": "label",
 					"left": 60,
-					"top": 510,
+					"top": 445,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "oraeb18r",
+					"default_style": false
+				},
+				{
 					"width": 600,
 					"height": 0,
 					"text": "For more detail on GUI and console interfaces, see console help...",
@@ -7909,19 +7906,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "4nvedo9x",
-					"default_style": false
-				},
-				{
-					"name": "label_8",
+					"name": "label_7",
 					"type": "label",
 					"left": 60,
-					"top": 610,
+					"top": 510,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "4nvedo9x",
+					"default_style": false
+				},
+				{
 					"width": 600,
 					"height": 0,
 					"text": "For more detail on MaaxBoard RT, see product page at:",
@@ -7981,19 +7978,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "zu5a1s34",
-					"default_style": false
-				},
-				{
-					"name": "label_9",
+					"name": "label_8",
 					"type": "label",
 					"left": 60,
-					"top": 680,
+					"top": 610,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "zu5a1s34",
+					"default_style": false
+				},
+				{
 					"width": 600,
 					"height": 0,
 					"text": "http://avnet.me/maaxboard-rt",
@@ -8053,19 +8050,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "m1tfe3ty",
-					"default_style": false
-				},
-				{
-					"name": "label_10",
+					"name": "label_9",
 					"type": "label",
 					"left": 60,
-					"top": 755,
+					"top": 680,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "m1tfe3ty",
+					"default_style": false
+				},
+				{
 					"width": 600,
 					"height": 0,
 					"text": "MaaxBoard RT is based on NXP RT1176 1GHz real-time crossover processor.",
@@ -8125,19 +8122,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "51rcvhph",
-					"default_style": false
-				},
-				{
-					"name": "label_11",
+					"name": "label_10",
 					"type": "label",
 					"left": 60,
-					"top": 810,
+					"top": 755,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "51rcvhph",
+					"default_style": false
+				},
+				{
 					"width": 600,
 					"height": 0,
 					"text": "For more detail on RT1170 family capabilities, see NXP product page at:",
@@ -8197,19 +8194,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "lshy051u",
-					"default_style": false
-				},
-				{
-					"name": "label_12",
+					"name": "label_11",
 					"type": "label",
 					"left": 60,
-					"top": 880,
+					"top": 810,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "lshy051u",
+					"default_style": false
+				},
+				{
 					"width": 600,
 					"height": 0,
 					"text": "https://www.nxp.com/iMXRT1170",
@@ -8269,19 +8266,19 @@
 							"paddingLeft": 0
 						}
 					],
-					"id": "48vt71be",
-					"default_style": false
-				},
-				{
-					"name": "maaxboard_version_label",
+					"name": "label_12",
 					"type": "label",
-					"left": 63,
-					"top": 1050,
+					"left": 60,
+					"top": 880,
 					"is_move_animation": false,
 					"desX": 0,
 					"desY": 0,
 					"path_type": "linear",
 					"duration": 100,
+					"id": "48vt71be",
+					"default_style": false
+				},
+				{
 					"width": 600,
 					"height": 0,
 					"text": "Avnet GUI Demo",
@@ -8341,6 +8338,15 @@
 							"paddingLeft": 0
 						}
 					],
+					"name": "maaxboard_version_label",
+					"type": "label",
+					"left": 63,
+					"top": 1050,
+					"is_move_animation": false,
+					"desX": 0,
+					"desY": 0,
+					"path_type": "linear",
+					"duration": 100,
 					"id": "7kuqjl8q",
 					"default_style": false
 				}
@@ -8352,6 +8358,7 @@
 		"name": "testingJson",
 		"version": "test_v1",
 		"default_scr": "screen0_MENU",
+		"theme": "LV_THEME_MATERIAL_FLAG_LIGHT",
 		"screen": [
 			{
 				"name": "screen0_MENU",
@@ -8673,7 +8680,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -8733,7 +8740,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -8793,7 +8800,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -8853,7 +8860,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -8913,7 +8920,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -8973,7 +8980,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -9070,7 +9077,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -9229,7 +9236,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -9341,8 +9348,8 @@
 						"name": "screen1_LEDs_redbtn0",
 						"type": "imgbtn",
 						"pos": [
-							20,
-							900
+							21,
+							899
 						],
 						"size": [
 							190,
@@ -9375,7 +9382,7 @@
 								"image_opa": 255,
 								"font_family": "OpenSans_Regular",
 								"text_color": "#000000",
-								"font": "36"
+								"font": 32
 							},
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -9383,9 +9390,9 @@
 								"disable": true,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
-								"text_color": "#FF33FF",
-								"font_family": "simsun",
-								"font": 16
+								"text_color": "#000000",
+								"font_family": "OpenSans_Regular",
+								"font": 32
 							},
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -9393,9 +9400,9 @@
 								"disable": true,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
-								"text_color": "#FF33FF",
-								"font_family": "simsun",
-								"font": 16
+								"text_color": "#000000",
+								"font_family": "OpenSans_Regular",
+								"font": 32
 							}
 						]
 					},
@@ -9445,9 +9452,9 @@
 								"disable": true,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
-								"text_color": "#FF33FF",
-								"font_family": "simsun",
-								"font": 16
+								"text_color": "#000000",
+								"font_family": "OpenSans_Regular",
+								"font": 32
 							},
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -9455,9 +9462,9 @@
 								"disable": true,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
-								"text_color": "#FF33FF",
-								"font_family": "simsun",
-								"font": 16
+								"text_color": "#000000",
+								"font_family": "OpenSans_Regular",
+								"font": 32
 							}
 						]
 					},
@@ -9507,9 +9514,9 @@
 								"disable": true,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
-								"text_color": "#FF33FF",
-								"font_family": "simsun",
-								"font": 16
+								"text_color": "#000000",
+								"font_family": "OpenSans_Regular",
+								"font": 32
 							},
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
@@ -9517,9 +9524,9 @@
 								"disable": true,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
-								"text_color": "#FF33FF",
-								"font_family": "simsun",
-								"font": 16
+								"text_color": "#000000",
+								"font_family": "OpenSans_Regular",
+								"font": 32
 							}
 						]
 					},
@@ -9646,7 +9653,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -9950,7 +9957,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -10109,7 +10116,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -10232,7 +10239,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -10665,7 +10672,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -10955,7 +10962,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -11114,7 +11121,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -11237,7 +11244,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -11900,7 +11907,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -11962,7 +11969,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -12022,7 +12029,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -12288,7 +12295,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -12447,7 +12454,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -12570,7 +12577,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -13555,7 +13562,8 @@
 							5
 						],
 						"range": 100,
-						"chart_data": []
+						"chart_data": [],
+						"point_count": 5
 					}
 				]
 			},
@@ -13645,7 +13653,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -13804,7 +13812,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -13927,7 +13935,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -14056,7 +14064,8 @@
 							5
 						],
 						"range": 100,
-						"chart_data": []
+						"chart_data": [],
+						"point_count": 5
 					},
 					{
 						"name": "screen5_SYSTEM_custom_label",
@@ -14174,7 +14183,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -14397,7 +14406,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -14556,7 +14565,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",
@@ -14679,7 +14688,7 @@
 							{
 								"part": "LV_IMGBTN_PART_MAIN",
 								"state": "LV_STATE_CHECKED",
-								"disable": true,
+								"disable": false,
 								"image_recolor": "#000000",
 								"image_recolor_opa": 0,
 								"text_color": "#FF33FF",

@@ -12,8 +12,12 @@
 /*********************
  *      DEFINES
  *********************/
-#ifndef MONITOR_ZOOM
-#define MONITOR_ZOOM    1
+#ifndef MONITOR_ZOOM_X
+#define MONITOR_ZOOM_X    1
+#endif
+
+#ifndef MONITOR_ZOOM_Y
+#define MONITOR_ZOOM_Y    1
 #endif
 
 /**********************
@@ -78,13 +82,13 @@ void mouse_handler(SDL_Event * event)
         case SDL_MOUSEBUTTONDOWN:
             if(event->button.button == SDL_BUTTON_LEFT) {
                 left_button_down = true;
-                last_x = event->motion.x / MONITOR_ZOOM;
-                last_y = event->motion.y / MONITOR_ZOOM;
+                last_x = event->motion.x / MONITOR_ZOOM_X;
+                last_y = event->motion.y / MONITOR_ZOOM_Y;
             }
             break;
         case SDL_MOUSEMOTION:
-            last_x = event->motion.x / MONITOR_ZOOM;
-            last_y = event->motion.y / MONITOR_ZOOM;
+            last_x = event->motion.x / MONITOR_ZOOM_X;
+            last_y = event->motion.y / MONITOR_ZOOM_Y;
 
             break;
     }

@@ -89,12 +89,6 @@ typedef void * lv_img_decoder_user_data_t;
 #define LV_ATTRIBUTE_TICK_INC
 #define LV_ATTRIBUTE_TASK_HANDLER
 #define LV_ATTRIBUTE_FLUSH_READY
-
-#if LV_USE_GPU_NXP_VG_LITE
-#define LV_ATTRIBUTE_MEM_ALIGN_SIZE 
-#define LV_ATTRIBUTE_MEM_ALIGN 
-#endif /* LV_USE_GPU_NXP_VG_LITE */
-
 #define LV_ATTRIBUTE_LARGE_CONST
 #define LV_ATTRIBUTE_FAST_MEM
 #define LV_EXPORT_CONST_INT(int_value) struct _silence_gcc_warning
