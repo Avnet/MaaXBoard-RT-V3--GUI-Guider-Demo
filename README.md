@@ -1,6 +1,7 @@
 # MaaXBoard-RT out-of-box demo-1 application
 
-This is the GUI Guider project for MaaXBoard-RT out-of-box demo application
+### This is the GUI Guider project for the MaaXBoard-RT-V3--GUI-Demo
+https://github.com/Avnet/MaaXBoard-RT-V3--GUI-Demo
 
 Seven GUI pages are defined:
 1. Navigation Menu
